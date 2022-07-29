@@ -1,0 +1,83 @@
+.row
+{
+    margin-top: 4%;
+}
+.meri
+{
+    font-family: 'Merriweather';;
+}
+.mg
+{
+    margin-top: 6%;
+}
+.orange-box
+{
+  background-color: #ef6525;
+  width: 430px;
+  height: 350px;
+  border-radius: 51% 28% 60% 10% / 53% 30% 56% 10% ;
+}
+.b
+{
+    font-weight: bold;
+}
+.lb
+{
+    font-weight: bold;
+    font-family: 'Poppins';
+    margin-left: 14px;
+}
+input::placeholder
+{
+    font-family: 'Poppins';
+    padding-left: 25px;
+    
+}
+.form
+{
+    margin-top: 10%;
+}
+.but
+{
+    margin-top: 7%;
+    width: 220px;
+    height: 45px;
+    background-color: #3db3ad;
+    border-radius: 15px;
+    font-weight: bold;
+    font-family: 'Poppins';
+}
+.acc
+{
+    display: inline;
+    padding-left: 100px;
+    font-weight: bold;
+    font-family: 'Poppins';   
+}
+.di
+{
+    margin-top: 5%;
+}
+.form-group
+{
+    margin-top: 2%;
+}
+.sig
+{
+    padding-left: 40px;
+    font-weight: bold;
+    font-family: 'Poppins';
+}
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+.form-control
+{
+    margin-top: 2%;
+    background-color: #FFF8EF;
+    border-radius: 13px;
+};
+

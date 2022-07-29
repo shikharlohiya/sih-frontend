@@ -1,0 +1,116 @@
+.main{
+  background-color: #fff8ef;
+  font-family: 'Poppins';
+}
+.text
+{
+  color:#ef6525
+}
+.div1 {
+  margin-top: 6%;
+  padding-left: 10px;
+  padding-right: 50px;
+}
+.val{
+  margin-left: 8%;
+}
+.div3 {
+  margin-top: 6%;
+}
+.div4 {
+  margin-top: 12%;
+  padding-right: 50px;
+}
+.div5 {
+
+  padding-left: 60px;
+}
+.section3 {
+  margin-top: 8%;
+}
+
+.div8 {
+  margin-top: 8%;
+  
+}
+.check {
+  border-radius: 10px;
+}
+.szb
+{
+  font-size: 400%;
+  font-weight: bold;
+  line-height: 50pt;
+}
+.szm
+{
+  font-size: larger;
+}
+.bold
+{
+  font-weight: bold;
+}
+.sz3
+{
+  font-weight: bold;
+  font-size: 200%;
+}
+.temp
+{
+  
+  height: 100px;
+  max-height: 100px;
+}
+.footer
+{
+  margin-top: 100px;
+  background-color: #FFF0EF;
+}
+.footer1
+{
+  margin-left: 100px;
+  
+}
+.section1
+{
+  margin-left: 80px;
+}
+.orange-box
+{
+  background-color: #ef6525;
+  width: 430px;
+  height: 350px;
+  border-radius: 51% 28% 60% 10% / 53% 30% 56% 10% ;
+}
+.check2
+{
+  padding-bottom: 120px;
+}
+.orange-box2
+{
+  background-color: #ef6525;
+  width: 430px;
+  height: 350px;
+  border-radius: 28% 51% 10% 60%/ 30% 53% 10% 56%;
+}
+.orange-box3
+{
+  background-color: #ef6525;
+  width: 430px;
+  height: 350px;
+  border-radius: 28% 51% 10% 51%/ 30% 53% 10% 53%;
+}
+.div9
+{
+  padding-left: 100px;
+}
+.sz6
+{
+  font-weight: bold;
+  font-size: 200%;
+  text-align: justify;
+}
+.meri
+{
+  font-family: 'Merriweather';
+}
