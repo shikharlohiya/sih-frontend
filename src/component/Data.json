@@ -1,0 +1,66 @@
+[
+    {
+      "id": 3,
+      "name": "Taj Mahal",
+      "stateUT": "cg",
+      "description":
+        "It is an immortal poem in white marble and is the finest expression of love of an emperor for his queen. . . . ",
+      "img": "https://cdn.britannica.com/86/170586-050-AB7FEFAE/Taj-Mahal-Agra-India.jpg",
+      "time": "8:am",
+      "fee": "open to all",
+      "price":0
+    },
+    {
+      "id": 4,
+      "name": "Red Fort",
+      "stateUT": "Agra",
+      "description":
+        "It is an immortal poem in white marble and is the finest expression of love of an emperor for his queen. . . . ",
+      "img": "https://cdn.britannica.com/86/170586-050-AB7FEFAE/Taj-Mahal-Agra-India.jpg",
+      "time": "8:am",
+      "fee": "open to all",
+      "price":0
+    },
+    {
+      "id": 1,
+      "name": "hawa mahal",
+      "stateUT": "Agra",
+      "description":
+        "It is an immortal poem in white marble and is the finest expression of love of an emperor for his queen. . . . ",
+      "img": "https://cdn.britannica.com/86/170586-050-AB7FEFAE/Taj-Mahal-Agra-India.jpg",
+      "time": "8:am",
+      "fee": "open to all",
+      "price":0
+    },
+    {
+      "id": 2,
+      "name": "hawa mahal",
+      "stateUT": "Agra",
+      "description":
+        "It is an immortal poem in white marble and is the finest expression of love of an emperor for his queen. . . . ",
+      "img": "https://cdn.britannica.com/86/170586-050-AB7FEFAE/Taj-Mahal-Agra-India.jpg",
+      "time": "8:am",
+      "fee": "open to all",
+      "price":0
+    },
+    {
+      "id": 6,
+      "name": "charminar",
+      "stateUT": "Agra",
+      "description":
+        "It is an immortal poem in white marble and is the finest expression of love of an emperor for his queen. . . . ",
+      "img": "https://cdn.britannica.com/86/170586-050-AB7FEFAE/Taj-Mahal-Agra-India.jpg",
+      "time": "8:am",
+      "fee": "open to all",
+      "price":0
+    }
+
+
+
+
+
+
+
+
+
+  ]

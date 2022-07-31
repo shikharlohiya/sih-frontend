@@ -1,0 +1,83 @@
+.monumentCard
+{
+    width: 18vmax;
+    display: flex;
+    flex-direction: column;
+    margin: 1vmax;
+    padding-bottom: 0.5vmax;
+    border: 2px solid #ffffff;
+    border-radius: 25px;
+    background-color: #ffffff;
+    
+    
+}
+img
+{
+    border-radius: 25px 25px 0px 0px;
+}
+.container2
+{
+    display: flex;
+    margin: 2vmax auto;
+    width: 80vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    
+}
+.input-group
+{
+    width: 80%;
+    margin: auto auto;
+    
+}
+.para
+{
+    font-family: 'Merriweather';
+    font-weight: bold;
+    font-size: medium;
+    padding-left: 18px;
+    margin: 0;
+}
+.details2
+{
+    font-family: 'Poppins';
+    text-align: justify;
+    padding-top: 1px;
+    padding-left: 18px;
+    margin: 0;
+}
+.name
+{
+    font-family: 'Merriweather';
+    font-weight: bold;
+    font-size: x-large;
+    padding-left: 18px;
+    margin-top: 25px;
+    line-height: 10px;
+   
+}
+
+.monum
+{
+    border-radius: 20px;
+    background-color: white;
+}
+.description
+{
+    padding-right: 18px;
+    
+}
+.button
+{
+    border-radius: 20px;
+    margin-top: 10px;
+   width: 40%;
+    height: 35px;
+    margin-left: 18px;
+    font-family: 'Poppins';
+    font-size: smaller;
+    font-weight: bold;
+    background-color: #3db3ad;
+    border: white;
+}

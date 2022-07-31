@@ -43,10 +43,16 @@ export default function header() {
         </ul>
         <ul className="navbar-nav">
           <li className="nav-item">
+            <a href="/Cart" className="nav-link">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+          </li>
+          <li className="nav-item">
             <a className="nav-link" href="/Login">
               Log In
             </a>
           </li>
+
           <li className="nav-item">
             <a className="nav-link" href="/SignUp">
               Sign Up
