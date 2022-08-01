@@ -9,6 +9,7 @@ import Cart from "./component/Cart";
 import { API } from "../src/backend";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Ticket from "./component/temp";
 function App() {
   console.log("API IS", API);
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/Login" element={<Login />} />
           <Route path="/Visit" element={<Visit />} />
           <Route path="/Cart" element={<Cart />} />
+          <Route path="/temp" element={<Ticket />} />
         </Routes>
       </BrowserRouter>
       <Footer />
