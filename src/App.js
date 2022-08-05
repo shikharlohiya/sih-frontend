@@ -15,6 +15,7 @@ import Stripe from "./component/Stripe";
 import TicketPdf from "./TicketPdf";
 function App() {
   console.log("API IS", API);
+
   return (
     <div className="main">
       <Header />

@@ -5,9 +5,10 @@
 .cart
 {
     display: flex;
+    flex-wrap: wrap;
     margin:40px 0;
     background-color: white;
-    height: 192px;
+    
     width: 100%;
     border-radius: 15px;
    
@@ -30,6 +31,10 @@
         
      
 }
+.amount-cart-div1
+{
+
+}
 .button-delete :hover{
     color: #199eff;
 }
@@ -50,21 +55,88 @@
 }
 .cart-div2
 {
-    padding-top: 30px;
+   
     padding-left: 37px;
+    flex: 1 0 70%;
+    
 }
+.cart-div3
+{
+    background-color: #fff8e5;
+    
+    height: fit-content;
+    border-radius: 7px;
+    margin-top: 7px;
+}
+.amount-val
+{
+    font-family: "Merriweather";
+    font-weight: 700;
+    font-size: larger;
+    text-align: center;
+    margin-top: 13px;
+}
+.amount-val2
+{
+    font-family: "Merriweather";
+    font-weight: 700;
+    font-size: large;
+    word-spacing: 130px;
+    margin-top: 13px;
+    margin-left: 6px;
+}
+.amount-price
+{
+    padding-left: 60px;
+}
+.cart-div9
+{
+    background-color: #fff8e5;
+    
+    height: fit-content;
+    border-radius: 7px;
+    margin-top: 7px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.cart-div10
+{
+    background-color: #fff8e5;
+    
+    height: fit-content;
+    border-radius: 7px;
+    margin-top: 20px;
+    margin-left: 2px;
+    margin-right: 2px;
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: medium;
+        word-spacing: 210px;
+   padding-left: 15px;
+    
+}
+.cart-div4
+{
+    margin-bottom: 18px;
+    padding-left: 23px;
+    width: 100%;
+    padding-right: 80px;
+}
+
 .cart-date
 {
     background-color: #fff8e5;
     border-radius: 11px;
-    margin-top: 0;
+    line-height: 15px;
+ 
 }
 .cart-name
 {
     font-weight: 600;
     font-family: "Merriweather";
     font-size: 32px;
-    line-height: 20px;
+    line-height: 33px;
+    
 }
 .cart-img
 {
@@ -86,12 +158,12 @@
 }
 .cart-date2
 {
-    padding-top: 10px;
+    padding-top: 3px;
     font-family: 'Poppins';
     font-weight: 800;
     font-size: 16px;
     color: #EF652580;
-    line-height: 8px;
+    line-height: 5px;
 }
 
 input::-webkit-outer-spin-button,
