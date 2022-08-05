@@ -1,12 +1,30 @@
 import React from "react";
 import "./MainPage.css";
+import "./animate.css";
+
 import tajmahal from "./images/tajmahal.jpg";
 import charminar from "./images/charminar.jpg";
 import hawamahal from "./images/hawamahal.jpg";
 import bgimg from "./images/bgimg.png";
+import airport from "./images2/airport.jpg";
+import murti from "./images2/murti.jpg";
+import tomb from "./images2/tomb.jpg";
 import img from "./images/img.PNG";
 import img2 from "./images/img2.PNG";
 import img3 from "./images/img3.png";
+import minar from "./images2/kutubminar.jpg";
+import birla from "./images2/birla-mandir.jpg";
+import lodhi from "./images2/lodhi.jpg";
+import lotus from "./images2/lotustemple.jpg";
+import rf from "./images2/red-ort.jpg";
+import ss from "./images2/Shanti-Stupa.jpg";
+import rb from "./images2/Rashtrapati-Bhavan.jpg";
+import jm from "./images2/jantar-mantar.jpg";
+import gtb from "./images2/GTB-Memorial.jpg";
+import bs from "./images2/Bangla-Sahib.jpg";
+import ab from "./images2/Agrasen-Ki-Baoli.jpg";
+import at from "./images2/Swaminarayan.jpg";
+
 export default function MainPage() {
   return (
     <>

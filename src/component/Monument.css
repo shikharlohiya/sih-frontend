@@ -15,6 +15,7 @@ img
 {
     border-radius: 25px 25px 0px 0px;
 }
+
 .container2
 {
     display: flex;
@@ -54,7 +55,7 @@ img
     font-size: x-large;
     padding-left: 18px;
     margin-top: 25px;
-    line-height: 10px;
+   
    
 }
 

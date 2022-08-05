@@ -12,6 +12,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Ticket from "./component/temp";
 function App() {
   console.log("API IS", API);
+
   return (
     <div className="main">
       <Header />
