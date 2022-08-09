@@ -6,11 +6,13 @@ import reportWebVitals from "./reportWebVitals";
 import { CartProvider } from "react-use-cart";
 import { Provider } from "react-redux";
 import store from "./store";
+import { ReactNotifications } from "react-notifications-component";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
       <CartProvider>
+        <ReactNotifications />
         <App />
       </CartProvider>
     </Provider>

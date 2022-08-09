@@ -212,7 +212,9 @@ function TicketPdf() {
   const [isLoading, setIsLoading] = useState(false);
   const getTicket = async () => {
     try {
-      const res = await axios.get(`http://localhost:8000/user-ticket/${id}`);
+      const res = await axios.get(
+        `http://localhost:8000/user-ticket/62ede2c3db94e51d3c623ebf`
+      );
       setData(res.data);
     } catch (err) {
       console.log(err);

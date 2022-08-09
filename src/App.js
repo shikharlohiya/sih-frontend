@@ -1,3 +1,4 @@
+import "react-notifications-component/dist/theme.css";
 import "./App.css";
 import Header from "./component/Header.js";
 import Footer from "./component/Footer.js";
@@ -12,6 +13,19 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Ticket from "./component/temp";
 import Stripe from "./component/Stripe";
 import TicketPdf from "./TicketPdf";
+export const notifications = {
+  message: "teodosii@react-notifications-component",
+  type: "success",
+  insert: "top",
+  showIcon: true,
+  container: "top-right",
+  animationIn: ["animate__animated", "animate__fadeIn"],
+  animationOut: ["animate__animated", "animate__fadeOut"],
+  dismiss: {
+    duration: 2000,
+    onScreen: true,
+  },
+};
 function App() {
   console.log("API IS", API);
 

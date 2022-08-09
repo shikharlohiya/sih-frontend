@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Popup from "./Popup";
 import Monument from "./Monument.js";
 import "./Monument.css";
+
 export default function Home() {
   const [isOpen, setIsOpen] = useState(true);
   const [inputText, setInputText] = useState("");
@@ -17,6 +18,7 @@ export default function Home() {
     var lowerCase = e.target.value.toLowerCase();
     setInputText(lowerCase);
   };
+
   return (
     <div>
       {isOpen && <Popup handleclose={handleclose} handleState={handleState} />}

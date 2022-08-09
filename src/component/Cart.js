@@ -4,8 +4,11 @@ import { ticket } from "../home";
 import axios from "axios";
 import "./Cart.css";
 import { CartProvider, useCart } from "react-use-cart";
-
+import { getCart } from "../store/API";
+import { useDispatch, useSelector } from "react-redux";
 const Ticket = () => {
+  const dispatch = useDispatch();
+  const { cartItems } = useSelector((state) => state.cart);
   const {
     isEmpty,
     totalUniqueItems,
@@ -61,6 +64,10 @@ const Ticket = () => {
       .catch(console.log("error in signup"));
   };
 
+  useEffect(() => {
+    dispatch(getCart());
+  }, []);
+  console.log(cartItems);
   const ticketForm = () => {
     return (
       <>
@@ -99,17 +106,20 @@ const Ticket = () => {
         <div className="container div-amount-cart">
           <div className="amount-cart row">
             <div className="cart-main col-8">
-              {items.map((item) => (
+              {cartItems?.map((item) => (
                 <div className="cart">
                   <div className="cart-div">
-                    <img src={item.img} className="cart-img"></img>
+                    <img
+                      src={`${process.env.REACT_APP_BACKEND}/${item.monumentId.img}`}
+                      className="cart-img"
+                    ></img>
                   </div>
                   <div className="cart-div2">
                     <i
                       class="fa-solid fa-trash-can button-delete"
-                      onClick={() => removeItem(item.id)}
+                      onClick={() => removeItem(item.monumentId.id)}
                     ></i>
-                    <p className="cart-name">{item.name}</p>
+                    <p className="cart-name">{item.monumentId.name}</p>
 
                     <p className="cart-date2">Date</p>
                     <input type="date" className="cart-date"></input>
