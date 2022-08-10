@@ -31,18 +31,19 @@ function App() {
 
   return (
     <div className="main">
-      <Header />
       <BrowserRouter>
         <Routes>
-          <Route path="/SignUp" element={<SignUp />} />
-          <Route path="/" element={<MainPage />} />
-          <Route path="/Login" element={<Login />} />
-          <Route path="/Visit" element={<Visit />} />
-          <Route path="/Cart" element={<Cart />} />
-          <Route path="/temp" element={<Ticket />} />
-          <Route path="/ticket" element={<TicketPdf />} />
-          <Route path="/get-ticket/:id" element={<TicketPdf />} />
-          <Route path="/Stripe" element={<Stripe />} />
+          <Route element={<Header />}>
+            <Route path="/SignUp" element={<SignUp />} />
+            <Route path="/" element={<MainPage />} />
+            <Route path="/Login" element={<Login />} />
+            <Route path="/Visit" element={<Visit />} />
+            <Route path="/Cart" element={<Cart />} />
+            <Route path="/temp" element={<Ticket />} />
+            <Route path="/ticket" element={<TicketPdf />} />
+            <Route path="/get-ticket/:id" element={<TicketPdf />} />
+            <Route path="/Stripe" element={<Stripe />} />
+          </Route>
         </Routes>
       </BrowserRouter>
       <Footer />

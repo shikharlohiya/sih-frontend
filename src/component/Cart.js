@@ -4,19 +4,14 @@ import { ticket } from "../home";
 import axios from "axios";
 import "./Cart.css";
 import { CartProvider, useCart } from "react-use-cart";
-import { getCart } from "../store/API";
+import { addUserToCart, deleteItem, getCart } from "../store/API";
 import { useDispatch, useSelector } from "react-redux";
+import { cartActions } from "../store/CartSlice";
 const Ticket = () => {
   const dispatch = useDispatch();
-  const { cartItems } = useSelector((state) => state.cart);
-  const {
-    isEmpty,
-    totalUniqueItems,
-    items,
-    updateItemQuantity,
-    removeItem,
-    cartTotal,
-  } = useCart();
+  const { cartItems, price } = useSelector((state) => state.cart);
+  const { isEmpty, totalUniqueItems, items, updateItemQuantity, cartTotal } =
+    useCart();
 
   const [values, setValues] = useState({
     name: "",
@@ -32,42 +27,18 @@ const Ticket = () => {
     setValues({ ...values, error: false, [name]: event.target.value });
   };
 
-  const callback = async () => {
-    try {
-      const res = await axios.get("http://localhost:8000/api/allTickets");
-      setAllTickets(res.data);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
   const onSubmit = (event) => {
-    items.map((item) => updateItemQuantity(item.id, item.quantity + 1));
     event.preventDefault();
-    setValues({ ...values, error: false });
-    ticket({ name, age, adhar })
-      .then((data) => {
-        if (data.error) {
-          setValues({ ...values, error: data.error, sucess: false });
-        } else {
-          setValues({
-            ...values,
-            name: "",
-            age: "",
-            adhar: "",
-            error: "",
-            success: true,
-          });
-          callback();
-        }
-      })
-      .catch(console.log("error in signup"));
+    const userId = JSON.parse(localStorage.getItem("jwt")).user._id;
+    dispatch(addUserToCart({ ...values, userId }));
   };
-
+  const removeItem = (id) => {
+    dispatch(deleteItem(id));
+  };
   useEffect(() => {
     dispatch(getCart());
   }, []);
-  console.log(cartItems);
+
   const ticketForm = () => {
     return (
       <>
@@ -117,7 +88,7 @@ const Ticket = () => {
                   <div className="cart-div2">
                     <i
                       class="fa-solid fa-trash-can button-delete"
-                      onClick={() => removeItem(item.monumentId.id)}
+                      onClick={() => removeItem(item._id)}
                     ></i>
                     <p className="cart-name">{item.monumentId.name}</p>
 
@@ -125,12 +96,12 @@ const Ticket = () => {
                     <input type="date" className="cart-date"></input>
                   </div>
                   <div className="cart-div4">
-                    {allTickets.map((item, index) => {
+                    {item.ticketedUsers.map((item, index) => {
                       return (
                         <div className="cart-div3 row">
                           <div className="cart-div5-1 col-6">{item.name}</div>
                           <div className="cart-div5 col-3">{item.age}</div>
-                          <div className="cart-div5 col-3">{item.adhar}</div>
+                          <div className="cart-div5 col-3">{item.aadhar}</div>
                         </div>
                       );
                     })}
@@ -150,7 +121,7 @@ const Ticket = () => {
                 </div>
               ))}
               <div className="cart-div10">
-                <p>Total {cartTotal}</p>
+                <p>Total {price}</p>
               </div>
             </div>
           </div>

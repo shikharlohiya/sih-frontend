@@ -74,3 +74,47 @@ export const getCart = () => {
     }
   };
 };
+
+export const deleteItem = (id) => {
+  return async (dispatch) => {
+    try {
+      const res = await API.post("/places/deleteCartItem", {
+        cartId: id,
+      });
+      Store.addNotification({
+        ...notifications,
+        type: "success",
+        message: "Delete Successfully",
+      });
+      dispatch(getCart());
+    } catch (err) {
+      console.log(err);
+      Store.addNotification({
+        ...notifications,
+        type: "danger",
+        message: "some error occurred",
+      });
+    }
+  };
+};
+
+export const addUserToCart = (data) => {
+  return async (dispatch) => {
+    try {
+      const res = await API.post("/places/addUserToCart", data);
+      Store.addNotification({
+        ...notifications,
+        type: "success",
+        message: "Sucessfully Added",
+      });
+      dispatch(getCart());
+    } catch (err) {
+      console.log(err);
+      Store.addNotification({
+        ...notifications,
+        type: "danger",
+        message: "Some error occurred",
+      });
+    }
+  };
+};
