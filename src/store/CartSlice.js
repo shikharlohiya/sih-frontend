@@ -4,12 +4,16 @@ const cartSlice = createSlice({
   name: "cart",
   initialState: {
     isLoading: false,
+    paynowLoading: false,
     cartItems: [],
     price: 0,
   },
   reducers: {
     setIsLoading(state, action) {
       state.isLoading = action.payload;
+    },
+    setPaynowLoading(state, action) {
+      state.paynowLoading = action.payload;
     },
     setCartItems(state, action) {
       state.cartItems = action.payload;

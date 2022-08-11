@@ -2,8 +2,12 @@ import React, { useEffect, useState } from "react";
 import Popup from "./Popup";
 import Monument from "./Monument.js";
 import "./Monument.css";
+import { fetchPlaceList } from "../store/API";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function Home() {
+  const { placeList } = useSelector((state) => state.place);
+  const dispatch = useDispatch();
   const [isOpen, setIsOpen] = useState(true);
   const [inputText, setInputText] = useState("");
   const [stat, setStat] = useState("");
@@ -18,7 +22,9 @@ export default function Home() {
     var lowerCase = e.target.value.toLowerCase();
     setInputText(lowerCase);
   };
-
+  useEffect(() => {
+    dispatch(fetchPlaceList());
+  }, []);
   return (
     <div>
       {isOpen && <Popup handleclose={handleclose} handleState={handleState} />}
@@ -35,7 +41,9 @@ export default function Home() {
           />
         </div>
         <div className="container2" id="container">
-          <Monument input={inputText} stat={stat} />
+          {placeList.map((item) => {
+            return <Monument input={inputText} stat={stat} data={item} />;
+          })}
         </div>
       </div>
     </div>

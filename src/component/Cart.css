@@ -1,169 +1,132 @@
-.cart-main
-{
-    
+.cart-main {
 }
-.cart
-{
-    display: flex;
-    flex-wrap: wrap;
-    margin:40px 0;
-    background-color: white;
-    
-    width: 100%;
-    border-radius: 15px;
-   
-}
-.div-amount-cart
-{
-    margin-left: 15%;
-    
-}
-.div-amount-cart{
-    padding-right: 130px;
-}
-.button-delete
-{
-    
-        color: #ef6525;
-        margin-left: 370px;
-        
-        
-        
-     
-}
-.amount-cart-div1
-{
+.cart {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 40px 0;
+  background-color: white;
 
+  width: 100%;
+  border-radius: 15px;
 }
-.button-delete :hover{
-    color: #199eff;
+.div-amount-cart {
+  margin-left: 15%;
 }
-.amount
-{
-  
-   margin-top: 40px;
-    height: 30%;
-    background-color: white;
-    border-radius: 15px;
-    
+.div-amount-cart {
+  padding-right: 130px;
 }
-.cart-div
-{
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 23px;
+.button-delete {
+  color: #ef6525;
+  margin-left: 370px;
 }
-.cart-div2
-{
-   
-    padding-left: 37px;
-    flex: 1 0 70%;
-    
+.amount-cart-div1 {
 }
-.cart-div3
-{
-    background-color: #fff8e5;
-    
-    height: fit-content;
-    border-radius: 7px;
-    margin-top: 7px;
+.button-delete :hover {
+  color: #199eff;
 }
-.amount-val
-{
-    font-family: "Merriweather";
-    font-weight: 700;
-    font-size: larger;
-    text-align: center;
-    margin-top: 13px;
+.amount {
+  margin-top: 40px;
+  height: 30%;
+  background-color: white;
+  border-radius: 15px;
 }
-.amount-val2
-{
-    font-family: "Merriweather";
-    font-weight: 700;
-    font-size: large;
-    word-spacing: 130px;
-    margin-top: 13px;
-    margin-left: 6px;
+.cart-div {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 23px;
 }
-.amount-price
-{
-    padding-left: 60px;
+.cart-div2 {
+  padding-left: 37px;
+  flex: 1 0 70%;
 }
-.cart-div9
-{
-    background-color: #fff8e5;
-    
-    height: fit-content;
-    border-radius: 7px;
-    margin-top: 7px;
-    margin-left: 2px;
-    margin-right: 2px;
+.cart-div3 {
+  background-color: #fff8e5;
+
+  height: fit-content;
+  border-radius: 7px;
+  margin-top: 7px;
 }
-.cart-div10
-{
-    background-color: #fff8e5;
-    
-    height: fit-content;
-    border-radius: 7px;
-    margin-top: 20px;
-    margin-left: 2px;
-    margin-right: 2px;
-    font-family: "Poppins";
-    font-weight: 700;
-    font-size: medium;
-        word-spacing: 210px;
-   padding-left: 15px;
-    
+.amount-val {
+  font-family: "Merriweather";
+  font-weight: 700;
+  font-size: larger;
+  text-align: center;
+  margin-top: 13px;
 }
-.cart-div4
-{
-    margin-bottom: 18px;
-    padding-left: 23px;
-    width: 100%;
-    padding-right: 80px;
+.amount-val2 {
+  font-family: "Merriweather";
+  font-weight: 700;
+  font-size: large;
+  word-spacing: 130px;
+  margin-top: 13px;
+  margin-left: 6px;
+}
+.amount-price {
+  padding-left: 60px;
+}
+.cart-div9 {
+  background-color: #fff8e5;
+
+  height: fit-content;
+  border-radius: 7px;
+  margin-top: 7px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.cart-div10 {
+  background-color: #fff8e5;
+
+  height: fit-content;
+  border-radius: 7px;
+  margin-top: 20px;
+  margin-left: 2px;
+  margin-right: 2px;
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: medium;
+  word-spacing: 210px;
+  padding-left: 15px;
+}
+.cart-div4 {
+  margin-bottom: 18px;
+  padding-left: 23px;
+  width: 100%;
+  padding-right: 80px;
 }
 
-.cart-date
-{
-    background-color: #fff8e5;
-    border-radius: 11px;
-    line-height: 15px;
- 
+.cart-date {
+  background-color: #fff8e5;
+  border-radius: 11px;
+  line-height: 15px;
 }
-.cart-name
-{
-    font-weight: 600;
-    font-family: "Merriweather";
-    font-size: 32px;
-    line-height: 33px;
-    
+.cart-name {
+  font-weight: 600;
+  font-family: "Merriweather";
+  font-size: 32px;
+  line-height: 33px;
 }
-.cart-img
-{
-    width: 160px;
-    height: 130px;
-    border-radius: 12px;
-
+.cart-img {
+  width: 160px;
+  height: 130px;
+  border-radius: 12px;
 }
-.cart-button
-{
-    background-color: #3db3ad;
-    border-radius: 13px;
-    width: 12%;
-    margin-left: 58%;
-    font-weight: 550;
-    font-family: 'Poppins';
-    color: white;
-    font-size: 18px;
+.cart-button {
+  background-color: #3db3ad;
+  border-radius: 13px;
+  width: 12%;
+  margin-left: 58%;
+  font-weight: 550;
+  font-family: "Poppins";
+  color: white;
+  font-size: 18px;
 }
-.cart-date2
-{
-    padding-top: 3px;
-    font-family: 'Poppins';
-    font-weight: 800;
-    font-size: 16px;
-    color: #EF652580;
-    line-height: 5px;
+.cart-date2 {
+  padding-top: 3px;
+  font-family: "Poppins";
+  font-weight: 800;
+  font-size: 16px;
+  color: #ef652580;
+  line-height: 5px;
 }
 
 input::-webkit-outer-spin-button,
@@ -171,51 +134,55 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.details
-{
-    width: 70%;
-margin: auto;
-    background-color: white;
-    margin-top: 50px;
-    border-radius: 20px;
-
-    
+.details {
+  width: 70%;
+  margin: auto;
+  background-color: white;
+  margin-top: 50px;
+  border-radius: 20px;
 }
-.details-name
-{
-    font-family: 'Poppins';
-    font-weight: 600;
-    font-size:xx-large;
-    color: #272444B2;
-    margin-left: 80px;
-margin-top: 30px;
+.details-name {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: xx-large;
+  color: #272444b2;
+  margin-left: 80px;
+  margin-top: 30px;
 }
-.details-input
-{
-    display: block;
-    border-radius: 15px;
-    margin-top: 10px;
-    background-color: #fff8e5;
-    margin-left: 80px;
-    width: 30%;
+.details-input {
+  display: block;
+  border-radius: 15px;
+  margin-top: 10px;
+  background-color: #fff8e5;
+  margin-left: 80px;
+  width: 30%;
 }
-.details-input-add
-{
-    margin-left: 76%;
-    width: 20%;
-    text-align: center;
-    border-radius: 15px;
-    background-color: #3db3ad;
-    font-family: 'Poppins';
-    font-weight: 700;
-    color: white;
-    border: 0;
-    margin-bottom: 20px;
-    height: 35px;
-    
+.details-input-add {
+  margin-left: 76%;
+  width: 20%;
+  text-align: center;
+  border-radius: 15px;
+  background-color: #3db3ad;
+  font-family: "Poppins";
+  font-weight: 700;
+  color: white;
+  border: 0;
+  margin-bottom: 20px;
+  height: 35px;
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
+}
+.paynow-btn {
+  width: 100%;
+  outline: none;
+  border: navajowhite;
+  border-radius: 40px;
+  padding: 1rem;
+  background: orange;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
 }

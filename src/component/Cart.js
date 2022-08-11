@@ -4,12 +4,15 @@ import { ticket } from "../home";
 import axios from "axios";
 import "./Cart.css";
 import { CartProvider, useCart } from "react-use-cart";
-import { addUserToCart, deleteItem, getCart } from "../store/API";
+import loadRazorpay, { addUserToCart, deleteItem, getCart } from "../store/API";
 import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from "../store/CartSlice";
+import { CircularProgress } from "@mui/material";
 const Ticket = () => {
   const dispatch = useDispatch();
-  const { cartItems, price } = useSelector((state) => state.cart);
+  const { cartItems, price, paynowLoading } = useSelector(
+    (state) => state.cart
+  );
   const { isEmpty, totalUniqueItems, items, updateItemQuantity, cartTotal } =
     useCart();
 
@@ -38,6 +41,10 @@ const Ticket = () => {
   useEffect(() => {
     dispatch(getCart());
   }, []);
+
+  const handlePayment = () => {
+    dispatch(loadRazorpay(cartItems, price));
+  };
 
   const ticketForm = () => {
     return (
@@ -122,6 +129,19 @@ const Ticket = () => {
               ))}
               <div className="cart-div10">
                 <p>Total {price}</p>
+              </div>
+              <div>
+                <button
+                  className="paynow-btn"
+                  disabled={paynowLoading}
+                  onClick={handlePayment}
+                >
+                  {paynowLoading ? (
+                    <CircularProgress sx={{ color: "white" }} size={20} />
+                  ) : (
+                    "Pay now"
+                  )}
+                </button>
               </div>
             </div>
           </div>
