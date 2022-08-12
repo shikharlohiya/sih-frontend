@@ -50,36 +50,113 @@ const Ticket = () => {
     return (
       <>
         <div className="details">
-          <p className="details-name">Add Your Details Here</p>
-          <form>
-            <input
-              type="text"
-              placeholder="Name"
-              className="details-input"
-              onChange={handlechange("name")}
-              id="name-input"
-            />
-            <input
-              type="number"
-              placeholder="Age"
-              className="details-input"
-              onChange={handlechange("age")}
-            />
-            <input
-              type="number"
-              placeholder="Aadhar Number"
-              className="details-input"
-              onChange={handlechange("adhar")}
-            />
+          <div className="row">
+            <div className="col-4">
+              <form>
+                <p>Select Nationality</p>
+                <ul>
+                  <li className="content">
+                    <input type="radio" name="test"></input>
+                    <label>Indian</label>
+                  </li>
+                  <li className="content">
+                    <input type="radio" name="test"></input>
+                    <label>Foreigner</label>
+                  </li>
+                  <li className="content">
+                    <input type="radio" name="test"></input>
+                    <label>SAARC</label>
+                  </li>
+                  <li className="content">
+                    <input type="radio" name="test"></input>
+                    <label>BIMSTEC</label>
+                  </li>
+                </ul>
+              </form>
+            </div>
+            <div className="col-8">
+              <div className="adult-form">
+                <form>
+                  <label>Adult:</label>
+                  <select>
+                    <option>Male</option>
+                    <option>Female</option>
+                  </select>
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    className="details-input"
+                    onChange={handlechange("name")}
+                    id="name-input"
+                  />
+                  <input
+                    type="number"
+                    placeholder="Age"
+                    className="details-input"
+                    onChange={handlechange("age")}
+                  />
+                  <label>select id</label>
+                  <select>
+                    <option>Passport</option>
+                    <option>Pan Card</option>
+                    <option>Driving Licence</option>
+                    <option>Voter Id</option>
+                    <option>Others</option>
+                  </select>
+                  <input
+                    type="number"
+                    placeholder="Enter Your Id"
+                    className="details-input"
+                    onChange={handlechange("adhar")}
+                  />
 
-            <button
-              onClick={onSubmit}
-              type="button"
-              className="details-input-add"
-            >
-              Add
-            </button>
-          </form>
+                  <button
+                    onClick={onSubmit}
+                    type="button"
+                    className="details-input-add"
+                  >
+                    Add Adult
+                  </button>
+                </form>
+              </div>
+              <div className="child-form">
+                <form>
+                  <label>Child:</label>
+                  <select>
+                    <option>Male</option>
+                    <option>Female</option>
+                  </select>
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    className="details-input"
+                    onChange={handlechange("name")}
+                    id="name-input"
+                  />
+                  <input
+                    type="number"
+                    placeholder="Age"
+                    className="details-input"
+                    onChange={handlechange("age")}
+                  />
+                  <input
+                    type="number"
+                    placeholder="Aadhar Number"
+                    className="details-input"
+                    onChange={handlechange("adhar")}
+                  />
+
+                  <button
+                    onClick={onSubmit}
+                    type="button"
+                    className="details-input-add"
+                  >
+                    Add Child
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="container div-amount-cart">
           <div className="amount-cart row">
