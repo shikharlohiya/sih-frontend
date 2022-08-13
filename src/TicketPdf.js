@@ -6,6 +6,8 @@ import html2canvas from "html2canvas";
 import "./TicketPdf.css";
 import ReactDOMServer from "react-dom/server";
 import { CircularProgress } from "@mui/material";
+import { useDispatch, useSelector } from "react-redux";
+import { getTicket } from "./store/API";
 const TicketPrint = () => {
   return (
     <div
@@ -208,21 +210,14 @@ const TicketPrint = () => {
 };
 function TicketPdf() {
   const { id } = useParams();
-  const [data, setData] = useState({});
+  const { data } = useSelector((state) => state.ticket);
+  const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(false);
-  const getTicket = async () => {
-    try {
-      const res = await axios.get(
-        `http://localhost:8000/user-ticket/62ede2c3db94e51d3c623ebf`
-      );
-      setData(res.data);
-    } catch (err) {
-      console.log(err);
-    }
-  };
+
   useEffect(() => {
-    getTicket();
-  }, []);
+    dispatch(getTicket());
+  }, [dispatch]);
+  console.log(data);
   const generatePdf = () => {
     setIsLoading(true);
     var doc = new jsPDF("p", "pt", "a4");
@@ -364,10 +359,7 @@ function TicketPdf() {
               </div>
             </div>
             <div style={{ flex: "1" }}>
-              <img
-                src="/imagess/imagess/temp-qr.png"
-                style={{ width: "200px" }}
-              />
+              <img src={data[0]?.qr} style={{ width: "200px" }} />
             </div>
           </div>
           <div style={{ display: "flex", margin: "4rem 0" }}>

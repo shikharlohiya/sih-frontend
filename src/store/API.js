@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import { notifications } from "../App";
 import { placeActions } from "./PlaceSlice";
 import { cartActions } from "./CartSlice";
+import { ticketActions } from "./TicketSlice";
 const API = axios.create({
   baseURL: "http://localhost:8000/",
 });
@@ -118,8 +119,9 @@ export const addUserToCart = (data) => {
   };
 };
 
-export function loadRazorpay(cartItems, price) {
+export function loadRazorpay(cartItems, price, navigate) {
   return async (dispatch) => {
+    console.log(cartItems);
     const script = document.createElement("script");
     script.src = "https://checkout.razorpay.com/v1/checkout.js";
     script.onerror = () => {
@@ -129,17 +131,14 @@ export function loadRazorpay(cartItems, price) {
       try {
         // setLoading(true);
         dispatch(cartActions.setPaynowLoading(true));
-        const result = await axios.post(
-          "http://localhost:8000/payment/create-order",
-          {
-            amount: price + "00",
-            cartItems,
-          }
-        );
+        const result = await API.post("payment/create-order", {
+          amount: price + "00",
+          cartItems,
+        });
         const { amount, id: order_id, currency } = result.data;
         const {
           data: { key: razorpayKey },
-        } = await axios.get("http://localhost:8000/payment/get-razorpay-key");
+        } = await API.get("/payment/get-razorpay-key");
 
         const options = {
           key: razorpayKey,
@@ -149,22 +148,22 @@ export function loadRazorpay(cartItems, price) {
           description: "example transaction",
           order_id: order_id,
           handler: async function (response) {
-            const result = await axios.post(
-              "http://localhost:8000/payment/pay-order",
-              {
-                amount: amount,
-                razorpayPaymentId: response.razorpay_payment_id,
-                razorpayOrderId: response.razorpay_order_id,
-                razorpaySignature: response.razorpay_signature,
-                cartItems,
-              }
-            );
+            const result = await API.post("/payment/pay-order", {
+              amount: amount,
+              razorpayPaymentId: response.razorpay_payment_id,
+              razorpayOrderId: response.razorpay_order_id,
+              razorpaySignature: response.razorpay_signature,
+              cartItems,
+            });
             Store.addNotification({
               ...notifications,
               type: "success",
               message: result.data.msg,
             });
-            dispatch(getCart());
+            // dispatch(getCart());
+            setTimeout(() => {
+              navigate("/ticket");
+            }, 2000);
           },
           prefill: {
             name: "example name",
@@ -194,4 +193,15 @@ export function loadRazorpay(cartItems, price) {
   };
 }
 
-export default loadRazorpay;
+export const getTicket = () => {
+  return async (dispatch) => {
+    try {
+      const res = await API.get(
+        `/user/getTicket/${JSON.parse(localStorage.getItem("jwt")).user._id}`
+      );
+      dispatch(ticketActions.setData(res.data));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+};

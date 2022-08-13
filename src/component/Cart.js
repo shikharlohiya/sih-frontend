@@ -4,11 +4,13 @@ import { ticket } from "../home";
 import axios from "axios";
 import "./Cart.css";
 import { CartProvider, useCart } from "react-use-cart";
-import loadRazorpay, { addUserToCart, deleteItem, getCart } from "../store/API";
+import { loadRazorpay, addUserToCart, deleteItem, getCart } from "../store/API";
 import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from "../store/CartSlice";
 import { CircularProgress } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 const Ticket = () => {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const { cartItems, price, paynowLoading } = useSelector(
     (state) => state.cart
@@ -43,7 +45,7 @@ const Ticket = () => {
   }, []);
 
   const handlePayment = () => {
-    dispatch(loadRazorpay(cartItems, price));
+    dispatch(loadRazorpay(cartItems, price, navigate));
   };
 
   const ticketForm = () => {

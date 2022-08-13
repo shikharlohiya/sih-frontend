@@ -1,4 +1,4 @@
-  /* import React from "react";
+/* import React from "react";
 
 import { useState } from "react";
 import { ticket } from "../home";
@@ -143,3 +143,26 @@ return(
 }
 export default Ticket;
  */
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+
+function Temp() {
+  const [src, setSrc] = useState("");
+  const abc = async () => {
+    try {
+      const res = await axios.get("http://localhost:8000/q");
+      setSrc(res.data);
+    } catch (err) {}
+  };
+  useEffect(() => {
+    abc();
+  }, []);
+  return (
+    <div>
+      <img src={src} />
+      <h1>hello</h1>
+    </div>
+  );
+}
+
+export default Temp;

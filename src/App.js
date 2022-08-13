@@ -22,9 +22,10 @@ export const notifications = {
   animationIn: ["animate__animated", "animate__fadeIn"],
   animationOut: ["animate__animated", "animate__fadeOut"],
   dismiss: {
-    duration: 2000,
+    duration: 1000,
     onScreen: true,
   },
+  dismissable: { click: true },
 };
 function App() {
   console.log("API IS", API);
