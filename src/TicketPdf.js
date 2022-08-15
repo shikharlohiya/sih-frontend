@@ -8,6 +8,7 @@ import ReactDOMServer from "react-dom/server";
 import { CircularProgress } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { getTicket } from "./store/API";
+
 const TicketPrint = () => {
   return (
     <div
