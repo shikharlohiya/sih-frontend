@@ -210,14 +210,9 @@ const TicketPrint = () => {
 };
 function TicketPdf() {
   const { id } = useParams();
-  const { data } = useSelector((state) => state.ticket);
-  const dispatch = useDispatch();
+
   const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(() => {
-    dispatch(getTicket());
-  }, [dispatch]);
-  console.log(data);
   const generatePdf = () => {
     setIsLoading(true);
     var doc = new jsPDF("p", "pt", "a4");
@@ -359,7 +354,7 @@ function TicketPdf() {
               </div>
             </div>
             <div style={{ flex: "1" }}>
-              <img src={data[0]?.qr} style={{ width: "200px" }} />
+              {/* <img src={data[0]?.qr} style={{ width: "200px" }} /> */}
             </div>
           </div>
           <div style={{ display: "flex", margin: "4rem 0" }}>

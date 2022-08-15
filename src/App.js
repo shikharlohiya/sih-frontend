@@ -13,6 +13,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Ticket from "./component/temp";
 import Stripe from "./component/Stripe";
 import TicketPdf from "./TicketPdf";
+import AllTicket from "./component/pages/AllTicket";
 export const notifications = {
   message: "teodosii@react-notifications-component",
   type: "success",
@@ -42,6 +43,7 @@ function App() {
             <Route path="/Cart" element={<Cart />} />
             <Route path="/temp" element={<Ticket />} />
             <Route path="/ticket" element={<TicketPdf />} />
+            <Route path="/all-ticket" element={<AllTicket />} />
             <Route path="/get-ticket/:id" element={<TicketPdf />} />
             <Route path="/Stripe" element={<Stripe />} />
           </Route>
