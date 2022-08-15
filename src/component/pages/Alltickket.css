@@ -1,0 +1,73 @@
+.cart123 {
+    display: flex;
+    flex-wrap: wrap;
+    margin:  20px auto 20px auto;
+    background-color: white;
+    
+    width: 50%;
+    border-radius: 20px;
+  }
+  .cart-div123 {
+   
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+  }
+  .cart-img123 {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+  }
+  .div-ticket
+  {
+    background-color: #FFF8E5;
+    margin-top: 6%;
+    
+  }
+  .header-img
+  {
+   height: 300px;
+    background-image: url("./color.png")
+    
+  }
+  .img-pay
+  {
+    padding-top: 3%;
+    text-align: center;
+  }
+  .thnak
+  {
+    text-align: center;
+    font-family: "Merriweather";
+    font-size: 50px;
+    font-weight: 550;
+    color: #ffffff;
+    padding-top: 1%;
+    line-height: 30px;
+  }
+  .enjoy
+  {
+    text-align: center;
+    font-family: 'Poppins';
+   
+    font-weight: 350;
+    font-size: 30px;
+    color: #ffffff;
+  }
+  .suc-det
+  {
+    padding-top: 25px;
+    font-family: "Merriweather";
+    font-size: larger;
+    font-weight: 600;
+  }
+  .suc-but
+  {
+    border-radius: 14px;
+    margin-top: 35px;
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: medium;
+    background-color: #3DB3AD;
+    color: #ffffff;
+  }
