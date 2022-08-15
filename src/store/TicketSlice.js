@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const ticketSlice = createSlice({
   name: "ticket",
   initialState: {
-    data: {},
+    data: [],
   },
   reducers: {
     setData(state, action) {

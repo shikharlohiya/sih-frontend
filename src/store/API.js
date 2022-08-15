@@ -162,7 +162,7 @@ export function loadRazorpay(cartItems, price, navigate) {
             });
             // dispatch(getCart());
             setTimeout(() => {
-              navigate("/ticket");
+              navigate("/all-ticket");
             }, 2000);
           },
           prefill: {
