@@ -29,6 +29,7 @@ export default function Home() {
   const [inputText, setInputText] = useState("");
   const [stat, setStat] = useState("");
   const [toggle, setToggle] = useState(false);
+  const [currentData, setCurrentData] = useState({});
   const handleclose = () => {
     setIsOpen(!isOpen);
   };
@@ -70,11 +71,12 @@ export default function Home() {
                   stat={stat}
                   data={item}
                   handleToggle={handleToggle}
+                  setCurrentData={setCurrentData}
                 />
               );
             })}
           </div>
-          {toggle && <div className="col-2">hello</div>}
+          {toggle && <div className="col-2">hello {currentData.name}</div>}
         </div>
       </div>
     </div>

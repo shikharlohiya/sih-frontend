@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addToCart, fetchPlaceList } from "../store/API";
 import { CircularProgress } from "@mui/material";
 const Monument = (props) => {
-  const { data } = props;
+  const { data, setCurrentData } = props;
   const dispatch = useDispatch();
 
   const [isLoading, setIsLoading] = useState(false);
@@ -38,7 +38,12 @@ const Monument = (props) => {
 
   return (
     <>
-      <div className="monumentCard">
+      <div
+        className="monumentCard"
+        onClick={() => {
+          setCurrentData(data);
+        }}
+      >
         <img
           src={`http://localhost:8000${data.img}`}
           alt={data.name}
