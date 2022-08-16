@@ -108,6 +108,7 @@ export const addUserToCart = (data) => {
         message: "Sucessfully Added",
       });
       dispatch(getCart());
+      dispatch(cartActions.clearFormData());
     } catch (err) {
       console.log(err);
       Store.addNotification({

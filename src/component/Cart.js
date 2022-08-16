@@ -12,31 +12,10 @@ import { useNavigate } from "react-router-dom";
 const Ticket = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { cartItems, price, paynowLoading } = useSelector(
+  const { cartItems, price, paynowLoading, formData } = useSelector(
     (state) => state.cart
   );
-  const { isEmpty, totalUniqueItems, items, updateItemQuantity, cartTotal } =
-    useCart();
 
-  const [values, setValues] = useState({
-    name: "",
-    age: "",
-    adhar: "",
-    error: "",
-    success: false,
-  });
-  const [allTickets, setAllTickets] = useState([]);
-  const { name, age, adhar, error, success } = values;
-
-  const handlechange = (name) => (event) => {
-    setValues({ ...values, error: false, [name]: event.target.value });
-  };
-
-  const onSubmit = (event) => {
-    event.preventDefault();
-    const userId = JSON.parse(localStorage.getItem("jwt")).user._id;
-    dispatch(addUserToCart({ ...values, userId }));
-  };
   const removeItem = (id) => {
     dispatch(deleteItem(id));
   };
@@ -48,6 +27,18 @@ const Ticket = () => {
     dispatch(loadRazorpay(cartItems, price, navigate));
   };
 
+  const handleChange = (e) => {
+    dispatch(
+      cartActions.setFormData({
+        name: e.target.name,
+        value: e.target.value,
+      })
+    );
+  };
+  const handleSubmit = async (type) => {
+    dispatch(addUserToCart(formData));
+  };
+  console.log(cartItems);
   const ticketForm = () => {
     return (
       <>
@@ -58,102 +49,120 @@ const Ticket = () => {
                 <p>Select Nationality</p>
                 <ul>
                   <li className="content">
-                    <input type="radio" name="test"></input>
+                    <input
+                      type="radio"
+                      name="nationality"
+                      value="Indian"
+                      onChange={handleChange}
+                    ></input>
                     <label>Indian</label>
                   </li>
                   <li className="content">
-                    <input type="radio" name="test"></input>
+                    <input
+                      type="radio"
+                      name="nationality"
+                      value="Foreigner"
+                      onChange={handleChange}
+                    ></input>
                     <label>Foreigner</label>
                   </li>
                   <li className="content">
-                    <input type="radio" name="test"></input>
+                    <input
+                      type="radio"
+                      name="nationality"
+                      value="SAARC"
+                      onChange={handleChange}
+                    ></input>
                     <label>SAARC</label>
                   </li>
                   <li className="content">
-                    <input type="radio" name="test"></input>
+                    <input
+                      type="radio"
+                      name="nationality"
+                      value="BIMSTEC"
+                      onChange={handleChange}
+                    ></input>
                     <label>BIMSTEC</label>
                   </li>
                 </ul>
               </form>
             </div>
             <div className="col-8">
+              <div>
+                <select
+                  name="userType"
+                  onChange={handleChange}
+                  value={formData.userType}
+                >
+                  <option>select</option>
+                  <option>Adult</option>
+                  <option>Child</option>
+                </select>
+              </div>
+
               <div className="adult-form">
                 <form>
-                  <label>Adult:</label>
-                  <select>
-                    <option>Male</option>
-                    <option>Female</option>
-                  </select>
                   <input
                     type="text"
                     placeholder="Name"
                     className="details-input"
-                    onChange={handlechange("name")}
                     id="name-input"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
                   />
                   <input
                     type="number"
                     placeholder="Age"
                     className="details-input"
-                    onChange={handlechange("age")}
+                    name="age"
+                    value={formData.age}
+                    onChange={handleChange}
                   />
-                  <label>select id</label>
-                  <select>
-                    <option>Passport</option>
-                    <option>Pan Card</option>
-                    <option>Driving Licence</option>
-                    <option>Voter Id</option>
-                    <option>Others</option>
-                  </select>
+                  <div>
+                    <label>Gender</label>
+                    <select
+                      name="gender"
+                      onChange={handleChange}
+                      value={formData.gender}
+                    >
+                      <option>select</option>
+                      <option>Male</option>
+                      <option>Female</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label>select id</label>
+
+                    <select
+                      name="idType"
+                      onChange={handleChange}
+                      value={formData.idType}
+                    >
+                      <option>select</option>
+                      <option>Passport</option>
+                      <option>Pan Card</option>
+                      <option>Driving Licence</option>
+                      <option>Voter Id</option>
+                      <option>Others</option>
+                    </select>
+                  </div>
                   <input
                     type="number"
                     placeholder="Enter Your Id"
                     className="details-input"
-                    onChange={handlechange("adhar")}
+                    name="idNumber"
+                    value={formData.idNumber}
+                    onChange={handleChange}
                   />
 
                   <button
-                    onClick={onSubmit}
+                    onClick={() => handleSubmit("adult")}
                     type="button"
                     className="details-input-add"
                   >
                     Add Adult
-                  </button>
-                </form>
-              </div>
-              <div className="child-form">
-                <form>
-                  <label>Child:</label>
-                  <select>
-                    <option>Male</option>
-                    <option>Female</option>
-                  </select>
-                  <input
-                    type="text"
-                    placeholder="Name"
-                    className="details-input"
-                    onChange={handlechange("name")}
-                    id="name-input"
-                  />
-                  <input
-                    type="number"
-                    placeholder="Age"
-                    className="details-input"
-                    onChange={handlechange("age")}
-                  />
-                  <input
-                    type="number"
-                    placeholder="Aadhar Number"
-                    className="details-input"
-                    onChange={handlechange("adhar")}
-                  />
-
-                  <button
-                    onClick={onSubmit}
-                    type="button"
-                    className="details-input-add"
-                  >
-                    Add Child
                   </button>
                 </form>
               </div>
@@ -198,14 +207,7 @@ const Ticket = () => {
             <div className="amount col-4 sticky-top">
               <p className="amount-val">Amount</p>
               <p className="amount-val2">Monument Amount</p>
-              {items.map((item) => (
-                <div className="cart-div9 row">
-                  <div className="col-8">{item.name}</div>
-                  <div className="col-4 amount-price">
-                    {item.price * item.quantity}
-                  </div>
-                </div>
-              ))}
+
               <div className="cart-div10">
                 <p>Total {price}</p>
               </div>
