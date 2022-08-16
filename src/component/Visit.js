@@ -6,29 +6,12 @@ import { fetchPlaceList } from "../store/API";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function Home() {
-  useEffect(() => {
-    (function (d, m) {
-      var kommunicateSettings = {
-        appId: "174c37c8a10db6579c04456dd95f01450",
-        popupWidget: true,
-        automaticChatOpenOnNavigation: true,
-      };
-      var s = document.createElement("script");
-      s.type = "text/javascript";
-      s.async = true;
-      s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
-      var h = document.getElementsByTagName("head")[0];
-      h.appendChild(s);
-      window.kommunicate = m;
-      m._globals = kommunicateSettings;
-    })(document, window.kommunicate || {});
-  });
   const { placeList } = useSelector((state) => state.place);
   const dispatch = useDispatch();
   const [isOpen, setIsOpen] = useState(true);
   const [inputText, setInputText] = useState("");
   const [stat, setStat] = useState("");
-  const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(true);
   const [currentData, setCurrentData] = useState({});
   const handleclose = () => {
     setIsOpen(!isOpen);
@@ -62,22 +45,58 @@ export default function Home() {
             onChange={inputHandler}
           />
         </div>
-        <div className="row">
-          <div className="container2 col-10" id="container">
-            {placeList.map((item) => {
-              return (
-                <Monument
-                  input={inputText}
-                  stat={stat}
-                  data={item}
-                  handleToggle={handleToggle}
-                  setCurrentData={setCurrentData}
-                />
-              );
-            })}
-          </div>
+        <div className="container-fluid">
+          <div className="row">
+            <div className="container2 col-8" id="container">
+              {placeList.map((item) => {
+                return (
+                  <Monument
+                    input={inputText}
+                    stat={stat}
+                    data={item}
+                    handleToggle={handleToggle}
+                    setCurrentData={setCurrentData}
+                  />
+                );
+              })}
+            </div>
 
-          {toggle && <div className="col-2">hello {currentData.name}</div>}
+            {toggle && (
+              <>
+                <div className=" temp123 col-4">
+                  <div className="desc245">
+                    <span className="close-ico" onClick={handleToggle}>
+                      x
+                    </span>
+                    <img
+                      src={`http://localhost:8000${currentData.img}`}
+                      className="img-side"
+                      alt=".."
+                    ></img>
+
+                    <p className="name2">{currentData.name}</p>
+                    <button className="monument-button">
+                      {" "}
+                      <img
+                        src="./imagess/Vector.png"
+                        alt=".."
+                        style={{ margin: "6px" }}
+                      ></img>
+                      View Monument Map
+                    </button>
+                    <p className="monument-desc">{currentData.description}</p>
+                    <p className="para">Opening closing time</p>
+                    <p className="monument-desc2">{currentData.time}</p>
+                    <p className="para">Entrance Fee</p>
+                    <p className="monument-desc3">{currentData.fee}</p>
+                  </div>
+                  <div className="div-nearby">
+                    <p className="text-nearby">Near By:</p>
+                  </div>
+                </div>
+              </>
+            )}
+          </div>
         </div>
       </div>
     </div>
