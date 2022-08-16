@@ -44,7 +44,7 @@ const TicketPrint = ({ data }) => {
           style={{ textAlign: "center", margin: "1rem 0 2rem 0" }}
         >
           <div style={{ fontWeight: "600", fontSize: "1.5rem" }}>
-            E-Ticket for Taj Mahal
+            E-Ticket for {data.monumentId.name}
           </div>
           <div style={{ fontWeight: "600", fontSize: "1rem", opacity: "0.5" }}>
             Ticket is valid for one person and one time use only
@@ -247,7 +247,7 @@ function TicketPdf() {
             style={{ textAlign: "center", margin: "1rem 0 2rem 0" }}
           >
             <div style={{ fontWeight: "600", fontSize: "1.5rem" }}>
-              E-Ticket for Taj Mahal
+              E-Ticket for {data.monumentId.name}
             </div>
             <div
               style={{ fontWeight: "600", fontSize: "1rem", opacity: "0.5" }}
