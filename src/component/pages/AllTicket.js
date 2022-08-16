@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { getTicket } from "../../store/API";
 import "./Alltickket.css";
 function AllTicket() {
   const { data } = useSelector((state) => state.ticket);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   useEffect(() => {
     dispatch(getTicket());
   }, [dispatch]);
@@ -34,7 +36,18 @@ function AllTicket() {
                 </p>
               </div>
               <div className="col-3">
-                <button className="suc-but">View Ticket</button>
+                <button
+                  className="suc-but"
+                  onClick={() => {
+                    navigate("/get-ticket/", {
+                      state: {
+                        data: item,
+                      },
+                    });
+                  }}
+                >
+                  View Ticket
+                </button>
               </div>
             </div>
           );

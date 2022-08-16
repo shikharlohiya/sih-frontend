@@ -44,7 +44,7 @@ function App() {
             <Route path="/temp" element={<Ticket />} />
             <Route path="/ticket" element={<TicketPdf />} />
             <Route path="/all-ticket" element={<AllTicket />} />
-            <Route path="/get-ticket/:id" element={<TicketPdf />} />
+            <Route path="/get-ticket/" element={<TicketPdf />} />
             <Route path="/Stripe" element={<Stripe />} />
           </Route>
         </Routes>

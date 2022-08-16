@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 import "./TicketPdf.css";
@@ -9,7 +9,7 @@ import { CircularProgress } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { getTicket } from "./store/API";
 
-const TicketPrint = () => {
+const TicketPrint = ({ data }) => {
   return (
     <div
       style={{ width: "589px", height: "1080px", margin: "auto", padding: 0 }}
@@ -162,10 +162,7 @@ const TicketPrint = () => {
             </div>
           </div>
           <div style={{ flex: "1" }}>
-            <img
-              src="/imagess/imagess/temp-qr.png"
-              style={{ width: "200px" }}
-            />
+            <img src={data.qr} style={{ width: "200px" }} />
           </div>
         </div>
         <div style={{ display: "flex", margin: "4rem 0" }}>
@@ -210,14 +207,13 @@ const TicketPrint = () => {
   );
 };
 function TicketPdf() {
-  const { id } = useParams();
-
+  const { data } = useLocation().state;
   const [isLoading, setIsLoading] = useState(false);
 
   const generatePdf = () => {
     setIsLoading(true);
     var doc = new jsPDF("p", "pt", "a4");
-    doc.html(ReactDOMServer.renderToStaticMarkup(<TicketPrint />), {
+    doc.html(ReactDOMServer.renderToStaticMarkup(<TicketPrint data={data} />), {
       callback: function (pdf) {
         pdf.save("CashReceipt.pdf");
         setIsLoading(false);
@@ -355,7 +351,7 @@ function TicketPdf() {
               </div>
             </div>
             <div style={{ flex: "1" }}>
-              {/* <img src={data[0]?.qr} style={{ width: "200px" }} /> */}
+              <img src={data?.qr} style={{ width: "200px" }} />
             </div>
           </div>
           <div style={{ display: "flex", margin: "4rem 0" }}>
