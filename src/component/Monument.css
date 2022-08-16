@@ -18,12 +18,12 @@ img
 
 .container2
 {
-    display: flex;
+   display: flex;
     margin: 2vmax auto;
-    width: 80vw;
+   
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 100%;
+   
     
 }
 .input-group
@@ -58,7 +58,10 @@ img
    
    
 }
-
+.fixed-div
+{
+   display: flex;
+}
 .monum
 {
     border-radius: 20px;

@@ -27,6 +27,9 @@ const Monument = (props) => {
   //     );
   //   }
   // });
+  const handleClick = (event) => {
+    props.handleToggle();
+  };
   const ButtonClick = (id) => {
     // alert("Added To Cart");
     // addItem(monument2);
@@ -36,7 +39,11 @@ const Monument = (props) => {
   return (
     <>
       <div className="monumentCard">
-        <img src={`http://localhost:8000${data.img}`} alt={data.name}></img>
+        <img
+          src={`http://localhost:8000${data.img}`}
+          alt={data.name}
+          onClick={handleClick}
+        ></img>
         <p className="name">{data.name}</p>
         <p className="details2 description">{data.description}</p>
         <p className="para">Opening Closing Time</p>

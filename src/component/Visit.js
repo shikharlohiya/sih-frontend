@@ -28,8 +28,12 @@ export default function Home() {
   const [isOpen, setIsOpen] = useState(true);
   const [inputText, setInputText] = useState("");
   const [stat, setStat] = useState("");
+  const [toggle, setToggle] = useState(false);
   const handleclose = () => {
     setIsOpen(!isOpen);
+  };
+  const handleToggle = () => {
+    setToggle(!toggle);
   };
   let handleState = (val) => {
     setStat(val);
@@ -57,10 +61,20 @@ export default function Home() {
             onChange={inputHandler}
           />
         </div>
-        <div className="container2" id="container">
-          {placeList.map((item) => {
-            return <Monument input={inputText} stat={stat} data={item} />;
-          })}
+        <div className="row">
+          <div className="container2 col-10" id="container">
+            {placeList.map((item) => {
+              return (
+                <Monument
+                  input={inputText}
+                  stat={stat}
+                  data={item}
+                  handleToggle={handleToggle}
+                />
+              );
+            })}
+          </div>
+          {toggle && <div className="col-2">hello</div>}
         </div>
       </div>
     </div>
