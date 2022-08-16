@@ -70,11 +70,13 @@ export default function Home() {
                   stat={stat}
                   data={item}
                   handleToggle={handleToggle}
+                  
                 />
               );
             })}
           </div>
-          {toggle && <div className="col-2">hello</div>}
+          {toggle && <div className="col-2">hello
+          </div>}
         </div>
       </div>
     </div>
