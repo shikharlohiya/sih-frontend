@@ -128,38 +128,44 @@ const TicketPrint = ({ data }) => {
             >
               Visitor's Detail
             </h4>
-            <div style={{ display: "flex" }}>
-              <div className="col-6">
-                <h5 style={{ fontWeight: "600" }}>Name</h5>
-              </div>
-              <div className="col-6">
-                <h5>xyz</h5>
-              </div>
-            </div>
-            <div style={{ display: "flex", margin: "0.2rem 0" }}>
-              <div className="col-6">
-                <h5 style={{ fontWeight: "600" }}>Age</h5>
-              </div>
-              <div className="col-6">
-                <h5>12</h5>
-              </div>
-            </div>
-            <div style={{ display: "flex", margin: "0.2rem 0" }}>
-              <div className="col-6">
-                <h5 style={{ fontWeight: "600" }}>Identity Type</h5>
-              </div>
-              <div className="col-6">
-                <h5>Others</h5>
-              </div>
-            </div>
-            <div style={{ display: "flex", margin: "0.2rem 0" }}>
-              <div className="col-6">
-                <h5 style={{ fontWeight: "600" }}>Identity No</h5>
-              </div>
-              <div className="col-6">
-                <h5>1234567989</h5>
-              </div>
-            </div>
+            {data.ticketedUsers.map((item) => {
+              return (
+                <>
+                  <div style={{ display: "flex" }}>
+                    <div className="col-6">
+                      <h5 style={{ fontWeight: "600" }}>Name</h5>
+                    </div>
+                    <div className="col-6">
+                      <h5>{item.name}</h5>
+                    </div>
+                  </div>
+                  <div style={{ display: "flex", margin: "0.2rem 0" }}>
+                    <div className="col-6">
+                      <h5 style={{ fontWeight: "600" }}>Age</h5>
+                    </div>
+                    <div className="col-6">
+                      <h5>{item.age}</h5>
+                    </div>
+                  </div>
+                  <div style={{ display: "flex", margin: "0.2rem 0" }}>
+                    <div className="col-6">
+                      <h5 style={{ fontWeight: "600" }}>Identity Type</h5>
+                    </div>
+                    <div className="col-6">
+                      <h5>{item.idType}</h5>
+                    </div>
+                  </div>
+                  <div style={{ display: "flex", margin: "0.2rem 0" }}>
+                    <div className="col-6">
+                      <h5 style={{ fontWeight: "600" }}>Identity No</h5>
+                    </div>
+                    <div className="col-6">
+                      <h5>{item.idNumber}</h5>
+                    </div>
+                  </div>
+                </>
+              );
+            })}
           </div>
           <div style={{ flex: "1" }}>
             <img src={data.qr} style={{ width: "200px" }} />
@@ -257,7 +263,7 @@ function TicketPdf() {
           </div>
           <div className="ticket-details">
             <div style={{ flex: "3" }}>
-              <h4 className="section-heading">Ticket Details</h4>
+              <h4 className="section-heading">Ticket Details</h4>;
               <div style={{ display: "flex", margin: "0.2rem 0" }}>
                 <div className="col-6">
                   <h5 style={{ fontWeight: "600" }}>Ticket Type</h5>
@@ -290,6 +296,14 @@ function TicketPdf() {
                   <h5>Rs 50</h5>
                 </div>
               </div>
+              <div style={{ display: "flex", margin: "0.2rem 0" }}>
+                <div className="col-6">
+                  <h5 style={{ fontWeight: "600" }}>ASI Fee</h5>
+                </div>
+                <div className="col-6">
+                  <h5>Rs 50</h5>
+                </div>
+              </div>
               <h4 className="section-heading">Validity</h4>
               <div style={{ display: "flex", margin: "0.2rem 0" }}>
                 <div className="col-6">
@@ -307,7 +321,6 @@ function TicketPdf() {
                   <h5>6:am-12:00pm</h5>
                 </div>
               </div>
-
               <h4
                 style={{
                   textAlign: "center",
@@ -317,38 +330,44 @@ function TicketPdf() {
               >
                 Visitor's Detail
               </h4>
-              <div style={{ display: "flex" }}>
-                <div className="col-6">
-                  <h5 style={{ fontWeight: "600" }}>Name</h5>
-                </div>
-                <div className="col-6">
-                  <h5>xyz</h5>
-                </div>
-              </div>
-              <div style={{ display: "flex", margin: "0.2rem 0" }}>
-                <div className="col-6">
-                  <h5 style={{ fontWeight: "600" }}>Age</h5>
-                </div>
-                <div className="col-6">
-                  <h5>12</h5>
-                </div>
-              </div>
-              <div style={{ display: "flex", margin: "0.2rem 0" }}>
-                <div className="col-6">
-                  <h5 style={{ fontWeight: "600" }}>Identity Type</h5>
-                </div>
-                <div className="col-6">
-                  <h5>Others</h5>
-                </div>
-              </div>
-              <div style={{ display: "flex", margin: "0.2rem 0" }}>
-                <div className="col-6">
-                  <h5 style={{ fontWeight: "600" }}>Identity No</h5>
-                </div>
-                <div className="col-6">
-                  <h5>1234567989</h5>
-                </div>
-              </div>
+              {data.ticketedUsers.map((item) => {
+                return (
+                  <>
+                    <div style={{ display: "flex" }}>
+                      <div className="col-6">
+                        <h5 style={{ fontWeight: "600" }}>Name</h5>
+                      </div>
+                      <div className="col-6">
+                        <h5>{item.name}</h5>
+                      </div>
+                    </div>
+                    <div style={{ display: "flex", margin: "0.2rem 0" }}>
+                      <div className="col-6">
+                        <h5 style={{ fontWeight: "600" }}>Age</h5>
+                      </div>
+                      <div className="col-6">
+                        <h5>{item.age}</h5>
+                      </div>
+                    </div>
+                    <div style={{ display: "flex", margin: "0.2rem 0" }}>
+                      <div className="col-6">
+                        <h5 style={{ fontWeight: "600" }}>Identity Type</h5>
+                      </div>
+                      <div className="col-6">
+                        <h5>{item.idType}</h5>
+                      </div>
+                    </div>
+                    <div style={{ display: "flex", margin: "0.2rem 0" }}>
+                      <div className="col-6">
+                        <h5 style={{ fontWeight: "600" }}>Identity No</h5>
+                      </div>
+                      <div className="col-6">
+                        <h5>{item.idNumber}</h5>
+                      </div>
+                    </div>
+                  </>
+                );
+              })}
             </div>
             <div style={{ flex: "1" }}>
               <img src={data?.qr} style={{ width: "200px" }} />
