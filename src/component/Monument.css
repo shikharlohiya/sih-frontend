@@ -1,212 +1,191 @@
-.monumentCard
-{
-    width: 17.5rem;
-    height: 30rem;
-    display: flex;
-    flex-direction: column;
-    margin: 1%;
-    padding-bottom: 0.5vmax;
-    border: 2px solid #ffffff;
-    border-radius: 25px;
-    background-color: #ffffff;
-    
-    
+.monumentCard {
+  width: 17.5rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  margin: 1%;
+  padding-bottom: 0.5vmax;
+  border: 2px solid #ffffff;
+  border-radius: 25px;
+  background-color: #ffffff;
 }
-img
-{
-    border-radius: 25px 25px 0px 0px;
+img {
+  border-radius: 25px 25px 0px 0px;
 }
 
-.container2
-{
-   display: flex;
-    margin: 2vmax auto;
-   
-    flex-wrap: wrap;
-    justify-content: center;
-   
-    
+.container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex: 2;
+  gap: 2rem;
 }
-.input-group
-{
-    width: 80%;
-    margin: auto auto;
-    
+.input-group {
+  width: 80%;
+  margin: auto auto;
 }
-.para
-{
-    font-family: 'Merriweather';
-    font-weight: bold;
-    font-size: medium;
-    padding-left: 18px;
-    margin: 0;
+.para {
+  font-family: "Merriweather";
+  font-weight: bold;
+  font-size: medium;
+  padding-left: 18px;
+  margin: 0;
 }
-.details2
-{
-    font-family: 'Poppins';
-    text-align: left;
-    font-weight: 300;
-    padding-left: 18px;
-    font-size: 1rem;
-    overflow: hidden;
-   text-overflow: ellipsis;
-   display: -webkit-box;
-   -webkit-line-clamp: 4;
-           line-clamp: 4; 
-   -webkit-box-orient: vertical;
+.details2 {
+  font-family: "Poppins";
+  text-align: left;
+  font-weight: 300;
+  padding-left: 18px;
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+.desc245 {
+  background-color: #ffffff;
+  border-radius: 32px 0px 0px 0px;
+}
+.name {
+  font-family: "Merriweather";
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: normal;
+  padding-left: 18px;
+  margin-top: 10%;
+}
+.name2 {
+  font-family: "Merriweather";
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: normal;
+  padding-left: 20px;
+}
+.monument-button {
+  background-color: #ef6525;
+  border-radius: 10px;
+  font-family: "Poppins";
+  font-weight: 550;
+  color: #ffffff;
+  font-size: large;
+  margin-left: 20px;
+  border: none;
+  height: 2.5rem;
+}
+.monument-desc {
+  font-family: "Poppins";
+  text-align: left;
+  font-weight: 300;
+  padding-left: 18px;
+  font-size: 1rem;
+  padding-top: 10px;
+  color: rgba(0, 0, 0, 0.7);
+}
+.monument-desc2 {
+  font-family: "Poppins";
+  text-align: left;
+  font-weight: 300;
+  padding-left: 18px;
+  font-size: 0.9rem;
+  padding-top: 2px;
 
+  color: rgba(0, 0, 0, 0.7);
 }
-.desc245
-{
-    background-color: #ffffff;
-    border-radius: 32px 0px 0px 0px;
-    
-    
+.monument-desc3 {
+  font-family: "Poppins";
+  text-align: left;
+  font-weight: 300;
+  padding-left: 18px;
+  font-size: 0.9rem;
+  padding-top: 2px;
+  padding-bottom: 18px;
+  color: rgba(0, 0, 0, 0.7);
 }
-.name
-{
-    font-family: 'Merriweather';
-    font-weight: 700;
-    font-size: 1.25rem;
-    line-height: normal;
-    padding-left: 18px;
-    margin-top: 10%;
-   
-   
+.fixed-div {
 }
-.name2
-{
-    font-family: 'Merriweather';
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: normal;
-    padding-left: 20px;
-   
+.monum {
+  border-radius: 20px;
+  background-color: white;
 }
-.monument-button
-{
-    background-color: #EF6525;
-    border-radius: 10px;
-    font-family: 'Poppins';
-    font-weight: 550;
-    color: #ffffff;
-    font-size: large;
-    margin-left: 20px;
-    border: none;
-    height: 2.5rem;
+.description {
+  padding-right: 18px;
 }
-.monument-desc
-{
-    font-family: 'Poppins';
-    text-align: left;
-    font-weight: 300;
-    padding-left: 18px;
-    font-size: 1rem;
-    padding-top: 10px;
-    color: rgba(0, 0, 0, 0.7);
+.desc123 {
+  width: 276px;
+  height: 94.5px;
 }
-.monument-desc2
-{
-    font-family: 'Poppins';
-    text-align: left;
-    font-weight: 300;
-    padding-left: 18px;
-    font-size: 0.9rem;
-    padding-top: 2px;
-    
-    color: rgba(0, 0, 0, 0.7);
+img.monu-img2 {
+  width: 17.5rem;
+  height: 12.125rem;
 }
-.monument-desc3
-{
-    font-family: 'Poppins';
-    text-align: left;
-    font-weight: 300;
-    padding-left: 18px;
-    font-size: 0.9rem;
-    padding-top: 2px;
-    padding-bottom: 18px;
-    color: rgba(0, 0, 0, 0.7);
+.button {
+  border-radius: 20px;
+  margin-top: 10px;
+  width: 80%;
+  height: 35px;
+  margin-left: 18px;
+  font-family: "Poppins";
+  font-size: smaller;
+  font-weight: bold;
+  background-color: #3db3ad;
+  border: white;
 }
-.fixed-div
-{
-    
+img.img-side {
+  height: 17.75rem;
+  width: 100%;
+  border-radius: 32px;
+  padding: 15px;
 }
-.monum
-{
-    border-radius: 20px;
-    background-color: white;
+.div-nearby {
+  background-color: #2c4569;
 }
-.description
-{
-    
-    padding-right: 18px;
-    
+.text-nearby {
+  font-family: "Merriweather";
+  font-weight: 700;
+  font-size: xx-large;
+  color: #ffffff;
+  padding-left: 18px;
 }
-.desc123
-{
-    width: 276px;
-    height: 94.5px;
+.close-ico {
+  content: "x";
+  cursor: pointer;
+  position: absolute;
+  right: 1%;
+  border-radius: 7px;
+  z-index: 3;
+  background: #ededed;
+  width: 23px;
+  height: 23px;
+
+  line-height: 20px;
+  text-align: center;
+  border: 1px solid #999;
+  font-size: 20px;
 }
-img.monu-img2
-{
-    width: 17.5rem;
-    height: 12.125rem;
+.explore {
+  margin-top: 4%;
+  padding-left: 15%;
+  font-family: "Poppins";
+  font-size: large;
+  font-weight: 600;
 }
-.button
-{
-    border-radius: 20px;
-    margin-top: 10px;
-   width: 80%;
-    height: 35px;
-    margin-left: 18px;
-    font-family: 'Poppins';
-    font-size: smaller;
-    font-weight: bold;
-    background-color: #3db3ad;
-    border: white;
+.explore-tab {
+  position: sticky;
+  top: 0;
+  right: 0;
+  overflow-y: scroll;
+  height: 70vh;
+  height: 100vh;
+  flex: 1.5;
 }
-img.img-side
-{
-    height: 17.75rem;
-    width: 100%;
-    border-radius: 32px;
-    padding: 15px;
+.monument-cont {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
 }
-.div-nearby
-{
-    background-color: #2C4569;
-}
-.text-nearby
-{
-    font-family: 'Merriweather';
-    font-weight: 700;
-    font-size: xx-large;
-    color: #ffffff;
-    padding-left: 18px;
-}
-.close-ico
-{
-    content: 'x';
-    cursor: pointer;
-    position: absolute;
-    right: 1%;
-    border-radius: 7px;
-    z-index: 3;
-    background: #ededed;
-    width: 23px;
-    height: 23px;
-    
-    line-height: 20px;
-    text-align: center;
-    border: 1px solid #999;
-    font-size: 20px;
-}
-.explore
-{
-    
-    margin-top: 4%;
-    padding-left: 15%;
-    font-family: 'Poppins';
-    font-size: large;
-    font-weight: 600;
+.nearplace-monument-cont {
+  display: flex;
+  flex-wrap: wrap;
 }

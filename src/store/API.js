@@ -33,6 +33,19 @@ export const fetchPlaceList = () => {
   };
 };
 
+export const getNearPlaces = (id) => {
+  return async (dispatch) => {
+    try {
+      const res = await API.post("places/nearPlaces", {
+        id,
+      });
+      dispatch(placeActions.addNearPlaces(res.data));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+};
+
 export const addToCart = (id, setIsLoading) => {
   return async (dispatch) => {
     setIsLoading(true);
@@ -119,6 +132,7 @@ export const addUserToCart = (data) => {
     }
   };
 };
+//payment
 
 export function loadRazorpay(cartItems, price, navigate) {
   return async (dispatch) => {
@@ -194,6 +208,7 @@ export function loadRazorpay(cartItems, price, navigate) {
   };
 }
 
+//ticket
 export const getTicket = () => {
   return async (dispatch) => {
     try {

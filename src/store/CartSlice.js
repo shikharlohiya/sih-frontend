@@ -15,7 +15,7 @@ const cartSlice = createSlice({
       nationality: "",
       idType: "",
       idNumber: "",
-      userId: JSON.parse(localStorage.getItem("jwt")).user._id,
+      userId: JSON.parse(localStorage.getItem("jwt"))?.user._id,
     },
   },
   reducers: {

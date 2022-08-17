@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Popup from "./Popup";
 import Monument from "./Monument.js";
 import "./Monument.css";
-import { fetchPlaceList } from "../store/API";
+import { fetchPlaceList, getNearPlaces } from "../store/API";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function Home() {
-  const { placeList } = useSelector((state) => state.place);
+  const { placeList, nearPlaces } = useSelector((state) => state.place);
   const dispatch = useDispatch();
   const [isOpen, setIsOpen] = useState(true);
   const [inputText, setInputText] = useState("");
@@ -30,6 +30,9 @@ export default function Home() {
   useEffect(() => {
     dispatch(fetchPlaceList());
   }, []);
+  useMemo(() => {
+    dispatch(getNearPlaces(currentData._id));
+  }, [currentData._id]);
   return (
     <div>
       {isOpen && <Popup handleclose={handleclose} handleState={handleState} />}
@@ -46,8 +49,8 @@ export default function Home() {
           />
         </div>
         <div className="container-fluid">
-          <div className="row">
-            <div className="container2 col-8" id="container">
+          <div className="monument-cont">
+            <div className="container2 " id="container">
               {placeList.map((item) => {
                 return (
                   <Monument
@@ -63,7 +66,7 @@ export default function Home() {
 
             {toggle && (
               <>
-                <div className=" temp123 col-4">
+                <div className=" temp123  explore-tab">
                   <div className="desc245">
                     <span className="close-ico" onClick={handleToggle}>
                       x
@@ -92,6 +95,19 @@ export default function Home() {
                   </div>
                   <div className="div-nearby">
                     <p className="text-nearby">Near By:</p>
+                    <div className="nearplace-monument-cont">
+                      {nearPlaces?.map((item) => {
+                        return (
+                          <Monument
+                            input={inputText}
+                            stat={stat}
+                            data={item}
+                            handleToggle={handleToggle}
+                            setCurrentData={setCurrentData}
+                          />
+                        );
+                      })}
+                    </div>
                   </div>
                 </div>
               </>
