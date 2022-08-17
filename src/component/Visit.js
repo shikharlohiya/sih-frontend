@@ -11,7 +11,7 @@ export default function Home() {
   const [isOpen, setIsOpen] = useState(true);
   const [inputText, setInputText] = useState("");
   const [stat, setStat] = useState("");
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(false);
   const [currentData, setCurrentData] = useState({});
   const handleclose = () => {
     setIsOpen(!isOpen);

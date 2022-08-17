@@ -1,7 +1,7 @@
 .monumentCard
 {
     width: 17.5rem;
-    height: 29rem;
+    height: 30rem;
     display: flex;
     flex-direction: column;
     margin: 1%;
@@ -156,7 +156,7 @@ img.monu-img2
 {
     border-radius: 20px;
     margin-top: 10px;
-   width: 40%;
+   width: 80%;
     height: 35px;
     margin-left: 18px;
     font-family: 'Poppins';
@@ -200,4 +200,13 @@ img.img-side
     text-align: center;
     border: 1px solid #999;
     font-size: 20px;
+}
+.explore
+{
+    
+    margin-top: 4%;
+    padding-left: 15%;
+    font-family: 'Poppins';
+    font-size: large;
+    font-weight: 600;
 }

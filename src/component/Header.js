@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import "./Header.css";
 const mystyle = {
-  backgroundColor: "#FFF8EF",
+  backgroundColor: "#FFFFFF",
 };
 export default function Header() {
   return (
@@ -10,33 +10,32 @@ export default function Header() {
       <nav className="navbar navbar-expand-md pop" style={mystyle}>
         <div className="container-fluid">
           <ul className="navbar-nav">
-            <li className="nav-item active mar">
-              <a className="navbar-brand" href="#">
-                Tic-Cket
-              </a>
+            <li className="nav-item  mar">
+              <h3 className="tic">Tic</h3> <h3 className="dash">-</h3>
+              <h3 className="cket">Cket</h3>
             </li>
 
-            <li className="nav-item mar">
+            <li className="nav-item mar item1">
               <NavLink to={"/"}>Home</NavLink>
             </li>
 
-            <li className="nav-item mar">
+            <li className="nav-item mar item1">
               <a className="" href="#">
                 My Profile
               </a>
             </li>
-            <li className="nav-item mar">
-              <a className="nav-link" href="#">
+            <li className="nav-item mar item1">
+              <a className="nav-link " href="#">
                 Tour Guide
               </a>
             </li>
-            <li className="nav-item mar">
-              <a className="nav-link" href="#">
+            <li className="nav-item mar item1">
+              <a className="nav-link " href="#">
                 360 Degree View
               </a>
             </li>
-            <li className="nav-item mar">
-              <a className="nav-link" href="#">
+            <li className="nav-item mar item1">
+              <a className="nav-link " href="#">
                 How To Use
               </a>
             </li>

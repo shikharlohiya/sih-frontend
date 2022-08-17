@@ -44,11 +44,11 @@ const Ticket = () => {
       <>
         <div className="details">
           <div className="row">
-            <div className="col-4">
+            <div className="col-5">
               <form>
-                <p>Select Nationality</p>
-                <ul>
-                  <li className="content">
+                <p className="national">Select Nationality:</p>
+                <ul className="donate-now">
+                  <li className>
                     <input
                       type="radio"
                       name="nationality"
@@ -57,7 +57,7 @@ const Ticket = () => {
                     ></input>
                     <label>Indian</label>
                   </li>
-                  <li className="content">
+                  <li>
                     <input
                       type="radio"
                       name="nationality"
@@ -66,7 +66,7 @@ const Ticket = () => {
                     ></input>
                     <label>Foreigner</label>
                   </li>
-                  <li className="content">
+                  <li>
                     <input
                       type="radio"
                       name="nationality"
@@ -75,7 +75,7 @@ const Ticket = () => {
                     ></input>
                     <label>SAARC</label>
                   </li>
-                  <li className="content">
+                  <li>
                     <input
                       type="radio"
                       name="nationality"
@@ -87,14 +87,14 @@ const Ticket = () => {
                 </ul>
               </form>
             </div>
-            <div className="col-8">
+            <div className="col-7">
               <div>
                 <select
                   name="userType"
                   onChange={handleChange}
                   value={formData.userType}
                 >
-                  <option>select</option>
+                  <option>Select</option>
                   <option>Adult</option>
                   <option>Child</option>
                 </select>
@@ -126,21 +126,21 @@ const Ticket = () => {
                       onChange={handleChange}
                       value={formData.gender}
                     >
-                      <option>select</option>
+                      <option>Select</option>
                       <option>Male</option>
                       <option>Female</option>
                     </select>
                   </div>
 
                   <div>
-                    <label>select id</label>
+                    <label>Select id</label>
 
                     <select
                       name="idType"
                       onChange={handleChange}
                       value={formData.idType}
                     >
-                      <option>select</option>
+                      <option>Select</option>
                       <option>Passport</option>
                       <option>Pan Card</option>
                       <option>Driving Licence</option>
@@ -162,7 +162,7 @@ const Ticket = () => {
                     type="button"
                     className="details-input-add"
                   >
-                    Add Adult
+                    Add
                   </button>
                 </form>
               </div>

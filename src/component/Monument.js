@@ -54,14 +54,20 @@ const Monument = (props) => {
           <p className="name">{data.name}</p>
         </div>
         <p className="details2 description">{data.description}</p>
-
-        <button className="button" onClick={() => ButtonClick(data._id)}>
-          {isLoading ? (
-            <CircularProgress sx={{ color: "white" }} size={15} />
-          ) : (
-            "Book Now"
-          )}
-        </button>
+        <div className="row">
+          <div className="col-6">
+            <button className="button" onClick={() => ButtonClick(data._id)}>
+              {isLoading ? (
+                <CircularProgress sx={{ color: "white" }} size={15} />
+              ) : (
+                "Book Now"
+              )}
+            </button>
+          </div>
+          <div className="col-6 explore">
+            <a href="/red-fort">Explore{">"} </a>
+          </div>
+        </div>
       </div>
     </>
   );
