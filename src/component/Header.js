@@ -20,17 +20,20 @@ export default function Header() {
             </li>
 
             <li className="nav-item mar item1">
-              <a className="" href="#">
+              <a className="" href="/profile">
                 My Profile
               </a>
             </li>
             <li className="nav-item mar item1">
-              <a className="nav-link " href="#">
+              <a className="nav-link " href="/Tour">
                 Tour Guide
               </a>
             </li>
             <li className="nav-item mar item1">
-              <a className="nav-link " href="#">
+              <a
+                className="nav-link "
+                href={process.env.PUBLIC_URL + "/thing to do/index.html"}
+              >
                 360 Degree View
               </a>
             </li>

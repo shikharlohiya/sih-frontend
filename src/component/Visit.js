@@ -49,8 +49,8 @@ export default function Home() {
           />
         </div>
         <div className="container-fluid">
-          <div className="monument-cont">
-            <div className="container2 " id="container">
+          <div className="monument-cont ">
+            <div className="container2" id="container">
               {placeList.map((item) => {
                 return (
                   <Monument
