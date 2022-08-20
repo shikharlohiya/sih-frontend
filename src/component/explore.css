@@ -1,0 +1,50 @@
+
+.explore-img123
+{
+    margin-top: 40px;
+    margin-left: 10%;
+   height: 300px;
+   width: 55%;
+    border-radius: 25px;
+}
+.serv12
+{
+    margin-top: 30px;
+    font-family: 'Merriweather';
+    font-weight: 700;
+    font-size: xx-large;
+    color: rgba(255, 153, 51, 1);
+}
+.serv123
+{
+    background-color: #ffffff;
+    width: 40%;
+    height: 70px;
+    
+    border-radius: 15px;
+    text-align: center;
+    font-family: 'Merriweather';
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 25px;
+    padding-top: 15px;
+    
+}
+.val-dec-12
+{
+    margin-top: 2%;
+}
+.mar-1-2
+{
+    margin-left: 100px;
+}
+.mar-top1
+{
+    margin-top: 25px;
+}
+.img-serv-12
+{
+    border-radius: 0;
+    margin-right: 20px;
+   
+}

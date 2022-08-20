@@ -65,7 +65,7 @@ const Monument = (props) => {
             </button>
           </div>
           <div className="col-6 explore">
-            <a href="/red-fort">Explore{">"} </a>
+            <a href="/explore">Explore{">"} </a>
           </div>
         </div>
       </div>

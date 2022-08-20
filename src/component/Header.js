@@ -38,7 +38,7 @@ export default function Header() {
               </a>
             </li>
             <li className="nav-item mar item1">
-              <a className="nav-link " href="#">
+              <a className="nav-link " href="/how-to-use">
                 How To Use
               </a>
             </li>

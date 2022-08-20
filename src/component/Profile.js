@@ -30,13 +30,13 @@ export default function Profile() {
           <p className="det-prof">identiy 1234656789</p>
           <p className="my-det">Bookings</p>
           <hr></hr>
-          <div className="temp123">
+          <div className="temp123-1">
             <p className="points">0 Points</p>
             <p className="points1">
               Get rewards after every visit and use them on your next.
             </p>
           </div>
-          <div className="temp1234">
+          <div className="temp1234-1">
             <p className="my-det">Points Activity</p>
             <hr></hr>
           </div>

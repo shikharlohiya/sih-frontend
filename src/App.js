@@ -16,6 +16,8 @@ import Ticket from "./component/temp";
 import Stripe from "./component/Stripe";
 import TicketPdf from "./TicketPdf";
 import AllTicket from "./component/pages/AllTicket";
+import Use from "./component/howToUse";
+import Exp from "./component/explore";
 export const notifications = {
   message: "teodosii@react-notifications-component",
   type: "success",
@@ -50,6 +52,8 @@ function App() {
             <Route path="/Stripe" element={<Stripe />} />
             <Route path="/Tour" element={<Tour />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/explore" element={<Exp />} />
+            <Route path="/how-to-use" element={<Use />} />
           </Route>
         </Routes>
       </BrowserRouter>
