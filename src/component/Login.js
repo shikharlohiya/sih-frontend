@@ -3,7 +3,9 @@ import signimg from "./images/signup.png";
 import "./signup.css";
 import { Link, Navigate } from "react-router-dom";
 import { signin, authenticate, isAuthenticated } from "../home";
+import {GoogleLogin }from 'react-google-login';
 import MainPage from "./MainPage";
+import axios from "axios";
 const Login = () => {
   const [values, setValues] = useState({
     email: "",
@@ -39,6 +41,24 @@ const Login = () => {
     );
   };
 
+
+  const responseSucessGoogle =(response)=>{
+    console.log(response)
+    axios({
+      mathod: "POST",
+      url:"http://localhost/api/googlelogin",
+      data: {tokenId: response.tokenId}
+    }).then(response=>{
+      console.log(response);
+    })
+
+  }
+  const responseErrorGoogle =(response)=>{
+
+  }
+  
+
+
   const onSubmit = (event) => {
     event.preventDefault();
     setValues({ ...values, error: false, loading: true });
@@ -66,6 +86,8 @@ const Login = () => {
       }
     }
   };
+
+
 
   const signInForm = () => {
     return (
@@ -123,19 +145,36 @@ const Login = () => {
                 <a href="/Signup" className="sig">
                   Sign Up
                 </a>
+          
+                
               </div>
             </div>
           </div>
         </div>
       </div>
+
     );
   };
   return (
     <>
       {errorMessage()}
       {signInForm()}
+
       {successMessage()}
+      { 
+      <>
+      <h1>login with google</h1>
+      <GoogleLogin
+      clientId="770410488707-l26b3qoq3pvcco7je1dv2jkm5fcjum1g.apps.googleusercontent.com"
+      buttonText="Login"
+      onSuccess={responseSucessGoogle}
+      onFailure={responseErrorGoogle}
+      cookiePolicy={'single_host_origin'}
+    />,
+    </>
+      }
       {performRedirect()}
+
     </>
   );
 };
