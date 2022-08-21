@@ -90,7 +90,9 @@
 .card-info:hover {
   animation: hover-scale 0.2s alternate ease-out forwards;
 }
-
+.active-card {
+  transform: scale(1.175);
+}
 @keyframes hover-scale {
   15% {
     transform: scale(1.1);

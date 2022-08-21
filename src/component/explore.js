@@ -207,7 +207,12 @@ export default function Explore() {
         <div className="weather-card">
           {[1, 2, 3, 4].map((item, index) => {
             return (
-              <div className="card-info" onClick={() => setActiveIndex(index)}>
+              <div
+                className={`card-info ${
+                  index === activeIndex && "active-card"
+                }`}
+                onClick={() => setActiveIndex(index)}
+              >
                 <div>Aug 21</div>
                 <div>
                   <img src={w1} />
