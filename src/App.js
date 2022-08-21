@@ -18,6 +18,7 @@ import TicketPdf from "./TicketPdf";
 import AllTicket from "./component/pages/AllTicket";
 import Use from "./component/howToUse";
 import Exp from "./component/explore";
+import Dash from "./component/Dahboard";
 export const notifications = {
   message: "teodosii@react-notifications-component",
   type: "success",
@@ -54,6 +55,7 @@ function App() {
             <Route path="/profile" element={<Profile />} />
             <Route path="/explore" element={<Exp />} />
             <Route path="/how-to-use" element={<Use />} />
+            <Route path="/dashboard" element={<Dash />} />
           </Route>
         </Routes>
       </BrowserRouter>

@@ -192,7 +192,7 @@ export default function Explore() {
             </div>
           </div>
           <div className="wheather-2">
-            <div className="heading-temp-count"> New York , US</div>
+            <div className="heading-temp-count"> Delhi,India</div>
             <div>Population: 8,175,133</div>
             <div>Aug 24</div>
             <div>Mainly cloudy</div>
