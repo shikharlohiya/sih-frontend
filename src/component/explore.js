@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import explor from "./explore.jpg";
 import "./explore.css";
 import guide from "./guide.png";
@@ -9,12 +9,75 @@ import desk from "./desk.png";
 import amb from "./amb.png";
 import Chart from "react-apexcharts";
 import w1 from "./images/w-1.svg";
-export default function explore() {
+export default function Explore() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const dataSeries = [
+    {
+      data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      label: [
+        "12:00 AM",
+        "12:00 AM",
+        "12:00 AM",
+        "12:00 AM",
+        "12:00 AM",
+        "12:00 AM",
+        "12:00 AM",
+        "12:00 AM",
+        "12:00 AM",
+        "12:00 AM",
+      ],
+    },
+    {
+      data: [1, 2, 23, 24, 25, 62, 7, 18, 9, 10],
+      label: [
+        "12:00 AM",
+        "1:00 AM",
+        "2:00 AM",
+        "12:00 AM",
+        "3:00 AM",
+        "4:00 AM",
+        "5:00 AM",
+        "6:00 AM",
+        "7:00 AM",
+        "7:00 AM",
+      ],
+    },
+    {
+      data: [11, 2, 3, 4, 25, 6, 17, 8, 29, 10],
+      label: [
+        "12:00 AM",
+        "1:00 AM",
+        "2:00 AM",
+        "3:00 AM",
+        "4:00 AM",
+        "5:00 AM",
+        "6:00 AM",
+        "6:00 AM",
+        "74:00 AM",
+        "74:00 AM",
+      ],
+    },
+    {
+      data: [1, 2, 3, 54, 53, 6, 27, 8, 19, 10],
+      label: [
+        "12:00 AM",
+        "1:00 AM",
+        "2:00 AM",
+        "3:00 AM",
+        "4:00 AM",
+        "5:00 AM",
+        "6:00 AM",
+        "6:00 AM",
+        "7:00 AM",
+        "7:00 AM",
+      ],
+    },
+  ];
   const data = {
     series: [
       {
         name: "t °C",
-        data: [1, 2, 4, 5, 5, 5, 6, 6, 6],
+        data: dataSeries[activeIndex].data,
       },
     ],
     options: {
@@ -69,17 +132,7 @@ export default function explore() {
       },
       xaxis: {
         type: "string",
-        categories: [
-          "12:00 AM",
-          "12:00 AM",
-          "12:00 AM",
-          "12:00 AM",
-          "12:00 AM",
-          "12:00 AM",
-          "12:00 AM",
-          "12:00 AM",
-          "12:00 AM",
-        ],
+        categories: dataSeries[activeIndex].label,
         crosshairs: {
           show: false,
         },
@@ -95,9 +148,10 @@ export default function explore() {
       },
     },
   };
+
   return (
     <>
-      <div className="explore-img-div">
+      <div className="E-img-div">
         <img src={explor} alt=".." className="explore-img123"></img>
       </div>
       <p>Red Fort</p>
@@ -151,9 +205,9 @@ export default function explore() {
           height={350}
         />
         <div className="weather-card">
-          {[1, 2, 3, 4].map((item) => {
+          {[1, 2, 3, 4].map((item, index) => {
             return (
-              <div className="card-info">
+              <div className="card-info" onClick={() => setActiveIndex(index)}>
                 <div>Aug 21</div>
                 <div>
                   <img src={w1} />

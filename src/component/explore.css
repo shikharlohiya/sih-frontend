@@ -72,6 +72,7 @@
 .weather-card {
   display: flex;
   justify-content: space-between;
+  margin-top: 2rem;
 }
 .card-info {
   width: 150px;
