@@ -1,0 +1,92 @@
+.div1234 {
+    margin-top: 4%;
+    
+  }
+  .text123
+{
+    font-size: xx-large;
+    font-family: 'Poppins';
+    font-weight: 600;
+  color:#ef6525
+  
+  
+}
+.orange-box3
+{
+  background-color: #ef6525;
+  width: 530px;
+  height: 450px;
+  border-radius: 28% 51% 10% 51%/ 30% 53% 10% 53%;
+}
+.org
+{
+    color: #ef6525;
+    display: inline;
+    font-size: 70px;
+    font-family: 'Merriweather';
+    font-weight: 700;
+    line-height: 90px;
+   
+}
+.div-guide
+{
+    background-color: #ffffff;
+    width: 40%;
+    margin-left: 80px;
+    height: fit-content;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+.szm123
+{
+    font-family: 'Poppins';
+    
+    font-weight: 500;
+    font-size:x-large;
+    color: rgba(39, 36, 68, 0.7);
+}
+.design123
+{
+    line-height: 90px;
+    display: inline;
+    font-size: 70px;
+    font-family: 'Merriweather';
+    font-weight: 700;
+    color: rgba(39, 36, 68, 1);
+}
+.touch
+{
+    font-family: 'Merriweather';
+    font-weight: 700;
+    color: rgba(29, 45, 63, 1);
+    font-size:45px;
+}
+.touch-details
+{
+    font-family: 'Poppins';
+    font-weight: 450;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: large;
+}
+.touch-det
+{
+    font-family: 'Poppins';
+    font-weight: 600;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.9);
+    font-size: larger;
+    margin-top: 30px;
+}
+.touch-det123
+{
+    font-family: 'Poppins';
+    font-weight: 550;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: larger;
+}
+.call
+{
+    width: 24px;
+    height: 2px;
+}

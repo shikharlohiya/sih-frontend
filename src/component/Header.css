@@ -1,6 +1,33 @@
 .mar
 {
     margin-left: 50px;
+
+}
+.tic
+{
+    font-family: 'Exo';
+    color: #ef6525;
+    display: inline;
+    font-weight: 700;
+}
+.dash
+{
+    display: inline;
+    font-weight: 700;
+    color: #3DB3AD;
+}
+.cket
+{
+    font-family: 'Inter';
+    display: inline;
+    font-weight: 700;
+}
+.item1
+{
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: large;
+    color: rgba(39, 36, 68, 0.7)
 }
 .bold
 {

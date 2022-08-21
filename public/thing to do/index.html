@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title itemprop="name">React App</title>
+        <meta name="description" content="things to do in Delhi, places to visit in Delhi, everything you need tourist tube"/>
+        <meta property="og:title" content="View The Red Fort in 360 virtual tour Tourist Tube" />
+        <meta property="og:url" content="https://www.touristtube.com/Things-to-do-in-Delhi/The-Red-Fort-360" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content=""/>
+       
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="p:domain_verify" content="056eb74cdb3b22b0a5fac2556b434c47"/>
+
+        
+                    <link rel="canonical" href="https://www.touristtube.com/Things-to-do-in-Delhi/The-Red-Fort-360" />
+                                <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="google-site-verification" content="UA-37276506-1" />
+       
+        <link rel="alternate" hreflang="en" href="https://touristtube.com/Things-to-do-in-Delhi/The-Red-Fort-360"/><link rel="alternate" hreflang="fr" href="https://touristtube.com/fr/Things-to-do-in-Delhi/The-Red-Fort-360"/><link rel="alternate" hreflang="hi" href="https://touristtube.com/in/Things-to-do-in-Delhi/The-Red-Fort-360"/>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<!-- Latest Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<!-- Latest jQuery UI CSS -->
+	
+	<!-- Latest Swiper CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.css" integrity="sha512-Yh4EqHPEJlOr5IFQ6EXPAA3RhwHgRBesEJLWJaz+xj1Bix5peuxOk40IA3gp7LH0BHJvi0e5QNL1iqvvLjdA9w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- Latest slick-carousel CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- Latest slick-carousel theme CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- Latest daterangepicker CSS -->
+	<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+	
+        <link href="/assets/common/css/base.css" rel="stylesheet">
+       
+
+        <style type="text/css">
+        .ui-progressbar .ui-progressbar-overlay {background: url("https://static2.touristtube.com/media/images/animated-overlay.gif");}
+    .ui-tooltip.search-tooltip-class-tl{background-image: url("https://static2.touristtube.com/media/images/popup_arrow_left.png");}
+    .ui-tooltip.search-tooltip-class-bl{background-image: url("https://static2.touristtube.com/media/images/popup_arrow_left.png");}
+    .ui-tooltip.search-tooltip-class-tr{background-image: url("https://static2.touristtube.com/media/images/popup_arrow_right.png");}
+    .ui-tooltip.search-tooltip-class-br{background-image: url("https://static2.touristtube.com/media/images/popup_arrow_right.png");}
+    .ui-tooltip.search-tooltip-class-t{background-image: url("https://static2.touristtube.com/media/images/popup_arrow_top.png");}
+    .ui-tooltip.search-tooltip-class-b{background-image: url("https://static2.touristtube.com/media/images/popup_arrow_bottom.png");}
+    .tt_vtour_popup_modal .fancybox-close {background-image: url("https://static2.touristtube.com/media/images/close.jpg");}
+    .TTCookie_close{background: url("https://static2.touristtube.com/media/images/cat-popup-close.png") no-repeat;}
+    .TTAlert_back_fix {background: url("https://static2.touristtube.com/media/images/fancybox_overlay.png") repeat;}
+    #TTAlert_shadow {background: url("https://static2.touristtube.com/media/images/alert_shadow.png") repeat scroll 0 0;}
+    #TTAlert_close {background: url("https://static2.touristtube.com/media/images/cat-popup-close.png") no-repeat;}
+    .TTAlert_seperator {background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/alert_seperator.jpg") no-repeat scroll 0 0;}
+    .fromDate,.toDate{background: url("https://static2.touristtube.com/media/images/search/calendar_icon.gif") no-repeat 5px center;}
+    .departureairport,.arrivalairport,.searchdiscover{background: url("https://static2.touristtube.com/media/images/search/airport_icon.gif") no-repeat 5px center;}
+    .dropdown-menu > li > a.flag_lang { background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/index/enflag.png") no-repeat scroll 10px 0;}
+    .dropdown-menu > li > a.flag_lang.flag_lang_en {background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/index/enflag.png") no-repeat scroll 10px 0;}
+    .dropdown-menu > li > a.flag_lang.flag_lang_fr {background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/index/frflag.png") no-repeat scroll 10px 0;}
+    .dropdown-menu > li > a.flag_lang.flag_lang_cn, .dropdown-menu > li > a.flag_lang.flag_lang_zh {background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/index/cnflag.png") no-repeat scroll 10px 0;}
+    .dropdown-menu > li > a.flag_lang.flag_lang_hi { background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/index/inflag.png") no-repeat scroll 10px 0;}
+    .flagbacklangbar.flagbacklangbar_en{background: rgba(0,0,0,0) url("https://static2.touristtube.com/media/images/index/enflag.png") no-repeat scroll 0px 16px;}
+    .flagbacklangbar.flagbacklangbar_fr{background: rgba(0,0,0,0) url("https://static2.touristtube.com/media/images/index/frflag.png") no-repeat scroll 0px 16px;}
+    .flagbacklangbar.flagbacklangbar_cn{background: rgba(0,0,0,0) url("https://static2.touristtube.com/media/images/index/cnflag.png") no-repeat scroll 0px 16px;}
+    .flagbacklangbar.flagbacklangbar_in{background: rgba(0,0,0,0) url("https://static2.touristtube.com/media/images/index/inflag.png") no-repeat scroll 0px 16px;}
+    .pagerWrapper .first_pg { background: url("https://static2.touristtube.com/media/images/pager_btns.jpg") no-repeat scroll 0 3px;}
+    .pagerWrapper .prev_pg { background: url("https://static2.touristtube.com/media/images/pager_btns.jpg") no-repeat scroll -12px 3px;}
+    .pagerWrapper .next_pg { background: url("https://static2.touristtube.com/media/images/pager_btns.jpg") no-repeat scroll -27px 3px;}
+    .pagerWrapper .last_pg { background: url("https://static2.touristtube.com/media/images/pager_btns.jpg") no-repeat scroll -38px 3px;}
+    .mainpage_backimg{  background-position: center center;}
+    .image_searchbox.active{background: url("https://static2.touristtube.com/media/images/index/yellow_circle.png") no-repeat top center;}
+    .image_searchbox {background: url("https://static2.touristtube.com/media/images/index/grey_circle.png") no-repeat top center;}
+    .styled-select select.selectclassstyle{background: transparent; background: url("https://static2.touristtube.com/media/images/index/flech-out.png") no-repeat scroll right 5px center;}
+    .moreoptionsclass .mropclass{background: rgba(0,0,0,0) url("https://static2.touristtube.com/media/images/index/arrowdown_hp.png") no-repeat scroll right 7px;}
+    .moreoptionsclass .lessclass{background: rgba(0,0,0,0) url("https://static2.touristtube.com/media/images/index/less_uparrow.png") no-repeat scroll right 7px;}
+    .decbut {background: url("https://static2.touristtube.com/media/images/index/minus_search_hp.png") no-repeat left center;}
+    .inputsearch.inputsearchplus {background: url("https://static2.touristtube.com/media/images/butrightborder.png") no-repeat right center;}
+    .incbut {background: url("https://static2.touristtube.com/media/images/index/plus_search_hp.png") no-repeat right center;}
+    .moreoptionnewselect_hp select{background: url("https://static2.touristtube.com/media/images/index/flech-out.png") no-repeat scroll right 3px center;}
+    .changebagname{background: url("https://static2.touristtube.com/media/images/index/flech-out.png") no-repeat scroll right 10px center;}
+    .currencyselectbox_top .currency_top_but{background: url("https://static2.touristtube.com/media/images/index/custom_black_arrow.png") no-repeat scroll right center;}
+    .sprite {background: url("https://static2.touristtube.com/media/images/index/sprite.png") no-repeat top left;}
+    
+    @media (min-width: 992px) and (max-width: 1199px) {
+        .moreoptionnewselect_hp select { background: url("https://static2.touristtube.com/media/images/index/flech-out.png") no-repeat scroll right 3px center;}
+    }
+    @media (max-width: 767px) {
+        .langxs .dropxslang {background: rgba(0,0,0,0) url("https://static2.touristtube.com/media/images/index/enflag.png") no-repeat scroll 0px 0px;}
+        .langxs .dropxslang.dropxslang_en {background: rgba(0,0,0,0) url("https://static2.touristtube.com/media/images/index/enflag.png") no-repeat scroll 0px 0px;}
+        .langxs .dropxslang.dropxslang_fr {background: rgba(0,0,0,0) url("https://static2.touristtube.com/media/images/index/frflag.png") no-repeat scroll 0px 0px;}
+        .langxs .dropxslang.dropxslang_cn {background: rgba(0,0,0,0) url("https://static2.touristtube.com/media/images/index/cnflag.png") no-repeat scroll 0px 0px; }
+        .langxs .dropxslang.dropxslang_in { background: rgba(0,0,0,0) url("https://static2.touristtube.com/media/images/index/inflag.png") no-repeat scroll 0px 0px;}
+        .image_searchbox {background: rgba(0,0,0,0) url("https://static2.touristtube.com/media/images/index/grey_circle_xs.png") no-repeat center top;}
+        .image_searchbox.active{background: url("https://static2.touristtube.com/media/images/index/yellow_circle-xs.png") no-repeat top center;}
+    }
+    
+        .cg-navTable td select.recordXP{background: #838383 url("https://static2.touristtube.com/media/images/corporate_new/white_dropdown_corp_arrow.png") no-repeat scroll right 5px center;}
+    div.dataTables_wrapper div.dataTables_length select{background: url("https://static2.touristtube.com/media/images/index/flech-out.png") no-repeat scroll right 18px center;}
+      
+    .navbar-default .navbar-nav > li.itemspecialstyleli{background: #636363 url("https://static2.touristtube.com/media/images/360_logo.png") no-repeat scroll center bottom 5px;}
+    .pagerWrapper ul li.first_pg {background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/pager_btns.jpg") no-repeat scroll 0 3px;}
+    .pagerWrapper ul li.prev_pg {background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/pager_btns.jpg") no-repeat scroll -12px 3px;}
+    .pagerWrapper ul li.next_pg {background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/pager_btns.jpg") no-repeat scroll -27px 3px;}
+    .pagerWrapper ul li.last_pg {background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/pager_btns.jpg") no-repeat scroll -38px 3px;}
+    .hotel-overlay-loading-fix div {background: url("https://static2.touristtube.com/media/images/preloader_hotels.gif") no-repeat center center;}
+    .addtobag {background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/addtobag_icon.png") no-repeat scroll 0 0;}
+    .sort_submenu>ul{background: url("https://static2.touristtube.com/media/images/hotel_search_new/arrow_gray.png") no-repeat scroll 29px 0px;}
+    .missedtxtcomm span.missed_pink{background: url("https://static2.touristtube.com/media/images/hotel_search_new/missed_pinkarrow.png") no-repeat left center;}
+    .room-gallery {background: url("https://static2.touristtube.com/media/images/fancybox_overlay.png") repeat;}
+    .room-gallery-container .rommgalleryul li.borderedliroom{background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/bordered_roomgallery.png") no-repeat scroll 0px 0px;}
+    .room-gallery-container .closebut-room{background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/closebut-room.png") no-repeat scroll 0px 0px;}
+    .addtobagImage {background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/addtobag_icon.png") no-repeat scroll 0 0;}
+    .hotel_booking_details_container .hotel_detailed_room_select select{background: white url("https://static2.touristtube.com/media/images/flech-out.png") no-repeat scroll right 5px center;}
+    .room-gallery {background: url("https://static2.touristtube.com/media/images/fancybox_overlay.png") repeat;}
+    .fancybox-overlay {background: url("https://static2.touristtube.com/media/images/fancybox_overlay.png") repeat;}
+    .backimginfo {background: url("https://static2.touristtube.com/media/images/exlamgreysmal.png") no-repeat scroll left center;}
+    .green-button { background: #17a988 url("https://static2.touristtube.com/media/images/whiteff.png") no-repeat scroll 10px 41px;}
+    .hotel_payment_container .select_commun{background: url("https://static2.touristtube.com/media/images/hotel-book_new/black_select_arrow.png") no-repeat scroll right 40px center;}
+    .hotel_payment_container .select_grey{background: #959595 url("https://static2.touristtube.com/media/images/hotel_payment_new/white_select_arrow.png") no-repeat scroll right 20px center;}
+    .leftpanel_selectbox .select_leftpanel{background: url("https://static2.touristtube.com/media/images/hotel-book_new/black_select_arrow.png") no-repeat scroll right 20px center;}
+    .hotel_book_container .right_panel .dropdown{background: url("https://static2.touristtube.com/media/images/hotel-book_new/black_select_arrow.png") no-repeat scroll right 20px center;}
+    .addchild{background-image: url("https://static2.touristtube.com/media/images/addchild.png");}
+    li.stops{background-image: url("https://static2.touristtube.com/media/images/fly-stops.png");}
+    .title_with_icon .bg {background-image: url("https://static2.touristtube.com/media/images/search-restaurant-list.png");}
+    .first_pg { background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/pager_btns.jpg") no-repeat scroll 0 3px;}
+    .prev_pg {background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/pager_btns.jpg") no-repeat scroll -12px 3px;}
+    .next_pg {background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/pager_btns.jpg") no-repeat scroll -27px 3px;}
+    .last_pg { background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/pager_btns.jpg") no-repeat scroll -38px 3px;}
+    .inputbox select {background: rgb(233, 233, 233) url("https://static2.touristtube.com/media/images/flech-out.png") no-repeat scroll right 5px center;}
+    .bluebacksearchdiv{background: rgb(45, 165, 187) url("https://static2.touristtube.com/media/images/threearr.png") no-repeat scroll 45% 53%;}
+    .ulheadstyle li{background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/border.png") no-repeat scroll right center;}
+    .text{ background: white url("https://static2.touristtube.com/media/images/timelogo.png") no-repeat scroll left center;}
+    .firsttextspan{background-image: url("https://static2.touristtube.com/media/images/excmarqblue.png"), url("https://static2.touristtube.com/media/images/orangeaddbut.png");}
+    .overlay-loading-flights div{background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/preloader_flight.gif") no-repeat scroll center center;}
+    .title_with_icon_chs .txt_chs{background: url("https://static2.touristtube.com/media/images/corporate-flight-search/filter-back-img-yellow.png") no-repeat 0 0;}
+    .checkboxes_chs .bg_chs {background: url("https://static2.touristtube.com/media/images/corporate-flight-search/greystars_chs.png") no-repeat 0 0;}
+    @media (max-width:1199px){
+        .bluebacksearchdiv{ background: rgb(45, 165, 187) url("https://static2.touristtube.com/media/images/threearr.png") no-repeat scroll 56% 53%;}
+    }
+    @media (max-width:767px){
+        .bluebacksearchdiv {background: rgb(45, 165, 187) url("https://static2.touristtube.com/media/images/threearr.png") no-repeat scroll 80px 57%;}
+    }
+    .channels_container ul.list_left_menue_ainfo li{background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/tuber/pink_list_dot.png") no-repeat scroll left center;}
+    .dropdown_txt {background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/hotel-book_new/black_select_arrow.png") no-repeat scroll right 20px center;}
+    .channel-container .channel_input_commun select{background: url("https://static2.touristtube.com/media/images/channel_new/black_darrow.png") no-repeat scroll right 15px center;}
+    .channel_input_commun select{background: url("https://static2.touristtube.com/media/images/channel_new/black_darrow.png") no-repeat scroll right 15px center;}
+    .channels_container ul.list_left_menue_ainfo li{background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/tuber/pink_list_dot.png") no-repeat scroll left center;}
+    .media-container .swiper-button-ss-prev { background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/photos_videos/prev_grey.png") no-repeat scroll center center;}
+    .media-container .swiper-button-ss-next { background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/photos_videos/next_black.png") no-repeat scroll center center;}
+    .review_main_container .eval_options_glob { background: url("https://static2.touristtube.com/media/images/review_new/grey_img_rating_star.png") no-repeat;}
+    .review_main_container .eval_options_glob:hover, .eval_options_glob.active {background: url("https://static2.touristtube.com/media/images/review_new/yellow_img_rating_star.png") no-repeat;}
+    .discover_detailed_container .slectcateg_select {background: #db3a69 url("https://static2.touristtube.com/media/images/discover_detailed_new/searchlogo.png") no-repeat scroll center right 10px;}
+    .discover_detailed_container .anchor_bk{ background: url("https://static2.touristtube.com/media/images/discover/anchor_bk.png") no-repeat scroll;}
+    .tuuber-container ul.list_left_menue_ainfo li{background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/tuber/pink_list_dot.png") no-repeat scroll left center;}
+    .bag_container .containeraddicon.containeraddicon1 { background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/defaultbag.png") no-repeat scroll center top;}
+    .peoplesdataemail_icon {background-image: url("https://static2.touristtube.com/media/images/email_icon.jpg");}
+    .peoplesdataclose {background-image: url("https://static2.touristtube.com/media/images/modal_profile_close.jpg");}
+    .fb-share{background-image: url("https://static2.touristtube.com/media/images/sharepopup-social.png");}
+    .g-share{background-image: url("https://static2.touristtube.com/media/images/sharepopup-social.png");}
+    .twt-share{background-image: url("https://static2.touristtube.com/media/images/sharepopup-social.png");}
+    .print-share{background-image: url("https://static2.touristtube.com/media/images/sharepopup-social.png");}
+    .hotel-overlay-loading-fix div {background: url("https://static2.touristtube.com/media/images/preloader_hotels.gif") no-repeat center center;}
+    .pagerWrapper ul li.first_pg {background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/pager_btns.jpg") no-repeat scroll 0 3px;}
+    .pagerWrapper ul li.prev_pg {background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/pager_btns.jpg") no-repeat scroll -12px 3px;}
+    .pagerWrapper ul li.next_pg {background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/pager_btns.jpg") no-repeat scroll -27px 3px;}
+    .pagerWrapper ul li.last_pg {background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/pager_btns.jpg") no-repeat scroll -38px 3px;}
+    .selectback2 {background: rgb(234, 234, 234) url("https://static2.touristtube.com/media/images/secureresume.png") no-repeat scroll 94% 50%;}
+    .select-expiry-date {background: rgb(234, 234, 234) url("https://static2.touristtube.com/media/images/flech-out.png") no-repeat scroll right 5px center;}
+    .firststep, .sndstep {background: rgba(255, 255, 255, 0) url("https://static2.touristtube.com/media/images/stepsborder_hoteldetailed.png") no-repeat scroll right 12px;}
+    .bullet {background: rgba(255, 255, 255, 0) url("https://static2.touristtube.com/media/images/grey_bullet.png") no-repeat scroll center center;}
+    .number-step-text {background: rgba(255, 255, 255, 0) url("https://static2.touristtube.com/media/images/greyff_hoteldetail.png") no-repeat scroll right center;}
+    .green_bullet .bullet {background: rgba(255, 255, 255, 0) url("https://static2.touristtube.com/media/images/green_bullet.png") no-repeat scroll center center;}
+    .blue_bullet .bullet {background: rgba(255, 255, 255, 0) url("https://static2.touristtube.com/media/images/blue_bullet.png") no-repeat scroll center center;}
+    .green_bullet .number-step-text {background: rgba(255, 255, 255, 0) url("https://static2.touristtube.com/media/images/greenff_hoteldetailed.png") no-repeat scroll right center;}
+    .blue_bullet .number-step-text {background: rgba(255, 255, 255, 0) url("https://static2.touristtube.com/media/images/blueff_hoteldetail.png") no-repeat scroll right center;}
+    .ui-icon-loading {background: url("https://static2.touristtube.com/media/images/360-photos/themes/images/ajax-loader.gif");}
+    .ui-nosvg .ui-icon-action:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/action-white.png")}
+    .ui-nosvg .ui-icon-alert:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/alert-white.png")}
+    .ui-nosvg .ui-icon-arrow-d-l:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/arrow-d-l-white.png")}
+    .ui-nosvg .ui-icon-arrow-d-r:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/arrow-d-r-white.png")}
+    .ui-nosvg .ui-icon-search:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/search-white.png")}
+    .ui-nosvg .ui-icon-shop:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/shop-white.png")}
+    .ui-nosvg .ui-icon-star:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/star-white.png")}
+    .ui-nosvg .ui-icon-tag:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/tag-white.png")}
+    .ui-nosvg .ui-icon-user:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/user-white.png")}
+    .ui-nosvg .ui-icon-video:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/video-white.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-action:after,.ui-nosvg .ui-alt-icon .ui-icon-action:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/action-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-alert:after,.ui-nosvg .ui-alt-icon .ui-icon-alert:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/alert-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-arrow-d:after,.ui-nosvg .ui-alt-icon .ui-icon-arrow-d:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/arrow-d-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-arrow-d-l:after,.ui-nosvg .ui-alt-icon .ui-icon-arrow-d-l:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/arrow-d-l-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-arrow-d-r:after,.ui-nosvg .ui-alt-icon .ui-icon-arrow-d-r:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/arrow-d-r-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-arrow-l:after,.ui-nosvg .ui-alt-icon .ui-icon-arrow-l:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/arrow-l-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-arrow-r:after,.ui-nosvg .ui-alt-icon .ui-icon-arrow-r:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/arrow-r-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-arrow-u:after,.ui-nosvg .ui-alt-icon .ui-icon-arrow-u:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/arrow-u-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-arrow-u-l:after,.ui-nosvg .ui-alt-icon .ui-icon-arrow-u-l:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/arrow-u-l-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-arrow-u-r:after,.ui-nosvg .ui-alt-icon .ui-icon-arrow-u-r:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/arrow-u-r-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-audio:after,.ui-nosvg .ui-alt-icon .ui-icon-audio:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/audio-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-back:after,.ui-nosvg .ui-alt-icon .ui-icon-back:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/back-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-bars:after,.ui-nosvg .ui-alt-icon .ui-icon-bars:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/bars-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-bullets:after,.ui-nosvg .ui-alt-icon .ui-icon-bullets:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/bullets-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-calendar:after,.ui-nosvg .ui-alt-icon .ui-icon-calendar:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/calendar-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-camera:after,.ui-nosvg .ui-alt-icon .ui-icon-camera:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/camera-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-carat-d:after,.ui-nosvg .ui-alt-icon .ui-icon-carat-d:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/carat-d-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-carat-l:after,.ui-nosvg .ui-alt-icon .ui-icon-carat-l:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/carat-l-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-carat-r:after,.ui-nosvg .ui-alt-icon .ui-icon-carat-r:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/carat-r-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-carat-u:after,.ui-nosvg .ui-alt-icon .ui-icon-carat-u:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/carat-u-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-check:after,.ui-nosvg .ui-alt-icon .ui-icon-check:after,.ui-nosvg .ui-alt-icon.ui-btn.ui-checkbox-on:after,.ui-nosvg .ui-alt-icon .ui-btn.ui-checkbox-on:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/check-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-clock:after,.ui-nosvg .ui-alt-icon .ui-icon-clock:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/clock-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-cloud:after,.ui-nosvg .ui-alt-icon .ui-icon-cloud:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/cloud-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-comment:after,.ui-nosvg .ui-alt-icon .ui-icon-comment:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/comment-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-delete:after,.ui-nosvg .ui-alt-icon .ui-icon-delete:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/delete-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-edit:after,.ui-nosvg .ui-alt-icon .ui-icon-edit:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/edit-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-eye:after,.ui-nosvg .ui-alt-icon .ui-icon-eye:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/eye-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-forbidden:after,.ui-nosvg .ui-alt-icon .ui-icon-forbidden:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/forbidden-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-forward:after,.ui-nosvg .ui-alt-icon .ui-icon-forward:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/forward-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-gear:after,.ui-nosvg .ui-alt-icon .ui-icon-gear:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/gear-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-grid:after,.ui-nosvg .ui-alt-icon .ui-icon-grid:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/grid-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-heart:after,.ui-nosvg .ui-alt-icon .ui-icon-heart:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/heart-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-home:after,.ui-nosvg .ui-alt-icon .ui-icon-home:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/home-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-info:after,.ui-nosvg .ui-alt-icon .ui-icon-info:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/info-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-location:after,.ui-nosvg .ui-alt-icon .ui-icon-location:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/location-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-lock:after,.ui-nosvg .ui-alt-icon .ui-icon-lock:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/lock-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-mail:after,.ui-nosvg .ui-alt-icon .ui-icon-mail:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/mail-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-minus:after,.ui-nosvg .ui-alt-icon .ui-icon-minus:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/minus-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-navigation:after,.ui-nosvg .ui-alt-icon .ui-icon-navigation:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/navigation-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-phone:after,.ui-nosvg .ui-alt-icon .ui-icon-phone:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/phone-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-plus:after,.ui-nosvg .ui-alt-icon .ui-icon-plus:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/plus-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-power:after,.ui-nosvg .ui-alt-icon .ui-icon-power:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/power-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-recycle:after,.ui-nosvg .ui-alt-icon .ui-icon-recycle:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/recycle-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-refresh:after,.ui-nosvg .ui-alt-icon .ui-icon-refresh:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/refresh-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-search:after,.ui-nosvg .ui-alt-icon .ui-icon-search:after,.ui-nosvg .ui-input-search:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/search-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-shop:after,.ui-nosvg .ui-alt-icon .ui-icon-shop:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/shop-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-star:after,.ui-nosvg .ui-alt-icon .ui-icon-star:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/star-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-tag:after,.ui-nosvg .ui-alt-icon .ui-icon-tag:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/tag-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-user:after,.ui-nosvg .ui-alt-icon .ui-icon-user:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/user-black.png")}
+    .ui-nosvg .ui-alt-icon.ui-icon-video:after,.ui-nosvg .ui-alt-icon .ui-icon-video:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/video-black.png")}   
+    .ui-nosvg .ui-icon-arrow-d:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/arrow-d-white.png")}
+    .ui-nosvg .ui-icon-arrow-l:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/arrow-l-white.png")}
+    .ui-nosvg .ui-icon-arrow-r:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/arrow-r-white.png")}
+    .ui-nosvg .ui-icon-arrow-u-l:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/arrow-u-l-white.png")}
+    .ui-nosvg .ui-icon-arrow-u-r:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/arrow-u-r-white.png")}
+    .ui-nosvg .ui-icon-arrow-u:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/arrow-u-white.png")}
+    .ui-nosvg .ui-icon-audio:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/audio-white.png")}
+    .ui-nosvg .ui-icon-back:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/back-white.png")}
+    .ui-nosvg .ui-icon-bars:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/bars-white.png")}
+    .ui-nosvg .ui-icon-bullets:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/bullets-white.png")}
+    .ui-nosvg .ui-icon-calendar:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/calendar-white.png")}
+    .ui-nosvg .ui-icon-camera:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/camera-white.png")}
+    .ui-nosvg .ui-icon-carat-d:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/carat-d-white.png")}
+    .ui-nosvg .ui-icon-carat-l:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/carat-l-white.png")}
+    .ui-nosvg .ui-icon-carat-r:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/carat-r-white.png")}
+    .ui-nosvg .ui-icon-carat-u:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/carat-u-white.png")}
+    .ui-nosvg .ui-icon-check:after,html.ui-nosvg .ui-btn.ui-checkbox-on:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/check-white.png")}
+    .ui-nosvg .ui-icon-clock:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/clock-white.png")}
+    .ui-nosvg .ui-icon-cloud:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/cloud-white.png")}
+    .ui-nosvg .ui-icon-comment:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/comment-white.png")}
+    .ui-nosvg .ui-icon-delete:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/delete-white.png")}
+    .ui-nosvg .ui-icon-edit:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/edit-white.png")}
+    .ui-nosvg .ui-icon-eye:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/eye-white.png")}
+    .ui-nosvg .ui-icon-forbidden:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/forbidden-white.png")}
+    .ui-nosvg .ui-icon-forward:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/forward-white.png")}
+    .ui-nosvg .ui-icon-gear:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/gear-white.png")}
+    .ui-nosvg .ui-icon-grid:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/grid-white.png")}
+    .ui-nosvg .ui-icon-heart:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/heart-white.png")}
+    .ui-nosvg .ui-icon-home:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/home-white.png")}
+    .ui-nosvg .ui-icon-info:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/info-white.png")}
+    .ui-nosvg .ui-icon-location:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/location-white.png")}
+    .ui-nosvg .ui-icon-lock:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/lock-white.png")}
+    .ui-nosvg .ui-icon-mail:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/mail-white.png")}
+    .ui-nosvg .ui-icon-minus:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/minus-white.png")}
+    .ui-nosvg .ui-icon-navigation:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/navigation-white.png")}
+    .ui-nosvg .ui-icon-phone:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/phone-white.png")}
+    .ui-nosvg .ui-icon-plus:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/plus-white.png")}
+    .ui-nosvg .ui-icon-power:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/power-white.png")}
+    .ui-nosvg .ui-icon-recycle:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/recycle-white.png")}
+    .ui-nosvg .ui-icon-refresh:after{background-image:url("https://static2.touristtube.com/media/images/360-photos/themes/images/icons-png/refresh-white.png")}
+    .fullscreen-enter {background: url("https://static2.touristtube.com/media/images/360-photos/enter-fullscreen.png");}
+    .fullscreen-exit {background: url("https://static2.touristtube.com/media/images/360-photos/exit-fullscreen.png");}
+    .close {background-image: url("https://static2.touristtube.com/media/images/360-photos/close.png");}
+    .popuplogo{background: url("https://static2.touristtube.com/media/images/popuplogo.png") no-repeat;}
+    .review_main_container .eval_options_glob { background: url("https://static2.touristtube.com/media/images/review_new/grey_img_rating_star.png") no-repeat;}
+    .review_main_container .eval_options_glob:hover, .eval_options_glob.active {background: url("https://static2.touristtube.com/media/images/review_new/yellow_img_rating_star.png") no-repeat;}
+    .downloadapptext{background: url("https://static2.touristtube.com/media/images/textpinkarrowhb.png") no-repeat 42px 27px;}
+    .ttd_grid .ttd_box .video-icon-play{background: url("https://static2.touristtube.com/media/images/video-icon-play.png") no-repeat;}
+    .rblk ul.rb li {background: url("https://static2.touristtube.com/media/images/li.jpg") no-repeat 0 11px;}
+    .first_pg{background: url("https://static2.touristtube.com/media/images/pager_btns.jpg") no-repeat 0 3px ;}
+    .prev_pg{background: url("https://static2.touristtube.com/media/images/pager_btns.jpg") no-repeat -12px 3px ;}
+    .next_pg{background: url("https://static2.touristtube.com/media/images/pager_btns.jpg") no-repeat -27px 3px ;}
+    .last_pg{background: url("https://static2.touristtube.com/media/images/pager_btns.jpg") no-repeat -38px 3px ;}
+    .ttd_details .header{background: url("https://static2.touristtube.com/media/images/bg-desc-ttd.png") repeat-x bottom;}
+    .headerseperater{background: url("https://static2.touristtube.com/media/images/bg-desc-ttd.png") repeat-x bottom;}
+    .plus{background: url("https://static2.touristtube.com/media/images/add_icon.png") no-repeat;}
+    @media  (max-width: 1205px){
+        .categoriesWrapper .btitle .bg{background: url("https://static2.touristtube.com/media/images/arrow_categ.png") no-repeat center -136px;}
+        .rblk .btitle .padd.categories{background: url("https://static2.touristtube.com/media/images/category.png") no-repeat center 0;}
+    }
+    @media (min-width:388px) and (max-width:585px){
+        .downloadapptext{background: url("https://static2.touristtube.com/media/images/textpinkarrowhb.png") no-repeat 16px 12px;}
+    }
+    @media (max-width:387px){    
+        .downloadapptext{background: url("https://static2.touristtube.com/media/images/textpinkarrowhb.png") no-repeat 6px 12px;}
+    }
+    .anchor_bk{background: url("https://static2.touristtube.com/media/images/discover/anchor_bk.png") no-repeat scroll;}
+    .anchor_star1{ background: url("https://static2.touristtube.com/media/images/discover/anchor_star1.png") no-repeat;}
+    .anchor_star2{ background: url("https://static2.touristtube.com/media/images/discover/anchor_star2.png") no-repeat;}
+    .anchor_star3{background: url("https://static2.touristtube.com/media/images/discover/anchor_star3.png") no-repeat;}
+    .anchor_star4{background: url("https://static2.touristtube.com/media/images/discover/anchor_star4.png") no-repeat;}
+    .anchor_star5{background: url("https://static2.touristtube.com/media/images/discover/anchor_star5.png") no-repeat;}
+    .my_bookings_container .inputs_row .form-group select{background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/corporate/customselectarrow.png") no-repeat scroll right 17px center;}
+    .my_bookings_container .inputs_row .submit_button button{background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/corporate/rightdirectionarrowcorp.png") no-repeat scroll center center;}
+    .my_bookings_container .custom_form .form-group select{background: #343434 url("https://static2.touristtube.com/media/images/corporate/white_select_arrow.png") no-repeat scroll right 5px center;}
+    .my_bookings_container .prev_pg {background-image: url("https://static2.touristtube.com/media/images/pager_btns.jpg") no-repeat scroll -12px 3px;}
+    .my_bookings_container .first_pg {background-image: url("https://static2.touristtube.com/media/images/pager_btns.jpg") no-repeat scroll 0 3px;}
+    .my_bookings_container .next_pg {background-image: url("https://static2.touristtube.com/media/images/pager_btns.jpg") no-repeat scroll -27px 3px;}
+    .my_bookings_container .last_pg {background-image: url("https://static2.touristtube.com/media/images/pager_btns.jpg") no-repeat scroll -38px 3px;}
+    .main_ul_list_help li{background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/tick.png") no-repeat scroll 0 5px;}
+    .marquee-window, .marquee-preview {background: url("https://static2.touristtube.com/media/images/spacer.gif") no-repeat center;}
+    .accountbutseperator {background: url("https://static2.touristtube.com/media/images/alert_seperator.jpg") no-repeat scroll 0 0 transparent;}
+    .deals_container .addtobagtextstyle, .attractions_list_new_container .addtobagtextstyle:hover {background: rgba(0,0,0,0) url("https://static2.touristtube.com/media/images/deals-list_new/add_to_bag_logo.png") no-repeat scroll 0 0px;}
+    .deals_container .deals_select_country select{background: url("https://static2.touristtube.com/media/images/index/flech-out.png") no-repeat scroll right 10px center;}
+    .deals_container .common_selectbox_deals select{background: url("https://static2.touristtube.com/media/images/index/flech-out.png") no-repeat scroll right 10px center;}
+    .deals_container .centeredtext_selectbox select{background: url("https://static2.touristtube.com/media/images/index/flech-out.png") no-repeat scroll right 10px center;}
+    .deals_container .select_grey select {background: #959595 url("https://static2.touristtube.com/media/images/hotel_payment_new/white_select_arrow.png") no-repeat scroll right 10px center;}
+    .deals_container .bullet_left:before{background-image: url("https://static2.touristtube.com/media/images/deals-details_new/pink_bullet.png"); }
+    .anchor_star1{ background: url("https://static2.touristtube.com/media/images/discover/anchor_star1.png") no-repeat;}
+    .anchor_star2{ background: url("https://static2.touristtube.com/media/images/discover/anchor_star2.png") no-repeat;}
+    .anchor_star3{ background: url("https://static2.touristtube.com/media/images/discover/anchor_star3.png") no-repeat;}
+    .anchor_star4{ background: url("https://static2.touristtube.com/media/images/discover/anchor_star4.png") no-repeat;}
+    .anchor_star5{ background: url("https://static2.touristtube.com/media/images/discover/anchor_star5.png") no-repeat;}
+    .corporate_common_new_container .mybookinginput select{background: url("https://static2.touristtube.com/media/images/index/greyfleche_prefooterselect.png") no-repeat scroll right 15px center; }
+    .fancybox-close {background-image: url("https://static2.touristtube.com/media/images/cat-popup-close.png");}
+    .corprate_newdesign_container .signin_corporate_list li{background: url("https://static2.touristtube.com/media/images/corporate_new/rightblue_arrow.png") no-repeat scroll left center;}
+    .searchlogo_msa {background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/corporate/searchlogo_msa.png") no-repeat scroll center center;}
+    .jstree-default .pinkarrowroot .jstree-icon {background-image: url("https://static2.touristtube.com/media/images/corporate/treerootlogo.png");}
+    .jstree-default .shildlogo .jstree-icon {background-image: url("https://static2.touristtube.com/media/images/corporate/shildlogo.png");}
+    .selectboxes_msapopup select{background-image: url("https://static2.touristtube.com/media/images/corporate-flight/fldwn_corpfl.png");}
+    .flight-bullet{background: transparent url("https://static2.touristtube.com/media/images/flight-stop-bullet.png") no-repeat scroll 4px 6px;}
+    .stopsresume{ background: transparent url("https://static2.touristtube.com/media/images/flight-stop-clock.png") no-repeat scroll 0 23px;}
+    .greyresume .textdivresume:first-child .flight-bullet:first-child, .greyresume .textdivresume:last-child .flight-bullet:last-child{background: transparent url("https://static2.touristtube.com/media/images/flight-bullet.png") no-repeat scroll 0 2px;}
+    .multi-destination-container .greyresume .textdivresume .small-flight-bullet.flight-bullet{background: transparent url("https://static2.touristtube.com/media/images/flight-stop-bullet.png") no-repeat scroll 4px 6px;}
+    .stop-flight-fields .flight-fields:last-child .small-flight-bullet.flight-bullet:last-child{background: transparent url("https://static2.touristtube.com/media/images/flight-bullet.png") no-repeat scroll 0 2px;}
+    .flight-info{background: transparent url("https://static2.touristtube.com/media/images/planeresume.png") no-repeat scroll 0 -3px;}
+    .baggage-info{background: transparent url("https://static2.touristtube.com/media/images/bagresume.png") no-repeat scroll 0 2px;}
+    .selectback{background: rgb(234, 234, 234) url("https://static2.touristtube.com/media/images/flech-out.png") no-repeat scroll right 5px center;}
+    .selectback2{background: rgb(234, 234, 234) url("https://static2.touristtube.com/media/images/secureresume.png") no-repeat scroll right 5px center;}
+    .dob select{ background: rgb(234, 234, 234) url("https://static2.touristtube.com/media/images/flech-out.png") no-repeat scroll right 5px center;}
+    .textwithbluebullet{background: transparent url("https://static2.touristtube.com/media/images/bluebullet.png") no-repeat scroll left center;}
+    .deparrival_corpflight .deparrival_input_corpfl{background-image: url("https://static2.touristtube.com/media/images/corporate-flight/locationiconyellow_corpfl.png");}
+    .selectboxes_corpfl select{background-image: url("https://static2.touristtube.com/media/images/corporate-flight/fldwn_corpfl.png");}
+    .slick-prev{background-image: url("https://static2.touristtube.com/media/images/galprev1.png") !important;}
+    .slick-next{background-image: url("https://static2.touristtube.com/media/images/galnxt1.png") !important;}
+    .rommgalleryul li.borderedliroom{background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/bordered_roomgallery.png") no-repeat scroll 0px 0px;}
+    .closebut-room{background: rgba(0, 0, 0, 0) url("https://static2.touristtube.com/media/images/closebut-room.png") no-repeat scroll 0px 0px;}
+    .review_options_glob{background: url("https://static2.touristtube.com/media/images/review-HT/emptyheart.png") no-repeat;}
+    .review_options_glob:hover, .review_options_glob.active{background: url("https://static2.touristtube.com/media/images/review-HT/fullheart.png") no-repeat;}
+    .review_options_over {background: url("https://static2.touristtube.com/media/images/channel_bubble_icon1.png") no-repeat left center;}
+    .request_form_eval_options {background: url("https://static2.touristtube.com/media/images/request_form_grey_star.png") no-repeat;}
+    .request_form_container .request_form_eval_options:hover, .request_form_container .request_form_eval_options.active {background: url("https://static2.touristtube.com/media/images/request_form_pink_star.png") no-repeat;}
+    .flight_input_pr select ,.flight_input_commun{background: url("/media/images/index/flech-out.png") no-repeat scroll right 2px center;}
+    .commun_container_360 .commun_select_style{width: 100%; height: 76px; border: 1px solid #d5d6d8; text-align: center;color: black; background: url("/media/images/index/flech-out.png") no-repeat scroll right 5px center;}
+    .commun_container_360 .eval_options {background: url("https://static2.touristtube.com/media/images/request_form_grey_star.png") no-repeat;}
+    .commun_container_360 .eval_options:hover, .commun_container_360 .eval_options.active {background: url("https://static2.touristtube.com/media/images/request_form_pink_star.png") no-repeat;}
+    .new_flight_container div.from_to_logo:after{background: url("https://static2.touristtube.com/media/images/flights_new/from_to_logo.png") no-repeat right top;}
+</style>        <script type="text/javascript">
+             if (navigator.cookieEnabled) document.cookie = "timezone="+ (- new Date().getTimezoneOffset()) +";expires=(Sat, 19 Aug 2023 08:34:23 +0000);path=/";
+        </script>
+
+        <script type="application/ld+json">
+            {
+            "@context":"https://schema.org",
+            "@graph":
+	    [
+	    {
+	    "@type" : "WebSite",
+	    "@id":"https://touristtube.com/#website",
+	    "name" : "TouristTube",
+	    "alternateName":"TouristTube.com",
+	    "url" : "https://touristtube.com/"
+	    },
+	    {
+	    "@type" : "WebPage",
+	    "@id" : "https://www.touristtube.com/Things-to-do-in-Delhi/The-Red-Fort-360#webpage",
+	    "url" : "https://www.touristtube.com/Things-to-do-in-Delhi/The-Red-Fort-360",
+	    "inLanguage" : "en",
+	    "name" : "TouristTube",
+	    "isPartOf":
+	    {
+	    "@id":"https://touristtube.com/#website"
+	    },
+	    "description" : "things to do in Delhi, places to visit in Delhi, everything you need tourist tube"
+	    },                            
+	    {
+	    "@type": "Organization",
+	    "name": "TouristTube",
+	    "url": "https://touristtube.com/",
+	    "logo": "https://static2.touristtube.com/media/images/Logo.png",
+	    "contactPoint": [
+	    {
+	    "@type": "ContactPoint",
+	    "email": "info@touristtube.com",
+	    "contactType": "customer service",
+	    "availableLanguage": ["EN", "FR", "AR"] 
+	    }
+	    ],
+	    "sameAs": [
+	    "https://www.facebook.com/pages/TouristTube/1635194046710440?fref=ts",
+	    "https://twitter.com/TouristTube",
+	    "https://plus.google.com/u/0/+touristtubepage/posts",
+	    "https://www.pinterest.com/touristtube/"
+	    ]
+	    }
+	    ]
+            }
+        </script>
+                                <!-- Facebook Pixel Code -->
+            <script>
+		!function (f, b, e, v, n, t, s) {
+		    if (f.fbq)
+				return;
+		    n = f.fbq = function () {
+				n.callMethod ? n.callMethod.apply(n,	arguments) : n.queue.push(arguments);
+			};
+		    if (!f._fbq)
+				f._fbq = n;
+		    n.push = n;
+		    n.loaded = !0;
+		    n.version = '2.0';
+		    n.queue = [];
+		    t = b.createElement(e);
+		    t.async = !0;
+		    t.src = v;
+		    s = b.getElementsByTagName(e)[0];
+		    s.parentNode.insertBefore(t, s);
+		}(window, document,	'script', 'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '100100533915167'); // Insert your pixel ID here.
+		fbq('track', 'PageView');
+            </script>
+	<noscript><img height="1" width="1" alt="facebook" style="display:none" src="https://www.facebook.com/tr?id=100100533915167&ev=PageView&noscript=1"/></noscript>
+	<!-- DO NOT MODIFY -->
+	<!-- End Facebook Pixel Code -->
+    </head>
+<body>
+
+
+        <div id="popup_creatid" class="popup_creat bag_popup"></div>
+    
+<div class="upload-overlay-loading-fix"><div></div></div>
+<div class="container">
+    <h3 class="para-desc2">View The Red Fort In </h3>
+    <h3 class="para-desc2 color-or">360 Virtual Tour</h3>
+    <p class="para-desc ">Take a look at the Destination and Decide the Place you Would Love To Visit.</p>
+</div>
+<section>
+<div class="bodyblocks" id="bodyblocks">
+    
+	<div class="container">
+	<div class="row new_margin">	    
+	    <div class="col-xs-12 new_padding">
+		<div class="col-xs-12 nopad blackBg">
+		    <div class="media_holder">
+			<div class="table-wrapper imgpano_container">
+			    <div id="pano" class="imgpano">
+				<noscript><table class="panotablestyle"><tr class="panotabletrstyle"><td><div class="panotabletrtdstyle">ERROR:<br/><br/>Javascript not activated<br/><br/></div></td></tr></table></noscript>
+			    </div>
+			    				<div class="table-cell">
+				    <span class="section_googlemap_loading"></span>
+				</div>
+			    			</div>
+		    </div>
+		</div>
+	    </div>
+	</div>	
+</div>
+<div class="container temp1234">
+	<div class="row new_margin ">
+	    		<div class="col-sm-3  new_padding thumb_360" data-ttdid="459" data-divisionid="229" data-parentdivid="228" data-categoryid="1" data-name="The Red Fort-1" data-country="in">
+		    <img class="img123" alt="The Red Fort-1" src="https://static2.touristtube.com/media/360/ttd/in/459/1/228/229/thumb.jpg?d=181x104">
+		    
+		</div>
+	    		<div class="col-sm-3 col-xs-4 new_padding thumb_360" data-ttdid="459" data-divisionid="230" data-parentdivid="228" data-categoryid="1" data-name="The Red Fort-2" data-country="in">
+		    <img class="img123" alt="The Red Fort-2" src="https://static2.touristtube.com/media/360/ttd/in/459/1/228/230/thumb.jpg?d=181x104">
+		    
+		</div>
+	    		<div class="col-sm-3 col-xs-4 new_padding thumb_360" data-ttdid="459" data-divisionid="231" data-parentdivid="228" data-categoryid="1" data-name="The Red Fort-3" data-country="in">
+		    <img class="img123" alt="The Red Fort-3" src="https://static2.touristtube.com/media/360/ttd/in/459/1/228/231/thumb.jpg?d=181x104">
+		    
+		</div>
+	    		<div class="col-sm-3 col-xs-4 new_padding thumb_360" data-ttdid="459" data-divisionid="232" data-parentdivid="228" data-categoryid="1" data-name="The Red Fort-4" data-country="in">
+		    <img class="img123" alt="The Red Fort-4" src="https://static2.touristtube.com/media/360/ttd/in/459/1/228/232/thumb.jpg?d=181x104">
+		   
+		</div>
+	    	</div>	
+        </div>
+        <div class="container">
+	<div class="row new_margin">   
+	    <div class="col-xs-12 new_padding">
+		<p class=" details_new_description_margin para-desc3">Among the historic monuments, the Red Fort is also one of the most significant monument in the heart of Delhi city, India. The red fort was established as the castle fort of powerful sovereign of ancient India in the city of Delhi. The red fort is enclosed by a rubble stone wall, with bastions, gates and wickets at intervals. The design of the stunning palace is founded on Islamic samples, but each construction discloses architectural basics typical of Mughal erection. The Red Fort is an unpredictable octagon, with two long sides on the east and west, and with two fundamental entrances, one on the west and the other on the south, called Lahori and Delhi gates separately. While the dividers, entryways and a couple of different structures in the fortification are built of red sandstone, marble has been to a great extent utilized as a part of the castles.</p>	    
+	    </div>
+	</div>
+</div>
+    </section>
+</div>
+<footer>
+    		    
+
+	   
+	    	
+	<!-- jQuery library -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<!-- Latest compiled Bootstrap JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<!-- jQuery UI library -->
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+	<!-- Latest compiled Bootstrap Notify JavaScript -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap-notify@3.1.3/bootstrap-notify.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<!-- Latest compiled jQuery i18n -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.min.js" integrity="sha512-a0tGMh5o0nCoRDiMVaSmiWgB9s/JqfC+PQZHWANTzIhasvm5eH9NkWTmJ4WloaQWLT8fEzRBjvADgFNDf0WusQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<!-- Latest compiled jQuery Number -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/df-number-format/2.1.6/jquery.number.min.js" integrity="sha512-3z5bMAV+N1OaSH+65z+E0YCCEzU8fycphTBaOWkvunH9EtfahAlcJqAVN2evyg0m7ipaACKoVk6S9H2mEewJWA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<!-- Latest compiled jQuery From Validator -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.79/jquery.form-validator.min.js" integrity="sha512-7+hQkXGIswtBWoGbyajZqqrC8sa3OYW+gJw5FzW/XzU/lq6kScphPSlj4AyJb91MjPkQc+mPQ3bZ90c/dcUO5w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<!-- Latest compiled jQuery loadingoverlay -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-loading-overlay/2.1.7/loadingoverlay.min.js" integrity="sha512-hktawXAt9BdIaDoaO9DlLp6LYhbHMi5A36LcXQeHgVKUH6kJMOQsAtIw2kmQ9RERDpnSTlafajo6USh9JUXckw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<!-- Latest jQuery migrate -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.2/jquery-migrate.min.js" integrity="sha512-3fMsI1vtU2e/tVxZORSEeuMhXnT9By80xlmXlsOku7hNwZSHJjwcOBpmy+uu+fyWwGCLkMvdVbHkeoXdAzBv+w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<!-- Latest jQuery fancybox -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<!-- Latest jQuery moment -->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<!-- Latest jQuery daterangepicker -->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<!-- Latest jQuery cookie -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha512-3j3VU6WC5rPQB4Ld1jnLV7Kd5xr+cq9avvhwqzbH/taCRNURoeEpoPBK9pDyeukwSxwRPJ8fDgvYXd6SkaZ2TA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<!-- Latest jQuery lazy -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.11/jquery.lazy.min.js" integrity="sha512-eviLb3jW7+OaVLz5N3B5F0hpluwkLb8wTXHOTy0CyNaZM5IlShxX1nEbODak/C0k9UdsrWjqIBKOFY0ELCCArw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<!-- Latest jQuery lazy plugins -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.11/jquery.lazy.plugins.min.js" integrity="sha512-znjTNYfgassLWnpEDIaGRNLUMuKUtaSz9UV76RFu/peUr8x+mCqEH3jRCJWVRf1ujF2TmT0CoiZOTF+EDoZfEQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<!-- Latest swiper plugins -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.min.js" integrity="sha512-sAHYBRXSgMOV2axInO6rUzuKKM5SkItFLlLHQ8YjRD+FBwowtATOs4njP9oim3/MzyAGrB52SLDjpAOLcOT9TA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<!-- Latest slick slider plugins -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<!-- Latest jquery validate plugins -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.js" integrity="sha512-jIgckTOSEC6cW2syg/cJIueoB9V4DIWvipqMP5v+820ZHNPwYm7Qyxw4h7rMe58DL2ARxLb9FXji8Ur9pmIdzA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	
+	<script type="text/javascript" src="/bundles/bazingajstranslation/js/translator.min.js"></script>
+	<script type="text/javascript" src="/js/translations/config.js"></script>
+	<script type="text/javascript" src="/translations/client"></script>
+	
+
+
+
+
+
+
+
+
+
+
+
+												    <link href="/assets/common/css/things_to_do.css" rel="stylesheet">
+						
+					    
+					    
+		
+
+					    <script type="text/javascript" src="/assets/vendor/jquery/plugins/mscroll/js/jquery.mscroll.min.js"></script>
+					   
+					    <script type="text/javascript" src="/assets/vendor/jquery/plugins/jcarousellite/js/jcarousellite_1.0.1c5.js"></script>
+
+					    						<script type="text/javascript" src="/assets/common/js/vtour/tt_360_tour.js"></script>
+					    
+<script type="text/javascript">
+window.page_type = 'www';
+</script>
+
+
+
+
+
+
+
+										    <script type="text/javascript">
+        var map;
+	var zoomvalue=8;
+	$(document).ready(function () {  
+            window.addEventListener('load', initializeMap);              
+	    $(document).on('click', ".thumb_360", function(){
+		var $this = $(this);
+		if( $this.hasClass('active') ) return;
+		$('.thumb_360').removeClass('active');
+		$this.addClass('active');
+		var $parent = $('.imgpano_container .imgpano');
+		$parent.height('100%');
+		renderTourEngine( $this, $parent );		    
+	    });
+	    $(".thumb_360").first().click();
+	});
+
+	function renderTourEngine( imgDom, panoObj ) {
+	    var obj_id = $(panoObj).attr('id');
+	    var ttdid = $(imgDom).data("ttdid");
+	    var name = ""+$(imgDom).data("name");
+	    var divName = ""+$(imgDom).data("name");
+	    var country = $(imgDom).data("country").toLowerCase();
+	    var divId = $(imgDom).data("divisionid");
+	    var catgId = $(imgDom).data("categoryid");
+	    var subDivId = null;
+	    var parentdivid = $(imgDom).data("parentdivid");
+	    if (parentdivid && parentdivid != "") {
+		subDivId = divId;
+		divId = parentdivid;
+	    }
+	    	    
+	    new TTTour(obj_id, {
+		loadPopupLibrary: false,
+		usePositionAbsolute: false,
+		showThumbnail: false,
+		autoload: true,
+		
+		params: {
+		    id: ttdid,
+		    type: "thingstodo",
+		    name: name,
+		    countrycode: country,
+		    division: divId,
+		    divisionName: divName,
+		    group: catgId,
+		    subdivision: subDivId
+		    		}
+	    });
+	}
+        function initializeMap() {            
+            setTimeout(function() {
+                var mapOptions = {
+                    center: new google.maps.LatLng( 28 , 77 ),
+                    zoom:zoomvalue,
+                    disableDefaultUI: true,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                map = new google.maps.Map(document.getElementById("googlemap_places"),mapOptions);
+		new google.maps.Marker({
+		    position: new google.maps.LatLng(28, 77),
+		    map: map,                
+		    title: 'View The Red Fort in 360 virtual tour',
+		    icon: new google.maps.MarkerImage("https://static2.touristtube.com/media/images/pin_empty.png")
+		});
+            }, 5000);
+        }
+    </script>
+									       
+									    <script>
+										if (navigator.userAgent.match(
+											/IEMobile\/10\.0/)) {
+										    var msViewportStyle =
+											    document.createElement(
+												    "style");
+										    msViewportStyle.appendChild(
+											    document.createTextNode(
+												    "@-ms-viewport{width:auto!important}"));
+										    document.getElementsByTagName(
+											    "head")[0].appendChild(
+											    msViewportStyle)
+										}
+									    </script>
+									    <style>
+										.grecaptcha-badge{z-index: 10;}
+									    </style>
+									    <script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async defer></script>
+									    <script type="text/javascript">
+
+										function onSubmit2(token) {
+										    console.log('success!');
+										}
+										;
+										$(document).ready(function () {
+										    setTimeout(function () {
+											//grecaptcha.execute();
+										    }, 2000);
+
+
+										    var opt = {
+											behavior: 'circle',
+											mouseover: function (
+												o) {
+											    o.stop();
+											    o.css(
+												    {
+													cursor: 'pointer'
+												    });
+											},
+											mouseout: function (
+												o) {
+											    o.start();
+											}
+										    }
+										    $(document).on('change', '.language_switcher select', function () {
+											var optionvalue = $(this).val();
+											window.location = optionvalue;
+										    });
+										    $('.menu-toggle').click(function () {
+											$("#mobile_tabsmain").slideToggle(500);
+										    });
+										    window.ttUtilsInst = new TTUtils(window, document);
+
+											// var flash_message_array = new Array();
+																				    });
+									    </script>    
+
+									  
+									    
+																			</footer>
+									
+								    								</body>
+							    </html>

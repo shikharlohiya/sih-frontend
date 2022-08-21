@@ -1,0 +1,112 @@
+.explore-img123 {
+  margin-top: 40px;
+  margin-left: 10%;
+  height: 300px;
+  width: 55%;
+  border-radius: 25px;
+}
+.serv12 {
+  margin-top: 30px;
+  font-family: "Merriweather";
+  font-weight: 700;
+  font-size: xx-large;
+  color: rgba(255, 153, 51, 1);
+}
+.serv123 {
+  background-color: #ffffff;
+  width: 40%;
+  height: 70px;
+
+  border-radius: 15px;
+  text-align: center;
+  font-family: "Merriweather";
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 25px;
+  padding-top: 15px;
+}
+.val-dec-12 {
+  margin-top: 2%;
+}
+.mar-1-2 {
+  margin-left: 100px;
+}
+.mar-top1 {
+  margin-top: 25px;
+}
+.img-serv-12 {
+  border-radius: 0;
+  margin-right: 20px;
+}
+.chart-cont {
+  padding: 1rem 6rem;
+}
+.weather-cont {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(180deg, #f8d49a -146.42%, #fad79d -46.42%);
+  border-radius: 30px;
+  box-shadow: var(--boxShadow);
+  margin-bottom: 2rem;
+  padding: 2rem 1rem;
+}
+.status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 2rem;
+}
+.icon-weather {
+  width: 80px;
+}
+.heading-temp-count {
+  font-size: 3rem;
+}
+.heading-temp-count-deg {
+  font-size: 1rem !important;
+}
+.wheather-2 {
+  text-align: right;
+}
+.weather-card {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.card-info {
+  width: 150px;
+  padding: 1rem;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  cursor: pointer;
+  background: linear-gradient(180deg, #f8d49a -146.42%, #fad79d -46.42%);
+  font-weight: 500;
+}
+.card-info:hover {
+  animation: hover-scale 0.2s alternate ease-out forwards;
+}
+.active-card {
+  transform: scale(1.175);
+}
+@keyframes hover-scale {
+  15% {
+    transform: scale(1.1);
+  }
+  25% {
+    transform: scale(1.115);
+  }
+  50% {
+    transform: scale(1.125);
+  }
+  75% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1.175);
+  }
+}

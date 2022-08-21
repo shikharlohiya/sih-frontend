@@ -155,22 +155,61 @@ input::-webkit-inner-spin-button {
   margin-top: 10px;
   background-color: #fff8e5;
   margin-left: 80px;
-  width: 30%;
+  width: 45%;
 }
-.content
-{
-  float: left;
-    margin: 0 5px 0 0;
-    width: 45%;
-    height: 40px;
-    position: relative;
-}
-li{
-  display: list-item;
-}
-ul{
+.donate-now {
   list-style-type: none;
+  margin-left: 25px;
+  margin-top: 30px;
+  padding: 0;
 }
+
+.donate-now li {
+  float: left;
+  margin-right: 8px;
+  width: 10rem;
+  height: 2.1rem;
+  position: relative;
+}
+
+.donate-now label,
+.donate-now input {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.donate-now input[type="radio"] {
+  opacity: 0.01;
+  z-index: 100;
+}
+
+.donate-now input[type="radio"]:checked+label,
+.Checked+label {
+  background: #3DB3AD;
+  color: white;
+}
+
+.donate-now label {
+  
+  border: 2.5px solid #3DB3AD;
+  border-radius: 30px;
+  cursor: pointer;
+  z-index: 90;
+  font-family: 'Poppins';
+  font-weight: 600;
+  color: #3DB3AD;
+  font-size: large;
+  text-align: center;
+}
+
+.donate-now label:hover {
+  background: #DDD;
+}
+
 .details-input-add {
   margin-left: 76%;
   width: 20%;
@@ -199,4 +238,12 @@ input[type="number"] {
   color: white;
   font-size: 1rem;
   font-weight: 600;
+}
+.national
+{
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: large;
+    margin-left: 10%;
+    margin-top: 7%;
 }
