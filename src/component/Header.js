@@ -16,18 +16,14 @@ export default function Header() {
             </li>
 
             <li className="nav-item mar item1">
-              <NavLink to={"/"}>Home</NavLink>
+              <NavLink to={"/visit"}>Visit</NavLink>
             </li>
 
             <li className="nav-item mar item1">
-              <a className="" href="/profile">
-                My Profile
-              </a>
+              <NavLink to="/profile">My Profile</NavLink>
             </li>
             <li className="nav-item mar item1">
-              <a className="nav-link " href="/Tour">
-                Tour Guide
-              </a>
+              <NavLink to="/Tour">Tour Guide</NavLink>
             </li>
             <li className="nav-item mar item1">
               <a
@@ -38,9 +34,7 @@ export default function Header() {
               </a>
             </li>
             <li className="nav-item mar item1">
-              <a className="nav-link " href="/how-to-use">
-                How To Use
-              </a>
+              <NavLink to="/how-to-use">How To Use</NavLink>
             </li>
           </ul>
           <ul className="navbar-nav">
@@ -61,9 +55,14 @@ export default function Header() {
             </li>
 
             <li className="nav-item">
-              <a className="nav-link" href="/SignUp">
+              <NavLink
+                to={"/SignUp"}
+                className={(isActive) =>
+                  "nav-link" + (!isActive ? " unselected" : "")
+                }
+              >
                 Sign Up
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
