@@ -6,6 +6,7 @@ import { notifications } from "../App";
 import { placeActions } from "./PlaceSlice";
 import { cartActions } from "./CartSlice";
 import { ticketActions } from "./TicketSlice";
+import { userActions } from "./UserSlice";
 const API = axios.create({
   baseURL: "http://localhost:8000/",
 });
@@ -218,6 +219,40 @@ export const getTicket = () => {
       dispatch(ticketActions.setData(res.data));
     } catch (err) {
       console.log(err);
+    }
+  };
+};
+
+//profile
+export const getUserProfile = () => {
+  return async (dispatch) => {
+    try {
+      const res = await API.get(
+        `/user/getProfile/${JSON.parse(localStorage.getItem("jwt")).user._id}`
+      );
+      dispatch(userActions.setUserProfile(res.data));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+};
+
+export const upDateUserProfile = (value) => {
+  return async (dispatch) => {
+    try {
+      const res = await API.post("/user/updateProfile", value);
+      Store.addNotification({
+        ...notifications,
+        type: "success",
+        message: "update Successfully",
+      });
+      dispatch(getUserProfile());
+    } catch (err) {
+      Store.addNotification({
+        ...notifications,
+        type: "danger",
+        message: err.message,
+      });
     }
   };
 };
