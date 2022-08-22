@@ -1,0 +1,84 @@
+.div-otp
+{
+    background-color: #ffffff;
+    width: 30%;
+    margin: auto;
+    margin-top: 4%;
+    border-radius: 30px;
+    
+}
+.auth-req
+{
+    font-family: 'Merriweather';
+    font-weight: 700;
+    font-size: x-large;
+   margin-bottom: 0px;
+   padding-top: 25px;
+   padding-left: 45px;
+}
+.xyz-1
+{
+  padding-left: 45px;
+  display: inline;
+  font-family: 'Poppins';
+  font-weight: 500;
+
+}
+.btn-change
+{
+    display: inline;
+    padding-left: 15px;
+    font-family: 'Poppins';
+    font-weight: 500;
+    color: rgba(61, 179, 173, 1);
+}
+.otp-desc
+{
+    padding-left: 45px;
+    margin-top: 5%;
+    padding-right: 45px;
+    font-family: 'Poppins';
+    font-weight: 400;
+
+}
+.otp-label
+{
+    display: block;
+    padding-left: 45px;
+    font-family: 'Poppins';
+    font-weight: 550;
+    font-size: larger;
+}
+.otp-input
+{
+    margin-left: 45px;
+    margin-top: 2%;
+    border-radius: 10px;
+    border: 2px solid rgba(239, 101, 37, 1);
+    background-color: rgba(255, 255, 255, 1);
+    width: 70%;
+    height: 28px
+}
+.otp-cont
+{
+    margin-top: 3%;
+    margin-left: 45px;
+    border-radius: 10px;
+    background-color: rgba(239, 101, 37, 1);
+    font-family: 'Poppins';
+    font-weight: 700;
+    border: none;
+    color: rgba(255, 255, 255, 1);
+    width: 70%;
+    height: 28px;
+}
+.otp-resend
+{
+    text-align: center;
+    margin-top: 3%;
+    padding-bottom: 4%;
+    font-family: 'Poppins';
+    font-weight: 550;
+    font-size: large;
+
+}
