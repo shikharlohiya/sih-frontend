@@ -82,6 +82,39 @@ export default function Profile() {
             <p className="my-det">Bookings</p>
             <hr></hr>
           </div>
+          <div className="my-bookings">
+            {data?.map((item) => {
+              return (
+                <div className="ticket-cont">
+                  <div className="ticket-image">
+                    <img
+                      src={`${process.env.REACT_APP_BACKEND}/${item.monumentId.img}`}
+                      className="cart-img123"
+                    ></img>
+                  </div>
+                  <div className="ticket-details">
+                    <p className="suc-det">
+                      {item.monumentId.name},{item.monumentId.stateUT}
+                    </p>
+                  </div>
+                  <div className="ticket-actions">
+                    <button
+                      className="view-ticket-btn"
+                      onClick={() => {
+                        navigate("/get-ticket/", {
+                          state: {
+                            data: item,
+                          },
+                        });
+                      }}
+                    >
+                      View Ticket
+                    </button>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
           <div className="temp123-1">
             <p className="points">0 Points</p>
             <p className="points1">
