@@ -76,7 +76,7 @@ export default function MainPage() {
               <div className="row">
                 <div className="col-sm-4 div5">
                   <p className="sz3 meri">We make Your Travel Visit easy.</p>
-                  <p>
+                  <p className="mar-top-1">
                     Take a look at the Destination You Wish To Visit Without any
                     time Wasting and Decide the Place you Would Love To Visit.
                   </p>
@@ -87,7 +87,7 @@ export default function MainPage() {
                     We store the vast majority of the digital assets in secure
                     offline storage.
                   </p>
-                  <h4 className="bold">Industry best practices</h4>
+                  <h4 className="bold mar-top-2">Industry best practices</h4>
                   <p>
                     Besnik crypto supports a variety of the most popular digital
                     crypto currencies.
@@ -99,7 +99,7 @@ export default function MainPage() {
                     Cryptocurrency stored on our servers is covered by our
                     insurance policy.
                   </p>
-                  <h4 className="bold">Trade Assets</h4>
+                  <h4 className="bold mar-top-2">Trade Assets</h4>
                   <p>
                     Discover new and innovative crypto assets with over 200 spot
                     trading pairs and 25 margin.
@@ -123,13 +123,13 @@ export default function MainPage() {
                 </div>
 
                 <div className="col-sm-6 div4">
-                  <h4 className="text bold">
+                  <h5 className="text bold">
                     Reduces your time to book Tickets my 10 Times
-                  </h4>
+                  </h5>
                   <h1 className="sz3 meri">
                     Acceptable over more than 180+ Destinations in India{" "}
                   </h1>
-                  <p>
+                  <p className="mar-top-3">
                     Try Out the Easiest way to Visit Monuments and start
                     exploring your dream destinations seating at the comfort of
                     your Home
@@ -146,7 +146,7 @@ export default function MainPage() {
                   <h1 className="sz6 meri">
                     Travel With Someone Who Knows Everything
                   </h1>
-                  <p>
+                  <p className="mar-top-3">
                     Its Always Good To Have Someone Who Knows Where to Go What
                     To See and How To Go at Places You Visit, and We Make It
                     Easy for You

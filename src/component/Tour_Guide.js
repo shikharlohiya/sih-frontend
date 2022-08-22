@@ -22,7 +22,7 @@ function Tour_Guide() {
             </div>
           </div>
           <div className="col-sm-5 div2">
-            <div className="orange-box3">
+            <div className="orange-box31">
               <div>
                 <img src={img3} height={400} alt="..." className="right"></img>
               </div>

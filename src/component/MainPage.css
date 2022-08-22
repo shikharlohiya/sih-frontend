@@ -326,6 +326,15 @@
     background-repeat:no-repeat;
 
 }
+.mar-top-1
+{
+    margin-top: 30px;
+}
+.mar-top-2
+{
+    margin-top: 37px;
+}
+
 
 .swiper-container-no-flexbox .swiper-slide {
     float: left
@@ -1042,4 +1051,8 @@ button.swiper-pagination-bullet {
 .meri
 {
   font-family: 'Merriweather';
+}
+.mar-top-3
+{
+    margin-top: 5%;
 }

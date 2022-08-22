@@ -178,6 +178,7 @@ img.img-side {
   overflow-y: scroll;
   height: 70vh;
   height: 100vh;
+  
   flex: 1.5;
 }
 .monument-cont {
