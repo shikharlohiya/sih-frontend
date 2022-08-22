@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, current } from "@reduxjs/toolkit";
 
 const cartSlice = createSlice({
   name: "cart",
@@ -15,6 +15,7 @@ const cartSlice = createSlice({
       nationality: "",
       idType: "",
       idNumber: "",
+      date: "",
       userId: JSON.parse(localStorage.getItem("jwt"))?.user._id,
     },
   },
@@ -56,6 +57,11 @@ const cartSlice = createSlice({
         });
         console.log(item.price);
       });
+    },
+    upDateCartItems(state, action) {
+      console.log(action);
+      state.cartItems[action.payload.index] = { ...action.payload.data };
+      console.log(current(state.cartItems));
     },
   },
 });

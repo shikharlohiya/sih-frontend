@@ -7,8 +7,16 @@ import { CartProvider, useCart } from "react-use-cart";
 import { loadRazorpay, addUserToCart, deleteItem, getCart } from "../store/API";
 import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from "../store/CartSlice";
-import { CircularProgress } from "@mui/material";
+import {
+  CircularProgress,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  TextField,
+} from "@mui/material";
 import { useNavigate } from "react-router-dom";
+
 const Ticket = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -39,6 +47,59 @@ const Ticket = () => {
     dispatch(addUserToCart(formData));
   };
   console.log(cartItems);
+  const CartCard = ({ item, index }) => {
+    const [date, setDate] = useState("");
+    return (
+      <>
+        <div className="cart">
+          <div className="cart-div">
+            <img
+              src={`${process.env.REACT_APP_BACKEND}/${item.monumentId.img}`}
+              className="cart-img"
+            ></img>
+          </div>
+          <div className="cart-div2">
+            <i
+              class="fa-solid fa-trash-can button-delete"
+              onClick={() => removeItem(item._id)}
+            ></i>
+            <p className="cart-name">{item.monumentId.name}</p>
+
+            <TextField
+              type={"date"}
+              required
+              id="date"
+              label="Date"
+              variant="outlined"
+              name="date"
+              value={item.date}
+              onChange={(e) => {
+                const newObj = Object.assign(
+                  { date: e.target.value },
+                  cartItems[index]
+                );
+                console.log(cartItems);
+                dispatch(
+                  cartActions.upDateCartItems({ data: newObj, index: index })
+                );
+              }}
+            />
+          </div>
+          <div className="cart-div4">
+            {item.ticketedUsers.map((item, index) => {
+              return (
+                <div className="cart-div3 row">
+                  <div className="cart-div5-1 col-6">{item.name}</div>
+                  <div className="cart-div5 col-3">{item.age}</div>
+                  <div className="cart-div5 col-3">{item.aadhar}</div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </>
+    );
+  };
   const ticketForm = () => {
     return (
       <>
@@ -89,15 +150,21 @@ const Ticket = () => {
             </div>
             <div className="col-7">
               <div>
-                <select
-                  name="userType"
-                  onChange={handleChange}
-                  value={formData.userType}
-                >
-                  <option>Select</option>
-                  <option>Adult</option>
-                  <option>Child</option>
-                </select>
+                <FormControl sx={{ m: 0, minWidth: 220 }}>
+                  <InputLabel id="demo-simple-select-label">
+                    User Type
+                  </InputLabel>
+                  <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    name="userType"
+                    onChange={handleChange}
+                    value={formData.userType}
+                  >
+                    <MenuItem value="Adult">Adult</MenuItem>
+                    <MenuItem value="Child">Child</MenuItem>
+                  </Select>
+                </FormControl>
               </div>
 
               <div className="adult-form">
@@ -120,33 +187,45 @@ const Ticket = () => {
                     onChange={handleChange}
                   />
                   <div>
-                    <label>Gender</label>
-                    <select
-                      name="gender"
-                      onChange={handleChange}
-                      value={formData.gender}
-                    >
-                      <option>Select</option>
-                      <option>Male</option>
-                      <option>Female</option>
-                    </select>
+                    <FormControl sx={{ m: 0, minWidth: 220 }}>
+                      <InputLabel id="demo-simple-select-label">
+                        Gender
+                      </InputLabel>
+                      <Select
+                        labelId="demo-simple-select-label"
+                        id="demo-simple-select"
+                        value={formData.gender}
+                        label="Gender"
+                        onChange={handleChange}
+                        name="gender"
+                      >
+                        <MenuItem value={"male"}>Male</MenuItem>
+                        <MenuItem value={"Female"}>Female</MenuItem>
+                      </Select>
+                    </FormControl>
                   </div>
 
                   <div>
-                    <label>Select id</label>
-
-                    <select
-                      name="idType"
-                      onChange={handleChange}
-                      value={formData.idType}
-                    >
-                      <option>Select</option>
-                      <option>Passport</option>
-                      <option>Pan Card</option>
-                      <option>Driving Licence</option>
-                      <option>Voter Id</option>
-                      <option>Others</option>
-                    </select>
+                    <FormControl sx={{ m: 0, minWidth: 220 }}>
+                      <InputLabel id="demo-simple-select-label">
+                        Select id
+                      </InputLabel>
+                      <Select
+                        labelId="demo-simple-select-label"
+                        id="demo-simple-select"
+                        name="idType"
+                        onChange={handleChange}
+                        value={formData.idType}
+                      >
+                        <MenuItem value="Passport">Passport</MenuItem>
+                        <MenuItem value="Pan Card">Pan Card</MenuItem>
+                        <MenuItem value="Driving Licence">
+                          Driving Licence
+                        </MenuItem>
+                        <MenuItem value="Voter Id">Voter Id</MenuItem>
+                        <MenuItem value="Others">Others</MenuItem>
+                      </Select>
+                    </FormControl>
                   </div>
                   <input
                     type="number"
@@ -172,37 +251,9 @@ const Ticket = () => {
         <div className="container div-amount-cart">
           <div className="amount-cart row">
             <div className="cart-main col-8">
-              {cartItems?.map((item) => (
-                <div className="cart">
-                  <div className="cart-div">
-                    <img
-                      src={`${process.env.REACT_APP_BACKEND}/${item.monumentId.img}`}
-                      className="cart-img"
-                    ></img>
-                  </div>
-                  <div className="cart-div2">
-                    <i
-                      class="fa-solid fa-trash-can button-delete"
-                      onClick={() => removeItem(item._id)}
-                    ></i>
-                    <p className="cart-name">{item.monumentId.name}</p>
-
-                    <p className="cart-date2">Date</p>
-                    <input type="date" className="cart-date"></input>
-                  </div>
-                  <div className="cart-div4">
-                    {item.ticketedUsers.map((item, index) => {
-                      return (
-                        <div className="cart-div3 row">
-                          <div className="cart-div5-1 col-6">{item.name}</div>
-                          <div className="cart-div5 col-3">{item.age}</div>
-                          <div className="cart-div5 col-3">{item.aadhar}</div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-              ))}
+              {cartItems?.map((item, index) => {
+                return <CartCard item={item} index={index} />;
+              })}
             </div>
             <div className="amount col-4 sticky-top">
               <p className="amount-val">Amount</p>

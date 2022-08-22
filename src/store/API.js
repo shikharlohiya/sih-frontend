@@ -135,7 +135,7 @@ export const addUserToCart = (data) => {
 };
 //payment
 
-export function loadRazorpay(cartItems, price, navigate) {
+export function loadRazorpay(cartItems, price, navigate, date) {
   return async (dispatch) => {
     console.log(cartItems);
     const script = document.createElement("script");

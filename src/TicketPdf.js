@@ -8,6 +8,7 @@ import ReactDOMServer from "react-dom/server";
 import { CircularProgress } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { getTicket } from "./store/API";
+import moment from "moment";
 
 const TicketPrint = ({ data }) => {
   return (
@@ -63,6 +64,14 @@ const TicketPrint = ({ data }) => {
             </h4>
             <div style={{ display: "flex", margin: "0.2rem 0" }}>
               <div className="col-6">
+                <h5 style={{ fontWeight: "600" }}>Ticket ID</h5>
+              </div>
+              <div className="col-6">
+                <h5>{data.ticketId}</h5>
+              </div>
+            </div>
+            <div style={{ display: "flex", margin: "0.2rem 0" }}>
+              <div className="col-6">
                 <h5 style={{ fontWeight: "600" }}>Ticket Type</h5>
               </div>
               <div className="col-6">
@@ -107,7 +116,7 @@ const TicketPrint = ({ data }) => {
                 <h5 style={{ fontWeight: "600" }}>Date</h5>
               </div>
               <div className="col-6">
-                <h5>2022-08-08</h5>
+                <h5>{moment}</h5>
               </div>
             </div>
             <div style={{ display: "flex", margin: "0.2rem 0" }}>
@@ -115,7 +124,7 @@ const TicketPrint = ({ data }) => {
                 <h5 style={{ fontWeight: "600" }}>Time</h5>
               </div>
               <div className="col-6">
-                <h5>6:am-12:00pm</h5>
+                <h5>{data.monumentId.time}</h5>
               </div>
             </div>
 
@@ -266,6 +275,14 @@ function TicketPdf() {
               <h4 className="section-heading">Ticket Details</h4>;
               <div style={{ display: "flex", margin: "0.2rem 0" }}>
                 <div className="col-6">
+                  <h5 style={{ fontWeight: "600" }}>Ticket ID</h5>
+                </div>
+                <div className="col-6">
+                  <h5>{data.ticketId}</h5>
+                </div>
+              </div>
+              <div style={{ display: "flex", margin: "0.2rem 0" }}>
+                <div className="col-6">
                   <h5 style={{ fontWeight: "600" }}>Ticket Type</h5>
                 </div>
                 <div className="col-6">
@@ -310,7 +327,7 @@ function TicketPdf() {
                   <h5 style={{ fontWeight: "600" }}>Date</h5>
                 </div>
                 <div className="col-6">
-                  <h5>2022-08-08</h5>
+                  <h5>{moment(data.date).format("DD-MM-YYYY")}</h5>
                 </div>
               </div>
               <div style={{ display: "flex", margin: "0.2rem 0" }}>
@@ -318,7 +335,7 @@ function TicketPdf() {
                   <h5 style={{ fontWeight: "600" }}>Time</h5>
                 </div>
                 <div className="col-6">
-                  <h5>6:am-12:00pm</h5>
+                  <h5>{data.monumentId.time}</h5>
                 </div>
               </div>
               <h4
@@ -412,7 +429,7 @@ function TicketPdf() {
           {isLoading ? (
             <CircularProgress sx={{ color: "white" }} size={25} />
           ) : (
-            " genrate pdf"
+            " Genrate pdf"
           )}
         </button>
       </div>
@@ -421,15 +438,3 @@ function TicketPdf() {
 }
 
 export default TicketPdf;
-
-// class App extends React.Component {
-
-//   render() {
-//     return (
-//       <div className="App content-22" id="content-22">
-//         <Invoice />
-//       </div>
-//     );
-//   }
-// }
-// export default App;
