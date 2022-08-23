@@ -256,3 +256,58 @@ export const upDateUserProfile = (value) => {
     }
   };
 };
+
+//otp
+
+export const submitOtp = (data) => {
+  if (!data.otp) {
+    Store.addNotification({
+      ...notifications,
+      type: "danger",
+      message: "Enter OTP",
+    });
+    return;
+  }
+  return async (dispatch) => {
+    try {
+      const res = await API.post("user/verifyOtp", {
+        userId: data.data.id,
+        otp: data.otp,
+      });
+      Store.addNotification({
+        ...notifications,
+        type: "success",
+        message: "verified successfully",
+      });
+      setTimeout(() => {
+        data.navigate("/login");
+      }, 1000);
+    } catch (err) {
+      console.log(err);
+      Store.addNotification({
+        ...notifications,
+        type: "danger",
+        message: err.response.data,
+      });
+    }
+  };
+};
+
+export const resendOtp = (id) => {
+  return async (dispatch) => {
+    try {
+      const res = await API.post("/user/resendOtp", { userId: id });
+      Store.addNotification({
+        ...notifications,
+        type: "success",
+        message: "OTP SENT",
+      });
+    } catch (err) {
+      Store.addNotification({
+        ...notifications,
+        type: "danger",
+        message: "some error occured",
+      });
+    }
+  };
+};

@@ -3,8 +3,9 @@ import "./signup.css";
 import signimg from "./images/signup.png";
 import { useState } from "react";
 import { signup } from "../home";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const SignUp = () => {
+  const navigate = useNavigate();
   const [values, setValues] = useState({
     name: "",
     email: "",
@@ -34,6 +35,7 @@ const SignUp = () => {
             confirmpassword: "",
             error: "",
             success: true,
+            data: data,
           });
         }
       })
@@ -127,13 +129,15 @@ const SignUp = () => {
     );
   };
   const successMessage = () => {
+    if (success) {
+      navigate("/otp", { state: { data: values.data } });
+    }
     return (
       <div
         className="alert alert-success"
         style={{ display: success ? "" : "none" }}
       >
-        New account was created successfully.please{" "}
-        <Link to="/signin">login here</Link>
+        OTP Sent To Your Registred Email
       </div>
     );
   };
