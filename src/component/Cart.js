@@ -16,7 +16,7 @@ import {
   TextField,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-
+import moment from "moment";
 const Ticket = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -48,7 +48,9 @@ const Ticket = () => {
   };
   console.log(cartItems);
   const CartCard = ({ item, index }) => {
-    const [date, setDate] = useState("");
+    const [date, setDate] = useState(
+      moment(new Date().toISOString()).format("YYYY-MM-DD")
+    );
     return (
       <>
         <div className="cart">

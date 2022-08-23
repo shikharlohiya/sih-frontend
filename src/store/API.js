@@ -199,7 +199,7 @@ export function loadRazorpay(cartItems, price, navigate, date) {
         Store.addNotification({
           ...notifications,
           type: "danger",
-          message: "some error occured",
+          message: err.response.data,
         });
       } finally {
         dispatch(cartActions.setPaynowLoading(false));
