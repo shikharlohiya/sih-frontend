@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import PersonPinIcon from "@mui/icons-material/PersonPin";
+import Tooltip from "@mui/material/Tooltip";
 import "./Header.css";
 const mystyle = {
   backgroundColor: "#FFFFFF",
@@ -82,6 +83,9 @@ export default function Header() {
                   <NavLink to="/profile">
                     <PersonPinIcon />
                   </NavLink>
+                </li>
+                <li>
+                  <Tooltip title="Enable Voice Command"></Tooltip>
                 </li>
               </>
             )}

@@ -8,11 +8,16 @@ import { useDispatch, useSelector } from "react-redux";
 export default function Home() {
   const { placeList, nearPlaces } = useSelector((state) => state.place);
   const dispatch = useDispatch();
+  const [filterValue, setFilterValue] = useState(placeList);
   const [isOpen, setIsOpen] = useState(true);
   const [inputText, setInputText] = useState("");
   const [stat, setStat] = useState("");
   const [toggle, setToggle] = useState(false);
   const [currentData, setCurrentData] = useState({});
+
+  useEffect(() => {
+    setFilterValue(placeList);
+  }, [placeList]);
   const handleclose = () => {
     setIsOpen(!isOpen);
   };
@@ -20,12 +25,21 @@ export default function Home() {
     setToggle(!toggle);
   };
   let handleState = (val) => {
-    setStat(val);
+    setInputText(val);
+    var lowerCase = val.toLowerCase();
+    const newData = placeList.filter((item) => {
+      return item.stateUT.toLowerCase().includes(lowerCase);
+    });
+    setFilterValue(newData);
   };
   let inputHandler = (e) => {
     //convert input text to lower case
     var lowerCase = e.target.value.toLowerCase();
     setInputText(lowerCase);
+    const newData = placeList.filter((item) => {
+      return item.name.toLowerCase().includes(lowerCase);
+    });
+    setFilterValue(newData);
   };
   useEffect(() => {
     dispatch(fetchPlaceList());
@@ -46,12 +60,13 @@ export default function Home() {
             aria-label="Search"
             aria-describedby="search-addon"
             onChange={inputHandler}
+            value={inputText}
           />
         </div>
         <div className="container-fluid">
           <div className="monument-cont ">
             <div className="container2" id="container">
-              {placeList.map((item) => {
+              {filterValue.map((item) => {
                 return (
                   <Monument
                     input={inputText}

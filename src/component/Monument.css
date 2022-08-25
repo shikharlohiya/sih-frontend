@@ -8,6 +8,29 @@
   border: 2px solid #ffffff;
   border-radius: 25px;
   background-color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0px 1px 9px 1px #cac6c6;
+  border: none;
+}
+.monumentCard:hover {
+  animation: lift-up 1s linear forwards;
+}
+@keyframes lift-up {
+  10% {
+    transform: scale(1.1);
+  }
+  25% {
+    transform: scale(1.125);
+  }
+  45% {
+    transform: scale(1.145);
+  }
+  550% {
+    transform: scale(1.155);
+  }
+  90% {
+    transform: scale(1.175);
+  }
 }
 img {
   border-radius: 25px 25px 0px 0px;
@@ -178,7 +201,7 @@ img.img-side {
   overflow-y: scroll;
   height: 70vh;
   height: 100vh;
-  
+
   flex: 1.5;
 }
 .monument-cont {
@@ -190,6 +213,6 @@ img.img-side {
   display: flex;
   flex-wrap: wrap;
 }
-.temp1234{
+.temp1234 {
   width: 70%;
 }
