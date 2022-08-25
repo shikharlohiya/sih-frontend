@@ -8,7 +8,13 @@ import MainPage from "./MainPage";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { userActions } from "../store/UserSlice";
+import geo from "../component/Locate";
+
 const Login = () => {
+
+
+  const location =geo();
+    
   const dispatch = useDispatch();
   const [values, setValues] = useState({
     email: "",
@@ -150,6 +156,9 @@ const Login = () => {
     <>
       {errorMessage()}
       {signInForm()}
+      {
+        location.loaded ?JSON.stringify(location):"location data not available yet"
+      }
 
       {successMessage()}
 
