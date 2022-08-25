@@ -1,4 +1,5 @@
 import "react-notifications-component/dist/theme.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Header from "./component/Header.js";
 import Footer from "./component/Footer.js";

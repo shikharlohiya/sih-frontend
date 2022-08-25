@@ -1,0 +1,33 @@
+.speech-content {
+  display: flex;
+  justify-content: space-between;
+}
+.speech-first-div {
+  display: flex;
+  flex-direction: column;
+}
+.speech-second-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.mic-div-icon {
+  background-color: white;
+  border-radius: 50px;
+  padding: 1rem 1.2rem;
+  box-shadow: 0px 2px 5px grey;
+}
+.mic-icon {
+  width: 25px;
+  cursor: pointer;
+}
+.wait-text {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+.questions-div {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0.5rem;
+}
