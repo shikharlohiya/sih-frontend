@@ -25,9 +25,10 @@ export default function Header() {
             <li className="nav-item mar item1">
               <NavLink to="/Tour">Tour Guide</NavLink>
             </li>
-            <li className="nav-item mar item1">
+            <li className="nav-item mar item1" style={{ marginTop: 0 }}>
               <a
                 className="nav-link "
+                style={{ color: "black" }}
                 href={process.env.PUBLIC_URL + "/thing to do/index.html"}
               >
                 360 Degree View
@@ -43,7 +44,7 @@ export default function Header() {
                 <i class="fa-solid fa-cart-shopping"></i>
               </NavLink>
             </li>
-            <li className="nav-item">
+            <li className="nav-item" style={{ marginTop: 0 }}>
               <NavLink
                 to={"/Login"}
                 className={(isActive) =>
@@ -54,7 +55,7 @@ export default function Header() {
               </NavLink>
             </li>
 
-            <li className="nav-item">
+            <li className="nav-item" style={{ marginTop: 0 }}>
               <NavLink
                 to={"/SignUp"}
                 className={(isActive) =>
