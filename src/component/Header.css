@@ -30,3 +30,9 @@
 .pop {
   font-family: "Poppins";
 }
+.header-profile {
+  margin: 0 0.5rem;
+}
+.voice-icon {
+  cursor: pointer;
+}

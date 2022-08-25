@@ -1,16 +1,22 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import PersonPinIcon from "@mui/icons-material/PersonPin";
 import Tooltip from "@mui/material/Tooltip";
+import MicIcon from "@mui/icons-material/Mic";
 import "./Header.css";
+import ModalComponent from "./ModalComponent";
+import SpeechContent from "./SpeechContent";
 const mystyle = {
   backgroundColor: "#FFFFFF",
 };
 export default function Header() {
   const { isLoggedIn } = useSelector((state) => state.user);
-  console.log(isLoggedIn);
+  const [show, setShow] = useState(false);
   const navigate = useNavigate();
+  const handleClose = () => {
+    setShow(false);
+  };
   useEffect(() => {}, [isLoggedIn]);
   return (
     <>
@@ -74,7 +80,7 @@ export default function Header() {
               </>
             ) : (
               <>
-                <li className="nav-item">
+                <li className="nav-item header-profile">
                   <NavLink to="/Cart" id="cart">
                     <i class="fa-solid fa-cart-shopping"></i>
                   </NavLink>
@@ -84,8 +90,13 @@ export default function Header() {
                     <PersonPinIcon />
                   </NavLink>
                 </li>
-                <li>
-                  <Tooltip title="Enable Voice Command"></Tooltip>
+                <li
+                  className="nav-item header-profile"
+                  onClick={() => setShow(true)}
+                >
+                  <Tooltip title="Enable Voice Command">
+                    <MicIcon className="voice-icon" />
+                  </Tooltip>
                 </li>
               </>
             )}
@@ -93,6 +104,9 @@ export default function Header() {
         </div>
       </nav>
       <Outlet />
+      <ModalComponent show={show} onHide={handleClose}>
+        <SpeechContent />
+      </ModalComponent>
     </>
   );
 }
