@@ -12,6 +12,7 @@ import {
   Select,
   TextField,
 } from "@mui/material";
+import { userActions } from "../store/UserSlice";
 
 export default function Profile() {
   const dispatch = useDispatch();
@@ -53,6 +54,12 @@ export default function Profile() {
     e.preventDefault();
     dispatch(upDateUserProfile(value));
   };
+
+  const handleSignout = () => {
+    localStorage.removeItem("jwt");
+    dispatch(userActions.updateUserStatus(false));
+    navigate("/");
+  };
   return (
     <div>
       <div className="profile-div">
@@ -65,7 +72,7 @@ export default function Profile() {
           <Tab>My Profile</Tab>
           <Tab>Bookings</Tab>
           <Tab>Points</Tab>
-          <Tab>Sign Out</Tab>
+          <Tab onClick={handleSignout}>Sign Out</Tab>
         </TabList>
         <TabPanel>
           <div className="heading-tab">
@@ -73,7 +80,7 @@ export default function Profile() {
             <hr></hr>
           </div>
           <p className="det-prof">First Name {value.name}</p>
-          <p className="det-prof">Last Name Agrawal</p>
+          <p className="det-prof">Last Name {value.lastname}</p>
           <p className="det-prof">Mobile No {value.mobile}</p>
           <p className="det-prof">Email Id {value.email}</p>
           <p className="det-prof">Gender {value.gender}</p>
@@ -277,9 +284,6 @@ export default function Profile() {
               <hr></hr>
             </div>
           </div>
-        </TabPanel>
-        <TabPanel>
-          <h2>Any content 5</h2>
         </TabPanel>
       </Tabs>
     </div>

@@ -1,40 +1,38 @@
-.mar
-{
-    margin-left: 50px;
-
+.mar {
+  margin-left: 50px;
 }
-.tic
-{
-    font-family: 'Exo';
-    color: #ef6525;
-    display: inline;
-    font-weight: 700;
+.tic {
+  font-family: "Exo";
+  color: #ef6525;
+  display: inline;
+  font-weight: 700;
 }
-.dash
-{
-    display: inline;
-    font-weight: 700;
-    color: #3DB3AD;
+.dash {
+  display: inline;
+  font-weight: 700;
+  color: #3db3ad;
 }
-.cket
-{
-    font-family: 'Inter';
-    display: inline;
-    font-weight: 700;
+.cket {
+  font-family: "Inter";
+  display: inline;
+  font-weight: 700;
 }
-.item1
-{
-    font-family: 'Poppins';
-    font-weight: 500;
-    font-size: large;
-    color: rgba(39, 36, 68, 0.7)
+.item1 {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: large;
+  color: rgba(39, 36, 68, 0.7);
 }
-.bold
-{
-    font-weight: bold;
-    color: #ef6525;
+.bold {
+  font-weight: bold;
+  color: #ef6525;
 }
-.pop
-{
-    font-family: 'Poppins';
+.pop {
+  font-family: "Poppins";
+}
+.header-profile {
+  margin-left: 1rem;
+}
+.login-home {
+  cursor: pointer;
 }

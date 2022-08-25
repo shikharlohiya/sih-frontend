@@ -9,7 +9,7 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { userActions } from "../store/UserSlice";
 const Login = () => {
-  const { dispatch } = useDispatch();
+  const dispatch = useDispatch();
   const [values, setValues] = useState({
     email: "",
     password: "",

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import PersonPinIcon from "@mui/icons-material/PersonPin";
 import "./Header.css";
 const mystyle = {
   backgroundColor: "#FFFFFF",
@@ -8,13 +9,17 @@ const mystyle = {
 export default function Header() {
   const { isLoggedIn } = useSelector((state) => state.user);
   console.log(isLoggedIn);
+  const navigate = useNavigate();
   useEffect(() => {}, [isLoggedIn]);
   return (
     <>
       <nav className="navbar navbar-expand-md pop" style={mystyle}>
         <div className="container-fluid">
           <ul className="navbar-nav">
-            <li className="nav-item  mar">
+            <li
+              className="nav-item  mar login-home"
+              onClick={() => navigate("/")}
+            >
               <h3 className="tic">Tic</h3> <h3 className="dash">-</h3>
               <h3 className="cket">Cket</h3>
             </li>
@@ -23,9 +28,9 @@ export default function Header() {
               <NavLink to={"/visit"}>Visit</NavLink>
             </li>
 
-            <li className="nav-item mar item1">
+            {/* <li className="nav-item mar item1">
               <NavLink to="/profile">My Profile</NavLink>
-            </li>
+            </li> */}
             <li className="nav-item mar item1">
               <NavLink to="/Tour">Tour Guide</NavLink>
             </li>
@@ -71,6 +76,11 @@ export default function Header() {
                 <li className="nav-item">
                   <NavLink to="/Cart" id="cart">
                     <i class="fa-solid fa-cart-shopping"></i>
+                  </NavLink>
+                </li>
+                <li className="header-profile">
+                  <NavLink to="/profile">
+                    <PersonPinIcon />
                   </NavLink>
                 </li>
               </>
