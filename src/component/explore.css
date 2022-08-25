@@ -1,8 +1,8 @@
 .explore-img123 {
   margin-top: 40px;
-  margin-left: 10%;
+  margin-left: 100px;
   height: 300px;
-  width: 55%;
+  
   border-radius: 25px;
 }
 .serv12 {
@@ -57,6 +57,11 @@
   margin-bottom: 1rem;
   gap: 2rem;
 }
+.check1234
+{
+  margin-left: 45px;
+  margin-right: 20px;
+}
 .icon-weather {
   width: 80px;
 }
@@ -92,6 +97,26 @@
 }
 .active-card {
   transform: scale(1.175);
+}
+.monument-name1
+{
+  font-family: 'Merriweather';
+  color: rgba(255, 153, 51, 1);
+  font-size: xx-large;
+  font-weight: 700;
+  margin-top: 2%;
+  margin-left: 10%;
+}
+.monument-desc1
+{
+  margin-left: 10%;
+  
+  font-family: 'Poppins';
+  
+}
+.para1
+{
+  margin-left: 6%;
 }
 @keyframes hover-scale {
   15% {

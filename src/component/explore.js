@@ -151,22 +151,33 @@ export default function Explore() {
 
   return (
     <>
-      <div className="E-img-div">
-        <img src={explor} alt=".." className="explore-img123"></img>
+      <div className="container check1234">
+        <div className="row">
+          <div className="col-6">
+            <p className="monument-name1">Red Fort</p>
+            <p className="monument-desc1">
+              The beautiful Red Fort (Lal Qila) was built by Shah Jahan in 1648
+              and served as the seat of Mughal power until 1857. This stunning
+              structure, with its tall, red sandstone walls covers an area of
+              more than two square kilometers, the entirety of which is crescent
+              shaped and surrounded by a moat. It is proof of the glory of the
+              flourishing Mughal Empire in Delhi.
+            </p>
+            <p className="para1 para">Opening closing time</p>
+            <p className="monument-desc2 para1">
+              Sunrise to sunset. (Only monday closed)
+            </p>
+            <p className="para para1">Entrance Fee</p>
+            <p className="monument-desc3 para1">
+              Rs.10 (Indians) Rs.250 (Foreigners)
+            </p>
+          </div>
+
+          <div className="E-img-div col-6">
+            <img src={explor} alt=".." className="explore-img123"></img>
+          </div>
+        </div>
       </div>
-      <p>Red Fort</p>
-      <p className="monument-desc">
-        The beautiful Red Fort (Lal Qila) was built by Shah Jahan in 1648 and
-        served as the seat of Mughal power until 1857. This stunning structure,
-        with its tall, red sandstone walls covers an area of more than two
-        square kilometers, the entirety of which is crescent shaped and
-        surrounded by a moat. It is proof of the glory of the flourishing Mughal
-        Empire in Delhi.
-      </p>
-      <p className="para">Opening closing time</p>
-      <p className="monument-desc2">Sunrise to sunset. (Only monday closed)</p>
-      <p className="para">Entrance Fee</p>
-      <p className="monument-desc3">Rs.10 (Indians) Rs.250 (Foreigners)</p>
       <div className="chart-cont">
         <div className="weather-cont">
           <div className="wheather-1">
