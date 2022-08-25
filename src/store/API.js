@@ -7,6 +7,7 @@ import { placeActions } from "./PlaceSlice";
 import { cartActions } from "./CartSlice";
 import { ticketActions } from "./TicketSlice";
 import { userActions } from "./UserSlice";
+import { DashboardActions } from "./DashboardSlice";
 const API = axios.create({
   baseURL: "http://localhost:8000/",
 });
@@ -308,6 +309,30 @@ export const resendOtp = (id) => {
         type: "danger",
         message: "some error occured",
       });
+    }
+  };
+};
+
+//dashboard
+
+export const getTotalRevenue = () => {
+  return async (dispatch) => {
+    try {
+      const res = await API.get("/admin/revenue");
+      dispatch(DashboardActions.updateRevenue(res.data));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+};
+
+export const getNationalityRevenue = () => {
+  return async (dispatch) => {
+    try {
+      const res = await API.get("/admin/nationalityRevenue");
+      dispatch(DashboardActions.updateNationalityRevenue(res.data));
+    } catch (err) {
+      console.log(err);
     }
   };
 };

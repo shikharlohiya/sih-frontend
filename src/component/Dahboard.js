@@ -1,11 +1,20 @@
 import { height } from "@mui/system";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ReactApexChart from "react-apexcharts";
+import { useDispatch, useSelector } from "react-redux";
+import { getNationalityRevenue, getTotalRevenue } from "../store/API";
 import "./Dashboard.css";
 
 export default function Dahboard() {
-  const data1 = {
+  const dispatch = useDispatch();
+  const { totalRevenue, nationalityRevenue } = useSelector(
+    (state) => state.dashboard
+  );
+  const [data1, setData1] = useState({
     series: [44, 55, 41, 17, 15],
+    chartOptions: {
+      labels: ["Indians", "Foreigners"],
+    },
     options: {
       chart: {
         type: "donut",
@@ -24,7 +33,8 @@ export default function Dahboard() {
         },
       ],
     },
-  };
+  });
+
   const data2 = {
     series: [
       {
@@ -176,13 +186,64 @@ export default function Dahboard() {
       },
     },
   };
+
+  useEffect(() => {
+    setData1({
+      series: nationalityRevenue.data,
+      chartOptions: {
+        labels: nationalityRevenue.label,
+      },
+      options: {
+        chart: {
+          type: "donut",
+        },
+        responsive: [
+          {
+            breakpoint: 480,
+            options: {
+              chart: {
+                width: 200,
+              },
+              legend: {
+                position: "bottom",
+              },
+            },
+          },
+        ],
+      },
+    });
+  }, [nationalityRevenue]);
+  useEffect(() => {
+    dispatch(getTotalRevenue());
+    dispatch(getNationalityRevenue());
+  }, []);
   return (
     <>
       <div className="row">
-        <div className="col-3">Min. visitors each day</div>
-        <div className="col-3">Avg. visitors each day</div>
-        <div className="col-3">Max. visitors each day</div>
-        <div className="col-3">Total Revenue</div>
+        <div className="col-3">
+          <div className="card-value">
+            <div className="card-value-title"> Min. visitors each day</div>
+            <div className="card-value-value">100</div>
+          </div>
+        </div>
+        <div className="col-3">
+          <div className="card-value">
+            <div className="card-value-title"> Avg. visitors each day</div>
+            <div className="card-value-value">100</div>
+          </div>
+        </div>
+        <div className="col-3">
+          <div className="card-value">
+            <div className="card-value-title"> Max. visitors each day</div>
+            <div className="card-value-value">100</div>
+          </div>
+        </div>
+        <div className="col-3">
+          <div className="card-value">
+            <div className="card-value-title">Total Revenue</div>
+            <div className="card-value-value">{totalRevenue}</div>
+          </div>
+        </div>
       </div>
       <h3>Revenue Genreation</h3>
       <div className="row">

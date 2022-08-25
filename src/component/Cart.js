@@ -107,7 +107,7 @@ const Ticket = () => {
       <>
         <div className="details">
           <div className="row">
-            <div className="col-5">
+            <div className="col-4">
               <form>
                 <p className="national">Select Nationality:</p>
                 <ul className="donate-now">
@@ -150,7 +150,7 @@ const Ticket = () => {
                 </ul>
               </form>
             </div>
-            <div className="col-7">
+            <div className="col-7 input-sec">
               <div>
                 <FormControl sx={{ m: 0, minWidth: 220 }}>
                   <InputLabel id="demo-simple-select-label">
@@ -167,6 +167,46 @@ const Ticket = () => {
                     <MenuItem value="Child">Child</MenuItem>
                   </Select>
                 </FormControl>
+                <div>
+                  <FormControl sx={{ m: 0, minWidth: 220 }}>
+                    <InputLabel id="demo-simple-select-label">
+                      Gender
+                    </InputLabel>
+                    <Select
+                      labelId="demo-simple-select-label"
+                      id="demo-simple-select"
+                      value={formData.gender}
+                      label="Gender"
+                      onChange={handleChange}
+                      name="gender"
+                    >
+                      <MenuItem value={"male"}>Male</MenuItem>
+                      <MenuItem value={"Female"}>Female</MenuItem>
+                    </Select>
+                  </FormControl>
+                </div>
+                <div>
+                  <FormControl sx={{ m: 0, minWidth: 220 }}>
+                    <InputLabel id="demo-simple-select-label">
+                      Select id
+                    </InputLabel>
+                    <Select
+                      labelId="demo-simple-select-label"
+                      id="demo-simple-select"
+                      name="idType"
+                      onChange={handleChange}
+                      value={formData.idType}
+                    >
+                      <MenuItem value="Passport">Passport</MenuItem>
+                      <MenuItem value="Pan Card">Pan Card</MenuItem>
+                      <MenuItem value="Driving Licence">
+                        Driving Licence
+                      </MenuItem>
+                      <MenuItem value="Voter Id">Voter Id</MenuItem>
+                      <MenuItem value="Others">Others</MenuItem>
+                    </Select>
+                  </FormControl>
+                </div>
               </div>
 
               <div className="adult-form">
@@ -188,47 +228,6 @@ const Ticket = () => {
                     value={formData.age}
                     onChange={handleChange}
                   />
-                  <div>
-                    <FormControl sx={{ m: 0, minWidth: 220 }}>
-                      <InputLabel id="demo-simple-select-label">
-                        Gender
-                      </InputLabel>
-                      <Select
-                        labelId="demo-simple-select-label"
-                        id="demo-simple-select"
-                        value={formData.gender}
-                        label="Gender"
-                        onChange={handleChange}
-                        name="gender"
-                      >
-                        <MenuItem value={"male"}>Male</MenuItem>
-                        <MenuItem value={"Female"}>Female</MenuItem>
-                      </Select>
-                    </FormControl>
-                  </div>
-
-                  <div>
-                    <FormControl sx={{ m: 0, minWidth: 220 }}>
-                      <InputLabel id="demo-simple-select-label">
-                        Select id
-                      </InputLabel>
-                      <Select
-                        labelId="demo-simple-select-label"
-                        id="demo-simple-select"
-                        name="idType"
-                        onChange={handleChange}
-                        value={formData.idType}
-                      >
-                        <MenuItem value="Passport">Passport</MenuItem>
-                        <MenuItem value="Pan Card">Pan Card</MenuItem>
-                        <MenuItem value="Driving Licence">
-                          Driving Licence
-                        </MenuItem>
-                        <MenuItem value="Voter Id">Voter Id</MenuItem>
-                        <MenuItem value="Others">Others</MenuItem>
-                      </Select>
-                    </FormControl>
-                  </div>
                   <input
                     type="number"
                     placeholder="Enter Your Id"

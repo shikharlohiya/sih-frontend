@@ -187,27 +187,26 @@ input::-webkit-inner-spin-button {
   z-index: 100;
 }
 
-.donate-now input[type="radio"]:checked+label,
-.Checked+label {
-  background: #3DB3AD;
+.donate-now input[type="radio"]:checked + label,
+.Checked + label {
+  background: #3db3ad;
   color: white;
 }
 
 .donate-now label {
-  
-  border: 2.5px solid #3DB3AD;
+  border: 2.5px solid #3db3ad;
   border-radius: 30px;
   cursor: pointer;
   z-index: 90;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-weight: 600;
-  color: #3DB3AD;
+  color: #3db3ad;
   font-size: large;
   text-align: center;
 }
 
 .donate-now label:hover {
-  background: #DDD;
+  background: #ddd;
 }
 
 .details-input-add {
@@ -239,11 +238,14 @@ input[type="number"] {
   font-size: 1rem;
   font-weight: 600;
 }
-.national
-{
-    font-family: 'Poppins';
-    font-weight: 600;
-    font-size: large;
-    margin-left: 10%;
-    margin-top: 7%;
+.national {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: large;
+  margin-left: 10%;
+  margin-top: 7%;
+}
+.input-sec {
+  display: flex;
+  justify-content: space-between;
 }
