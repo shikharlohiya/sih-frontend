@@ -8,3 +8,19 @@
 .swiper-wrapper {
   margin-top: 2rem;
 }
+.caption-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.hide-caption {
+  opacity: 0;
+}
+
+.show-caption {
+  opacity: 1;
+}
