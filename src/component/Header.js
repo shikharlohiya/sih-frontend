@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink, Outlet } from "react-router-dom";
+import { useSelector } from "react-redux";
 import "./Header.css";
 const mystyle = {
   backgroundColor: "#FFFFFF",
 };
 export default function Header() {
+  const { isLoggedIn } = useSelector((state) => state.user);
+  console.log(isLoggedIn);
+  useEffect(() => {}, [isLoggedIn]);
   return (
     <>
       <nav className="navbar navbar-expand-md pop" style={mystyle}>
@@ -25,9 +29,10 @@ export default function Header() {
             <li className="nav-item mar item1">
               <NavLink to="/Tour">Tour Guide</NavLink>
             </li>
-            <li className="nav-item mar item1">
+            <li className="nav-item mar item1" style={{ marginTop: 0 }}>
               <a
                 className="nav-link "
+                style={{ color: "black" }}
                 href={process.env.PUBLIC_URL + "/thing to do/index.html"}
               >
                 360 Degree View
@@ -38,32 +43,38 @@ export default function Header() {
             </li>
           </ul>
           <ul className="navbar-nav">
-            <li className="nav-item">
-              <NavLink to="/Cart" id="cart">
-                <i class="fa-solid fa-cart-shopping"></i>
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                to={"/Login"}
-                className={(isActive) =>
-                  "nav-link" + (!isActive ? " unselected" : "")
-                }
-              >
-                Log In
-              </NavLink>
-            </li>
-
-            <li className="nav-item">
-              <NavLink
-                to={"/SignUp"}
-                className={(isActive) =>
-                  "nav-link" + (!isActive ? " unselected" : "")
-                }
-              >
-                Sign Up
-              </NavLink>
-            </li>
+            {!isLoggedIn ? (
+              <>
+                <li className="nav-item" style={{ marginTop: 0 }}>
+                  <NavLink
+                    to={"/Login"}
+                    className={(isActive) =>
+                      "nav-link" + (!isActive ? " unselected" : "")
+                    }
+                  >
+                    Log In
+                  </NavLink>
+                </li>
+                <li className="nav-item" style={{ marginTop: 0 }}>
+                  <NavLink
+                    to={"/SignUp"}
+                    className={(isActive) =>
+                      "nav-link" + (!isActive ? " unselected" : "")
+                    }
+                  >
+                    Sign Up
+                  </NavLink>
+                </li>
+              </>
+            ) : (
+              <>
+                <li className="nav-item">
+                  <NavLink to="/Cart" id="cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </NavLink>
+                </li>
+              </>
+            )}
           </ul>
         </div>
       </nav>

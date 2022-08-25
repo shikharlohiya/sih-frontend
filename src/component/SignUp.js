@@ -3,7 +3,7 @@ import "./signup.css";
 import signimg from "./images/signup.png";
 import { useState } from "react";
 import { signup } from "../home";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 const SignUp = () => {
   const navigate = useNavigate();
   const [values, setValues] = useState({
@@ -118,10 +118,14 @@ const SignUp = () => {
               </form>
               <div className="di">
                 <h6 className="acc"> Already Have an Account?</h6>
-                <a href="/login" className="sig">
+                <NavLink to={"/login"} className="sig">
                   Sign in
+<<<<<<< HEAD
                 </a>
                 <h1>forget password</h1>
+=======
+                </NavLink>
+>>>>>>> 3889789ca52b745c543f1de0d0ddf0c6e94a84bc
               </div>
             </div>
           </div>

@@ -1,0 +1,10 @@
+.swiper-slide {
+  width: 300px;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+}
+.swiper-wrapper {
+  margin-top: 2rem;
+}

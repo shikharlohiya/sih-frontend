@@ -24,6 +24,7 @@ import gtb from "./images2/GTB-Memorial.jpg";
 import bs from "./images2/Bangla-Sahib.jpg";
 import ab from "./images2/Agrasen-Ki-Baoli.jpg";
 import at from "./images2/Swaminarayan.jpg";
+import HomeSlider from "./HomeSlider";
 
 export default function MainPage() {
   useEffect(() => {
@@ -45,6 +46,7 @@ export default function MainPage() {
   });
   return (
     <>
+      <HomeSlider />
       <div className="main">
         <div className="section1 container">
           <div className="row">

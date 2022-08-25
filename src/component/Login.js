@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import signimg from "./images/signup.png";
 import "./signup.css";
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, NavLink } from "react-router-dom";
 import { signin, authenticate, isAuthenticated } from "../home";
 import { GoogleLogin } from "react-google-login";
 import MainPage from "./MainPage";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { userActions } from "../store/UserSlice";
 const Login = () => {
+  const { dispatch } = useDispatch();
   const [values, setValues] = useState({
     email: "",
     password: "",
@@ -67,6 +70,7 @@ const Login = () => {
               didRedirect: true,
             });
           });
+          dispatch(userActions.updateUserStatus(true));
         }
       })
       .catch(console.log("signin request failed"));
@@ -132,9 +136,9 @@ const Login = () => {
               </form>
               <div className="di">
                 <h6 className="acc"> Don't Have an Account?</h6>
-                <a href="/Signup" className="sig">
+                <NavLink to={"/Signup"} className="sig">
                   Sign Up
-                </a>
+                </NavLink>
               </div>
             </div>
           </div>
@@ -148,9 +152,9 @@ const Login = () => {
       {signInForm()}
 
       {successMessage()}
-      {
-        <>
-          <h1>login with google</h1>
+
+      {/* <> */}
+      {/* <h1>login with google</h1>
           <GoogleLogin
             clientId="770410488707-l26b3qoq3pvcco7je1dv2jkm5fcjum1g.apps.googleusercontent.com"
             buttonText="Login"
@@ -158,9 +162,9 @@ const Login = () => {
             onFailure={responseErrorGoogle}
             cookiePolicy={"single_host_origin"}
           />
-          ,
-        </>
-      }
+          
+        </> */}
+
       {performRedirect()}
     </>
   );
