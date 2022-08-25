@@ -38,3 +38,11 @@
 {
     font-family: 'Poppins';
 }
+
+@media screen and (max-width: 600px) {
+    .navbar navbar-expand-md pop{
+        display: none;
+    }
+    }
+  
+  

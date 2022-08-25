@@ -121,6 +121,7 @@ const SignUp = () => {
                 <a href="/login" className="sig">
                   Sign in
                 </a>
+                <h1>forget password</h1>
               </div>
             </div>
           </div>

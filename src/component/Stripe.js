@@ -33,14 +33,15 @@ function Stripe(){
 
 return(
  <StripeCheckout
- stripeKey="pk_test_51LSItVSAgNM3L4fVbTmzqS1AW1SkEOav1rfemBDVl7K6mGzUXwNj7xW7QZPzLVSlgY47ypORrsV5LAYlc5rp7j4j00kGinMDWO"
+  stripeKey="pk_test_51LSItVSAgNM3L4fVczKVMfHolGnQ0fNiYWx3rSrGSQzfVAPw0iRhDQ0KIti7CIWsKnWgjOMaLI2KlYAjk1H5brMb00Kt9xWGPm"
+
  token={makePayment}
  name="Buy ticket"
  amount={product.price*100}
  
  >
     <button className="btn-large pink"> buy ticket 
-    {product.price}
+
     
     </button>
  </StripeCheckout>
