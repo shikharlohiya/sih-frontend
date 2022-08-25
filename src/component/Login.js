@@ -6,7 +6,10 @@ import { signin, authenticate, isAuthenticated } from "../home";
 import { GoogleLogin } from "react-google-login";
 import MainPage from "./MainPage";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { userActions } from "../store/UserSlice";
 const Login = () => {
+  const { dispatch } = useDispatch();
   const [values, setValues] = useState({
     email: "",
     password: "",
@@ -67,6 +70,7 @@ const Login = () => {
               didRedirect: true,
             });
           });
+          dispatch(userActions.updateUserStatus(true));
         }
       })
       .catch(console.log("signin request failed"));
