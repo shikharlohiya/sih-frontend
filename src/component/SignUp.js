@@ -120,12 +120,7 @@ const SignUp = () => {
                 <h6 className="acc"> Already Have an Account?</h6>
                 <NavLink to={"/login"} className="sig">
                   Sign in
-<<<<<<< HEAD
-                </a>
-                <h1>forget password</h1>
-=======
                 </NavLink>
->>>>>>> 3889789ca52b745c543f1de0d0ddf0c6e94a84bc
               </div>
             </div>
           </div>
