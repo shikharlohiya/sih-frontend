@@ -60,7 +60,11 @@ function App() {
             <Route path="/explore" element={<Exp />} />
             <Route path="/how-to-use" element={<Use />} />
             <Route path="/dashboard" element={<Dash />} />
+<<<<<<< HEAD
             
+=======
+            {/* <Route path="/location" elemenmt ={<Location/> }/> */}
+>>>>>>> 705a26234a6ea25ea53b7d8eb5210f5ee5a63964
             <Route path="/otp" element={<Otp />} />
             <Route path="/speech" element={<Speech />} />
           </Route>

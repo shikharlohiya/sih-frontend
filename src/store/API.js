@@ -7,6 +7,7 @@ import { placeActions } from "./PlaceSlice";
 import { cartActions } from "./CartSlice";
 import { ticketActions } from "./TicketSlice";
 import { userActions } from "./UserSlice";
+import { DashboardActions } from "./DashboardSlice";
 const API = axios.create({
   baseURL: "http://localhost:8000/",
 });
@@ -308,6 +309,74 @@ export const resendOtp = (id) => {
         type: "danger",
         message: "some error occured",
       });
+    }
+  };
+};
+
+//dashboard
+
+export const getTotalRevenue = () => {
+  return async (dispatch) => {
+    try {
+      const res = await API.get("/admin/revenue");
+      dispatch(DashboardActions.updateRevenue(res.data));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+};
+
+export const getNationalityRevenue = () => {
+  return async (dispatch) => {
+    try {
+      const res = await API.get("/admin/nationalityRevenue");
+      dispatch(DashboardActions.updateNationalityRevenue(res.data));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+};
+
+export const getTopStates = () => {
+  return async (dispatch) => {
+    try {
+      const res = await API.get("/admin/stateRevenue");
+      dispatch(DashboardActions.updateState(res.data));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+};
+
+export const getTopMonuments = () => {
+  return async (dispatch) => {
+    try {
+      const res = await API.get("/admin/monumentRevenue");
+      dispatch(DashboardActions.updateMonument(res.data));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+};
+
+export const getTopMonumentDayWise = () => {
+  return async (dispatch) => {
+    try {
+      const res = await API.get("/admin/monumentDayWise");
+      dispatch(DashboardActions.updateMonumentDayWise(res.data));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+};
+
+export const getMonthlyRevenue = () => {
+  return async (dispatch) => {
+    try {
+      const res = await API.get("/admin/monthRevenue");
+      dispatch(DashboardActions.updateMonthlyRevenue(res.data));
+    } catch (err) {
+      console.log(err);
     }
   };
 };

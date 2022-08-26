@@ -31,15 +31,15 @@ export default function Header() {
               <h3 className="cket">Cket</h3>
             </li>
 
-            <li className="nav-item mar item1">
+            <li className="nav-item mar item1" id="visit">
               <NavLink to={"/visit"}>Visit</NavLink>
             </li>
 
             {/* <li className="nav-item mar item1">
               <NavLink to="/profile">My Profile</NavLink>
             </li> */}
-            <li className="nav-item mar item1">
-              <NavLink to="/Tour">Tour Guide</NavLink>
+            <li className="nav-item mar item1" id="guide">
+              <a href="/Tour">Tour Guide</a>
             </li>
             <li className="nav-item mar item1" style={{ marginTop: 0 }}>
               <a
