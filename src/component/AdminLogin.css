@@ -1,0 +1,15 @@
+.login-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+  background-color: white;
+  padding: 1rem;
+}
+.login-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -8,6 +8,7 @@ import { cartActions } from "./CartSlice";
 import { ticketActions } from "./TicketSlice";
 import { userActions } from "./UserSlice";
 import { DashboardActions } from "./DashboardSlice";
+import { signin } from "../home";
 const API = axios.create({
   baseURL: "http://localhost:8000/",
 });
@@ -378,5 +379,34 @@ export const getMonthlyRevenue = () => {
     } catch (err) {
       console.log(err);
     }
+  };
+};
+
+export const adminLogin = (data) => {
+  return async (dispatch) => {
+    try {
+      // const res = await API.post("user/admin/login", {
+      //   email: data.email,
+      //   userType: data.userType,
+      //   password: data.password,
+      // });
+      localStorage.setItem("jwt", {
+        token: "asdasdasdasd",
+        user: { _id: "25323adfqea" },
+      });
+      data.navigate("/dasboard");
+    } catch (err) {
+      console.log(err);
+    }
+    // try {
+    //   const res = await signin({
+    //     email: data.email,
+    //     userType: data.userType,
+    //     password: data.password,
+    //   });
+    //   data.navigate("/dashboard");
+    // } catch (err) {
+    //   console.log(err);
+    // }
   };
 };

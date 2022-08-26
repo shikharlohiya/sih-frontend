@@ -28,6 +28,7 @@ import location from "./component/Location";
 import Speech from "./component/Speech";
 import ProtectedRoutes from "./ProtectedRoutes";
 import UnprotectedRoutes from "./UnprotectedRoutes";
+import AdminLogin from "./component/AdminLogin";
 
 export const notifications = {
   message: "teodosii@react-notifications-component",
@@ -70,6 +71,7 @@ function App() {
               <Route path="/SignUp" element={<SignUp />} />
               <Route path="/Login" element={<Login />} />
               <Route path="/otp" element={<Otp />} />
+              <Route path="/admin/login" element={<AdminLogin />} />
             </Route>
 
             {/* <Route path="/location" elemenmt ={<Location/> }/> */}
