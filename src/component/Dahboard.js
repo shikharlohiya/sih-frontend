@@ -24,10 +24,8 @@ export default function Dahboard() {
   } = useSelector((state) => state.dashboard);
   const [data1, setData1] = useState({
     series: [44, 55, 41, 17, 15],
-    chartOptions: {
-      labels: ["Indians", "Foreigners"],
-    },
     options: {
+      labels: ["Indians", "Foreigners"],
       chart: {
         type: "donut",
       },
@@ -54,6 +52,7 @@ export default function Dahboard() {
       },
     ],
     options: {
+      labels: ["a", "b", "c", "d", "e", "f", "g", "h"],
       chart: {
         type: "bar",
         height: 350,
@@ -136,7 +135,7 @@ export default function Dahboard() {
         colors: ["#fff"],
       },
       title: {
-        text: "Fiction Books Sales",
+        // text: "Fiction Books Sales",
       },
       xaxis: {
         categories: [2008, 2009, 2010, 2011, 2012, 2013, 2014],
@@ -197,10 +196,8 @@ export default function Dahboard() {
   useEffect(() => {
     setData1({
       series: nationalityRevenue.data,
-      chartOptions: {
-        labels: nationalityRevenue.label,
-      },
       options: {
+        labels: ["Indians", "Foreigners"],
         chart: {
           type: "donut",
         },
@@ -228,6 +225,7 @@ export default function Dahboard() {
         },
       ],
       options: {
+        labels: ["a", "b", "c", "d", "e", "f", "g", "h"],
         chart: {
           type: "bar",
           height: 350,
@@ -305,7 +303,7 @@ export default function Dahboard() {
           colors: ["#fff"],
         },
         title: {
-          text: "Fiction Books Sales",
+          // text: "Fiction Books Sales",
         },
         xaxis: {
           categories: [2008, 2009, 2010, 2011, 2012, 2013, 2014],
@@ -392,7 +390,7 @@ export default function Dahboard() {
     dispatch(getMonthlyRevenue());
   }, []);
   return (
-    <>
+    <div className="dashboard-cont">
       <div className="row">
         <div className="col-3">
           <div className="card-value">
@@ -419,7 +417,7 @@ export default function Dahboard() {
           </div>
         </div>
       </div>
-      <h3>Revenue Genreation</h3>
+      <h3 className="heading-class">Revenue Genreation</h3>
       <div className="row">
         <div className="col-4">
           Indian/Foriegner
@@ -468,8 +466,7 @@ export default function Dahboard() {
             height={350}
           /> */}
         </div>
-        <div className="col-5">Family/Couple bookings</div>
       </div>
-    </>
+    </div>
   );
 }

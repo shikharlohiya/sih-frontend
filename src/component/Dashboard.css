@@ -42,11 +42,12 @@ iframe {
   margin-top: 4%;
 }
 .card-value {
-  width: 200px;
+  width: 230px;
   background: white;
   border-radius: 10px;
   padding: 1rem;
   box-shadow: 0px 2px 5px #cfcfcf;
+  height: 100px;
 }
 .card-value-title {
   font-size: 1.1rem;
@@ -55,4 +56,10 @@ iframe {
 .card-value-value {
   font-size: 1rem;
   font-weight: 500;
+}
+.dashboard-cont {
+  padding: 1rem 2rem;
+}
+.heading-class {
+  margin-top: 1rem;
 }
