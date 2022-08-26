@@ -4,8 +4,8 @@ import Data from "./Data.json";
 import { CartProvider, useCart } from "react-use-cart";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, fetchPlaceList } from "../store/API";
-import { CircularProgress } from "@mui/material";
-
+import { CircularProgress, Link } from "@mui/material";
+import { NavLink } from "react-router-dom";
 
 const Monument = (props) => {
   const { data, setCurrentData } = props;
@@ -67,7 +67,9 @@ const Monument = (props) => {
             </button>
           </div>
           <div className="col-6 explore">
-            <a href="/explore">Explore{">"} </a>
+            <NavLink to="/explore" state={{ data }}>
+              Explore
+            </NavLink>
           </div>
         </div>
       </div>
