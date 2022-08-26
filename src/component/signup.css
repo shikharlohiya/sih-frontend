@@ -1,7 +1,4 @@
-.row
-{
-    margin-top: 4%;
-}
+
 .meri
 {
     font-family: 'Merriweather';;
@@ -23,9 +20,29 @@
 }
 .lb
 {
-    font-weight: bold;
+    font-weight: 500;
     font-family: 'Poppins';
-    margin-left: 14px;
+    color: #666666;
+    margin-left: 20%;
+}
+.side-reg
+{
+    font-family: 'Poppins';
+    padding-top: 3%;
+    font-weight: 400;
+    display: inline;
+    font-size: xx-large;
+    color: rgba(255, 255, 255, 1);
+    
+}
+.side-reg2
+{
+    font-family: 'Poppins';
+    font-weight: 700;
+    display: inline;
+    font-size: xx-large;
+    color: rgba(255, 255, 255, 1); 
+     
 }
 input::placeholder
 {
@@ -35,7 +52,7 @@ input::placeholder
 }
 .form
 {
-    margin-top: 10%;
+    margin-top: 6%;
 }
 .but
 {
@@ -57,6 +74,7 @@ input::placeholder
 .di
 {
     margin-top: 5%;
+    margin-bottom: 100px;
 }
 .form-group
 {
@@ -64,9 +82,10 @@ input::placeholder
 }
 .sig
 {
-    padding-left: 40px;
+    padding-left: 20px;
     font-weight: bold;
     font-family: 'Poppins';
+    color: #3db3ad;
 }
 a
 {
@@ -77,6 +96,49 @@ a
 .form-control
 {
     margin-top: 2%;
-    background-color: #FFF8E5;
-    border-radius: 13px;
-};
+    width: 60%;
+    margin-left: 20%;
+}
+.color-white-1
+{
+    background-color: #ffffff;
+}
+.bg-grd
+{
+    background-image: linear-gradient(#ef6525,#7c300c);
+    padding-top: 8%;
+    padding-left: 5%;
+    padding-right: 5%;
+   
+}
+.mar-side
+{
+    margin-left: 0;
+}
+.reg-name
+{
+    font-family: 'Inter';
+    font-weight: bolder;
+    font-size: xx-large;
+    margin-left: 20%;
+}
+.reg-desc
+{
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: larger;
+    margin-left: 20%;
+}
+.mar-left3
+{
+    margin-left: 20%;
+}
+.disp-in
+{
+    display: inline;
+}
+.temp1-img
+{
+    width: 400px;
+    height: 400px;
+}

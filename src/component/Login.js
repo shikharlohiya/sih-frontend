@@ -11,10 +11,8 @@ import { userActions } from "../store/UserSlice";
 import geo from "../component/Locate";
 
 const Login = () => {
+  const location = geo();
 
-
-  const location =geo();
-    
   const dispatch = useDispatch();
   const [values, setValues] = useState({
     email: "",
@@ -93,19 +91,19 @@ const Login = () => {
 
   const signInForm = () => {
     return (
-      <div className="main">
-        <div class="container">
-          <h2 className="b meri mg">Welcome Back</h2>
+      <div className="main color-white-1">
+        <div class="container mar-side">
           <div class="row">
-            <div class="col-sm-6 ">
-              <div className="orange-box form">
-                <div>
-                  <img src={signimg} alt="..." height={400}></img>
-                </div>
-              </div>
+            <div class="col-sm-5 bg-grd ">
+              <p className="side-reg">A few clicks away from creating your</p>{" "}
+              <p className="side-reg2">memorable journey.</p>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-7">
               <form className="form">
+                <p className="reg-name">Login</p>
+                <p className="reg-desc">
+                  Welcome back! Please login to your account to continue.
+                </p>
                 <div class="form-group">
                   <label for="email" className="lb">
                     Email
@@ -134,14 +132,14 @@ const Login = () => {
                   />
                 </div>
 
-                <div class="d-flex justify-content-center">
+                <div className="mar-left3">
                   <button type="button" onClick={onSubmit} class="btn but">
                     Sign In
                   </button>
                 </div>
               </form>
               <div className="di">
-                <h6 className="acc"> Don't Have an Account?</h6>
+                <h6 className=" mar-left3 disp-in"> Don't Have an Account?</h6>
                 <NavLink to={"/Signup"} className="sig">
                   Sign Up
                 </NavLink>
@@ -156,9 +154,6 @@ const Login = () => {
     <>
       {errorMessage()}
       {signInForm()}
-      {
-        location.loaded ?JSON.stringify(location):"location data not available yet"
-      }
 
       {successMessage()}
 

@@ -4,6 +4,7 @@ import signimg from "./images/signup.png";
 import { useState } from "react";
 import { signup } from "../home";
 import { Link, NavLink, useNavigate } from "react-router-dom";
+import temp1 from "./temp1.jpg";
 const SignUp = () => {
   const navigate = useNavigate();
   const [values, setValues] = useState({
@@ -43,21 +44,20 @@ const SignUp = () => {
   };
   const signUpForm = () => {
     return (
-      <div className="main">
-        <div class="container">
-          <h2 className="d-flex justify-content-center b meri mg">
-            Getting Started.
-          </h2>
+      <div className="color-white-1">
+        <div class="container mar-side">
           <div class="row">
-            <div class="col-sm-6 ">
-              <div className="orange-box form">
-                <div>
-                  <img src={signimg} alt="..." height={400}></img>
-                </div>
-              </div>
+            <div class="col-sm-5 bg-grd">
+              <p className="side-reg">A few clicks away from creating your</p>{" "}
+              <p className="side-reg2">memorable journey.</p>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-7">
               <form className="form">
+                <p className="reg-name">Register</p>
+                <p className="reg-desc">
+                  Let’s get you all set up so you can verify your personal
+                  account and begin setting up your profile.
+                </p>
                 <div class="form-group">
                   <label for="email" className="lb">
                     Email
@@ -68,7 +68,6 @@ const SignUp = () => {
                     onChange={handlechange("email")}
                     class="form-control"
                     id="email"
-                    placeholder="Enter Your Email"
                   />
                 </div>
                 <div class="form-group">
@@ -81,7 +80,6 @@ const SignUp = () => {
                     class="form-control"
                     value={name}
                     id="name"
-                    placeholder="Enter Your Full Name"
                   />
                 </div>
                 <div class="form-group">
@@ -94,7 +92,6 @@ const SignUp = () => {
                     onChange={handlechange("password")}
                     class="form-control"
                     id="Password"
-                    placeholder="********"
                   />
                 </div>
                 <div class="form-group">
@@ -107,19 +104,18 @@ const SignUp = () => {
                     onChange={handlechange("confirmpassword")}
                     class="form-control"
                     id="cpassword"
-                    placeholder="********"
                   />
                 </div>
-                <div class="d-flex justify-content-center">
+                <div class="mar-left3">
                   <button onClick={onSubmit} type="button" class="btn but">
-                    Sign Up
+                    Create Account
                   </button>
                 </div>
               </form>
               <div className="di">
-                <h6 className="acc"> Already Have an Account?</h6>
+                <h6 className="mar-left3 disp-in"> Already Have an Account?</h6>
                 <NavLink to={"/login"} className="sig">
-                  Sign in
+                  Log In
                 </NavLink>
               </div>
             </div>

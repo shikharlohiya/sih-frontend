@@ -1,5 +1,5 @@
 .main {
-  background-color: #ffe6e5;
+  background-color: #fff8e5;
   font-family: "Poppins";
 }
 .text {
@@ -377,7 +377,10 @@
   z-index: -9;
   transition-duration: 2000ms;
 }
-
+.section2
+{
+  padding-left: 100px;
+}
 .swiper-container {
   margin-left: auto;
   margin-right: auto;
@@ -1093,6 +1096,7 @@ button.swiper-pagination-bullet {
 }
 .section3 {
   margin-top: 8%;
+  
 }
 
 .div8 {
@@ -1121,7 +1125,7 @@ button.swiper-pagination-bullet {
   max-height: 100px;
 }
 .footer {
-  margin-top: 100px;
+  
   background-color: #fff0ef;
 }
 .footer1 {
@@ -1129,6 +1133,10 @@ button.swiper-pagination-bullet {
 }
 .section1 {
   margin-left: 80px;
+}
+.section4
+{
+  padding-left: 100px;
 }
 .orange-box {
   background-color: #ef6525;
