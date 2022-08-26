@@ -21,6 +21,7 @@ import Use from "./component/howToUse";
 import Exp from "./component/explore";
 import Dash from "./component/Dahboard";
 import Otp from "./component/OTP";
+import View from "./component/view";
 import location from "./component/Location";
 export const notifications = {
   message: "teodosii@react-notifications-component",
@@ -61,6 +62,7 @@ function App() {
             <Route path="/dashboard" element={<Dash />} />
             {/* <Route path="/location" elemenmt ={<Location/> }/> */}
             <Route path="/otp" element={<Otp />} />
+            <Route path="/view" element={<View />} />
           </Route>
         </Routes>
       </BrowserRouter>
