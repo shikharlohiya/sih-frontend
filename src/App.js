@@ -24,7 +24,7 @@ import Otp from "./component/OTP";
 
 import View from "./component/view";
 import location from "./component/Location";
-
+import Data from "./component/Data.js";
 import Speech from "./component/Speech";
 import ProtectedRoutes from "./ProtectedRoutes";
 import UnprotectedRoutes from "./UnprotectedRoutes";
@@ -71,7 +71,6 @@ function App() {
               <Route path="/SignUp" element={<SignUp />} />
               <Route path="/Login" element={<Login />} />
               <Route path="/otp" element={<Otp />} />
-              <Route path="/admin/login" element={<AdminLogin />} />
             </Route>
 
             {/* <Route path="/location" elemenmt ={<Location/> }/> */}

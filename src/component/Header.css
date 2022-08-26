@@ -7,6 +7,10 @@
   display: inline;
   font-weight: 700;
 }
+.border
+{
+  border: 2px solid green;
+}
 .dash {
   display: inline;
   font-weight: 700;

@@ -20,7 +20,7 @@ export default function Header() {
   useEffect(() => {}, [isLoggedIn]);
   return (
     <>
-      <nav className="navbar navbar-expand-md pop" style={mystyle}>
+      <nav className="navbar navbar-expand-md pop border" style={mystyle}>
         <div className="container-fluid">
           <ul className="navbar-nav">
             <li
@@ -81,7 +81,7 @@ export default function Header() {
                     <i class="fa-solid fa-cart-shopping"></i>
                   </NavLink>
                 </li>
-                <li className="header-profile">
+                <li className="header-profile" id="profile">
                   <NavLink to="/profile">
                     <PersonPinIcon />
                   </NavLink>

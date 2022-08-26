@@ -82,9 +82,6 @@ const TicketPrint = ({ data }) => {
               <div className="col-6">
                 <h5 style={{ fontWeight: "600" }}>Visitor Type</h5>
               </div>
-              <div className="col-6">
-                <h5>Indian</h5>
-              </div>
             </div>
             <div style={{ display: "flex", margin: "0.2rem 0" }}>
               <div className="col-6">
@@ -127,7 +124,6 @@ const TicketPrint = ({ data }) => {
                 <h5>{data.monumentId.time}</h5>
               </div>
             </div>
-
             <h4
               style={{
                 textAlign: "center",
@@ -136,7 +132,7 @@ const TicketPrint = ({ data }) => {
               }}
             >
               Visitor's Detail
-            </h4>
+            </h4>{" "}
             {data.ticketedUsers.map((item) => {
               return (
                 <>
@@ -285,16 +281,10 @@ function TicketPdf() {
                 <div className="col-6">
                   <h5 style={{ fontWeight: "600" }}>Ticket Type</h5>
                 </div>
-                <div className="col-6">
-                  <h5>Adult</h5>
-                </div>
               </div>
               <div style={{ display: "flex", margin: "0.2rem 0" }}>
                 <div className="col-6">
                   <h5 style={{ fontWeight: "600" }}>Visitor Type</h5>
-                </div>
-                <div className="col-6">
-                  <h5>Indian</h5>
                 </div>
               </div>
               <div style={{ display: "flex", margin: "0.2rem 0" }}>

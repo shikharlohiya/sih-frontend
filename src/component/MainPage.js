@@ -79,32 +79,32 @@ export default function MainPage() {
                 <div className="col-sm-4 div5">
                   <p className="sz3 meri">We make Your Travel Visit easy.</p>
                   <p className="mar-top-1">
-                    Take a look at the Destination You Wish To Visit Without any
-                    time Wasting and Decide the Place you Would Love To Visit.
+                    Take a look at the destination, book your tickets and you
+                    are done! We will assist you at every step.
                   </p>
                 </div>
                 <div className="col-sm-4 div6">
-                  <h4 className="bold">Secure storage</h4>
+                  <h4 className="bold">Explore destinations</h4>
                   <p>
-                    We store the vast majority of the digital assets in secure
-                    offline storage.
+                    Know everything about a city or a state to make a perfect
+                    stint with your family and musketeers.
                   </p>
-                  <h4 className="bold mar-top-2">Industry best practices</h4>
+                  <h4 className="bold mar-top-2">Book entry tickets </h4>
                   <p>
-                    Besnik crypto supports a variety of the most popular digital
-                    crypto currencies.
+                    Add the number of visitors and their details and proceed to
+                    checkout. Simple and unique entry QR will be generated.
                   </p>
                 </div>
                 <div className="col-sm-4 div7">
-                  <h4 className="bold">Protected by insurance</h4>
+                  <h4 className="bold">Get the QR </h4>
                   <p>
-                    Cryptocurrency stored on our servers is covered by our
-                    insurance policy.
+                    Get the QR to be scanned at the entry premises contributing
+                    to the paperless objective.
                   </p>
-                  <h4 className="bold mar-top-2">Trade Assets</h4>
+                  <h4 className="bold mar-top-2">Earn rewards</h4>
                   <p>
-                    Discover new and innovative crypto assets with over 200 spot
-                    trading pairs and 25 margin.
+                    Get rewards after every place you visit and use it on your
+                    next visit.
                   </p>
                 </div>
               </div>
