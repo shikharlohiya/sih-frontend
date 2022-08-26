@@ -9,7 +9,14 @@ import desk from "./desk.png";
 import amb from "./amb.png";
 import Chart from "react-apexcharts";
 import w1 from "./images/w-1.svg";
+import { useLocation } from "react-router-dom";
+import VolumeUpIcon from "@mui/icons-material/VolumeUp";
+import VolumeOffIcon from "@mui/icons-material/VolumeOff";
+import { useSpeechSynthesis } from "react-speech-kit";
+
 export default function Explore() {
+  const [value, setValue] = React.useState("");
+  const { speak } = useSpeechSynthesis();
   const [activeIndex, setActiveIndex] = useState(0);
   const dataSeries = [
     {
@@ -148,29 +155,38 @@ export default function Explore() {
       },
     },
   };
-
+  const location = useLocation().state.data;
+  const [isClicked, setIsClicked] = useState(false);
   return (
     <>
       <div className="container check1234">
         <div className="row">
           <div className="col-6">
-            <p className="monument-name1">Red Fort</p>
+            <p className="monument-name1">{location.name}</p>
             <p className="monument-desc1">
-              The beautiful Red Fort (Lal Qila) was built by Shah Jahan in 1648
+              {location.description}
+
+              <VolumeUpIcon
+                onClick={() => {
+                  speak({ text: location.description });
+                  setIsClicked(!isClicked);
+                }}
+              ></VolumeUpIcon>
+
+              {/* The beautiful Red Fort (Lal Qila) was built by Shah Jahan in 1648
               and served as the seat of Mughal power until 1857. This stunning
               structure, with its tall, red sandstone walls covers an area of
               more than two square kilometers, the entirety of which is crescent
               shaped and surrounded by a moat. It is proof of the glory of the
-              flourishing Mughal Empire in Delhi.
+              flourishing Mughal Empire in Delhi. */}
             </p>
             <p className="para1 para">Opening closing time</p>
             <p className="monument-desc2 para1">
-              Sunrise to sunset. (Only monday closed)
+              {/* Sunrise to sunset. (Only monday closed) */}
+              {location.time}
             </p>
             <p className="para para1">Entrance Fee</p>
-            <p className="monument-desc3 para1">
-              Rs.10 (Indians) Rs.250 (Foreigners)
-            </p>
+            <p className="monument-desc3 para1">{location.fee}</p>
           </div>
 
           <div className="E-img-div col-6">
@@ -203,7 +219,7 @@ export default function Explore() {
             </div>
           </div>
           <div className="wheather-2">
-            <div className="heading-temp-count"> Delhi,India</div>
+            <div className="heading-temp-count"> {location.stateUT},India</div>
             <div>Population: 8,175,133</div>
             <div>Aug 24</div>
             <div>Mainly cloudy</div>
@@ -224,7 +240,7 @@ export default function Explore() {
                 }`}
                 onClick={() => setActiveIndex(index)}
               >
-                <div>Aug 21</div>
+                <div>Aug 27</div>
                 <div>
                   <img src={w1} />
                 </div>
