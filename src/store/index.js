@@ -15,5 +15,6 @@ const store = configureStore({
     user: UserSlice.reducer,
     dashboard: DashboardSlice.reducer,
   },
+  devTools: process.env.NODE_ENV !== "production",
 });
 export default store;

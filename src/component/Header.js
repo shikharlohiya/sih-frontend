@@ -34,12 +34,8 @@ export default function Header() {
             <li className="nav-item mar item1" id="visit">
               <NavLink to={"/visit"}>Visit</NavLink>
             </li>
-
-            {/* <li className="nav-item mar item1">
-              <NavLink to="/profile">My Profile</NavLink>
-            </li> */}
             <li className="nav-item mar item1" id="guide">
-              <a href="/Tour">Tour Guide</a>
+              <NavLink to={"/Tour"}>Tour Guide</NavLink>
             </li>
             <li className="nav-item mar item1" style={{ marginTop: 0 }}>
               <a

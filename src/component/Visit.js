@@ -4,6 +4,7 @@ import Monument from "./Monument.js";
 import "./Monument.css";
 import { fetchPlaceList, getNearPlaces } from "../store/API";
 import { useDispatch, useSelector } from "react-redux";
+import MultipleSelect from "../StateDropDown";
 
 export default function Home() {
   const { placeList, nearPlaces } = useSelector((state) => state.place);
@@ -47,21 +48,32 @@ export default function Home() {
   useMemo(() => {
     dispatch(getNearPlaces(currentData._id));
   }, [currentData._id]);
+  const handleStateChange = (e) => {
+    var lowerCase = e.toLowerCase();
+    const newData = placeList.filter((item) => {
+      return item.stateUT.toLowerCase().includes(lowerCase);
+    });
+    setFilterValue(newData);
+  };
   return (
     <div>
       {isOpen && <Popup handleclose={handleclose} handleState={handleState} />}
 
       <div>
         <div class="input-group rounded">
-          <input
-            type="search"
-            class="form-control monum"
-            placeholder="Search Monuments"
-            aria-label="Search"
-            aria-describedby="search-addon"
-            onChange={inputHandler}
-            value={inputText}
-          />
+          <div className="search-div">
+            {" "}
+            <input
+              type="search"
+              class="form-control monum"
+              placeholder="Search Monuments"
+              aria-label="Search"
+              aria-describedby="search-addon"
+              onChange={inputHandler}
+              value={inputText}
+            />
+          </div>
+          <MultipleSelect stateChange={handleStateChange} />
         </div>
         <div className="container-fluid">
           <div className="monument-cont ">

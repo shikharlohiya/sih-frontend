@@ -26,6 +26,8 @@ import View from "./component/view";
 import location from "./component/Location";
 import Data from "./component/Data.js";
 import Speech from "./component/Speech";
+import ProtectedRoutes from "./ProtectedRoutes";
+import UnprotectedRoutes from "./UnprotectedRoutes";
 
 export const notifications = {
   message: "teodosii@react-notifications-component",
@@ -64,10 +66,8 @@ function App() {
             <Route path="/explore" element={<Exp />} />
             <Route path="/how-to-use" element={<Use />} />
             <Route path="/dashboard" element={<Dash />} />
-            <Route path="/table" element={<Data />} />
-            {/* <Route path="/location" elemenmt ={<Location/> }/> */}
 
-            <Route path="/otp" element={<Otp />} />
+            {/* <Route path="/location" elemenmt ={<Location/> }/> */}
 
             <Route path="/view" element={<View />} />
 
