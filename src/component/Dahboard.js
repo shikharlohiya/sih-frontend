@@ -2,14 +2,26 @@ import { height } from "@mui/system";
 import React, { useEffect, useState } from "react";
 import ReactApexChart from "react-apexcharts";
 import { useDispatch, useSelector } from "react-redux";
-import { getNationalityRevenue, getTotalRevenue } from "../store/API";
+import {
+  getMonthlyRevenue,
+  getNationalityRevenue,
+  getTopMonumentDayWise,
+  getTopMonuments,
+  getTopStates,
+  getTotalRevenue,
+} from "../store/API";
 import "./Dashboard.css";
 
 export default function Dahboard() {
   const dispatch = useDispatch();
-  const { totalRevenue, nationalityRevenue } = useSelector(
-    (state) => state.dashboard
-  );
+  const {
+    totalRevenue,
+    nationalityRevenue,
+    topStates,
+    topMonuments,
+    topMonumentDayWise,
+    monthlyRevenue,
+  } = useSelector((state) => state.dashboard);
   const [data1, setData1] = useState({
     series: [44, 55, 41, 17, 15],
     chartOptions: {
@@ -35,7 +47,7 @@ export default function Dahboard() {
     },
   });
 
-  const data2 = {
+  const [data2, setData2] = useState({
     series: [
       {
         data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380],
@@ -56,66 +68,36 @@ export default function Dahboard() {
         enabled: false,
       },
       xaxis: {
-        categories: [
-          "South Korea",
-          "Canada",
-          "United Kingdom",
-          "Netherlands",
-          "Italy",
-          "France",
-          "Japan",
-          "United States",
-          "China",
-          "Germany",
-        ],
+        categories: topStates.labels,
       },
     },
-  };
-  const data3 = {
+  });
+  const [data3, setData3] = useState({
     series: [
       {
-        data: [44, 55, 41, 64, 22, 43, 21],
-      },
-      {
-        data: [53, 32, 33, 52, 13, 44, 32],
+        data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380],
       },
     ],
     options: {
       chart: {
         type: "bar",
-        height: 430,
+        height: 350,
       },
       plotOptions: {
         bar: {
+          borderRadius: 4,
           horizontal: false,
-          dataLabels: {
-            position: "top",
-          },
         },
       },
       dataLabels: {
-        enabled: true,
-        offsetX: -6,
-        style: {
-          fontSize: "12px",
-          colors: ["#fff"],
-        },
-      },
-      stroke: {
-        show: true,
-        width: 1,
-        colors: ["#fff"],
-      },
-      tooltip: {
-        shared: true,
-        intersect: false,
+        enabled: false,
       },
       xaxis: {
-        categories: [2001, 2002, 2003, 2004, 2005, 2006, 2007],
+        categories: topMonuments.labels,
       },
     },
-  };
-  const data4 = {
+  });
+  const [data4, setData4] = useState({
     series: [
       {
         name: "Marine Sprite",
@@ -185,7 +167,32 @@ export default function Dahboard() {
         offsetX: 40,
       },
     },
-  };
+  });
+  const [data5, setData5] = useState({
+    series: [
+      {
+        data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380],
+      },
+    ],
+    options: {
+      chart: {
+        type: "bar",
+        height: 350,
+      },
+      plotOptions: {
+        bar: {
+          borderRadius: 4,
+          horizontal: false,
+        },
+      },
+      dataLabels: {
+        enabled: false,
+      },
+      xaxis: {
+        categories: topStates.labels,
+      },
+    },
+  });
 
   useEffect(() => {
     setData1({
@@ -214,8 +221,175 @@ export default function Dahboard() {
     });
   }, [nationalityRevenue]);
   useEffect(() => {
+    setData2({
+      series: [
+        {
+          data: topStates.data,
+        },
+      ],
+      options: {
+        chart: {
+          type: "bar",
+          height: 350,
+        },
+        plotOptions: {
+          bar: {
+            borderRadius: 4,
+            horizontal: false,
+          },
+        },
+        dataLabels: {
+          enabled: false,
+        },
+        xaxis: {
+          categories: [
+            "South Korea",
+            "Canada",
+            "United Kingdom",
+            "Netherlands",
+            "Italy",
+            "France",
+            "Japan",
+            "United States",
+            "China",
+            "Germany",
+          ],
+        },
+      },
+    });
+  }, [topStates.data]);
+
+  useEffect(() => {
+    setData3({
+      series: [
+        {
+          data: topMonuments.data,
+        },
+      ],
+      options: {
+        chart: {
+          type: "bar",
+          height: 350,
+        },
+        plotOptions: {
+          bar: {
+            borderRadius: 4,
+            horizontal: false,
+          },
+        },
+        dataLabels: {
+          enabled: false,
+        },
+        xaxis: {
+          categories: topStates.labels,
+        },
+      },
+    });
+  }, [topMonuments.data]);
+  useEffect(() => {
+    setData4({
+      series: topMonumentDayWise,
+      options: {
+        chart: {
+          type: "bar",
+          height: 350,
+          stacked: true,
+        },
+        plotOptions: {
+          bar: {
+            horizontal: true,
+          },
+        },
+        stroke: {
+          width: 1,
+          colors: ["#fff"],
+        },
+        title: {
+          text: "Fiction Books Sales",
+        },
+        xaxis: {
+          categories: [2008, 2009, 2010, 2011, 2012, 2013, 2014],
+          labels: {
+            formatter: function (val) {
+              return val + "K";
+            },
+          },
+        },
+        yaxis: {
+          title: {
+            text: undefined,
+          },
+        },
+        tooltip: {
+          y: {
+            formatter: function (val) {
+              return val + "K";
+            },
+          },
+        },
+        fill: {
+          opacity: 1,
+        },
+        legend: {
+          position: "top",
+          horizontalAlign: "left",
+          offsetX: 40,
+        },
+      },
+    });
+  }, [topMonumentDayWise]);
+
+  // useState(() => {
+  //   setData5({
+  //     series: [
+  //       {
+  //         data:
+  //           monthlyRevenue.length === 0
+  //             ? [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 1]
+  //             : monthlyRevenue,
+  //       },
+  //     ],
+  //     options: {
+  //       chart: {
+  //         type: "bar",
+  //         height: 350,
+  //       },
+  //       plotOptions: {
+  //         bar: {
+  //           borderRadius: 4,
+  //           horizontal: false,
+  //         },
+  //       },
+  //       dataLabels: {
+  //         enabled: false,
+  //       },
+  //       xaxis: {
+  //         categories: [
+  //           "a",
+  //           "b",
+  //           "c",
+  //           "d",
+  //           "a",
+  //           "b",
+  //           "c",
+  //           "d",
+  //           "a",
+  //           "b",
+  //           "c",
+  //           "d",
+  //         ],
+  //       },
+  //     },
+  //   });
+  //   console.log(monthlyRevenue);
+  // }, [monthlyRevenue]);
+  useEffect(() => {
     dispatch(getTotalRevenue());
     dispatch(getNationalityRevenue());
+    dispatch(getTopStates());
+    dispatch(getTopMonuments());
+    dispatch(getTopMonumentDayWise());
+    dispatch(getMonthlyRevenue());
   }, []);
   return (
     <>
@@ -252,6 +426,7 @@ export default function Dahboard() {
           <ReactApexChart
             options={data1.options}
             series={data1.series}
+            labels={data1.labels}
             type="donut"
           />
         </div>
@@ -268,15 +443,15 @@ export default function Dahboard() {
       <div>
         <h4>Monuments with highest revenues</h4>
         <ReactApexChart
-          options={data2.options}
-          series={data2.series}
+          options={data3.options}
+          series={data3.series}
           type="bar"
           height={350}
         />
       </div>
       <div className="row">
         <div className="col-7">
-          last 7 days
+          Day Wise
           <ReactApexChart
             options={data4.options}
             series={data4.series}
@@ -285,13 +460,13 @@ export default function Dahboard() {
           />
         </div>
         <div className="col-7">
-          Monthly
+          {/* Monthly
           <ReactApexChart
             options={data2.options}
             series={data2.series}
             type="bar"
             height={350}
-          />
+          /> */}
         </div>
         <div className="col-5">Family/Couple bookings</div>
       </div>

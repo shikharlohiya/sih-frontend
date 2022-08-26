@@ -336,3 +336,47 @@ export const getNationalityRevenue = () => {
     }
   };
 };
+
+export const getTopStates = () => {
+  return async (dispatch) => {
+    try {
+      const res = await API.get("/admin/stateRevenue");
+      dispatch(DashboardActions.updateState(res.data));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+};
+
+export const getTopMonuments = () => {
+  return async (dispatch) => {
+    try {
+      const res = await API.get("/admin/monumentRevenue");
+      dispatch(DashboardActions.updateMonument(res.data));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+};
+
+export const getTopMonumentDayWise = () => {
+  return async (dispatch) => {
+    try {
+      const res = await API.get("/admin/monumentDayWise");
+      dispatch(DashboardActions.updateMonumentDayWise(res.data));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+};
+
+export const getMonthlyRevenue = () => {
+  return async (dispatch) => {
+    try {
+      const res = await API.get("/admin/monthRevenue");
+      dispatch(DashboardActions.updateMonthlyRevenue(res.data));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+};
