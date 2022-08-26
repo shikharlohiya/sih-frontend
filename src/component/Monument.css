@@ -44,8 +44,18 @@ img {
   gap: 2rem;
 }
 .input-group {
-  width: 80%;
+  width: 75%;
   margin: auto auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.input-group > input {
+  height: 60px;
+}
+.search-div {
+  flex: 1;
 }
 .para {
   font-family: "Merriweather";

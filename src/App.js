@@ -26,6 +26,8 @@ import View from "./component/view";
 import location from "./component/Location";
 
 import Speech from "./component/Speech";
+import ProtectedRoutes from "./ProtectedRoutes";
+import UnprotectedRoutes from "./UnprotectedRoutes";
 
 export const notifications = {
   message: "teodosii@react-notifications-component",
@@ -49,25 +51,28 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<Header />}>
-            <Route path="/SignUp" element={<SignUp />} />
-            <Route path="/" element={<MainPage />} />
-            <Route path="/Login" element={<Login />} />
-            <Route path="/Visit" element={<Visit />} />
-            <Route path="/Cart" element={<Cart />} />
-            <Route path="/temp" element={<Ticket />} />
-            <Route path="/ticket" element={<TicketPdf />} />
-            <Route path="/all-ticket" element={<AllTicket />} />
-            <Route path="/get-ticket/" element={<TicketPdf />} />
-            <Route path="/Stripe" element={<Stripe />} />
-            <Route path="/Tour" element={<Tour />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/explore" element={<Exp />} />
-            <Route path="/how-to-use" element={<Use />} />
-            <Route path="/dashboard" element={<Dash />} />
+            <Route element={<ProtectedRoutes />}>
+              <Route path="/" element={<MainPage />} />
+              <Route path="/Visit" element={<Visit />} />
+              <Route path="/Cart" element={<Cart />} />
+              <Route path="/temp" element={<Ticket />} />
+              <Route path="/ticket" element={<TicketPdf />} />
+              <Route path="/all-ticket" element={<AllTicket />} />
+              <Route path="/get-ticket/" element={<TicketPdf />} />
+              <Route path="/Stripe" element={<Stripe />} />
+              <Route path="/Tour" element={<Tour />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/explore" element={<Exp />} />
+              <Route path="/how-to-use" element={<Use />} />
+              <Route path="/dashboard" element={<Dash />} />
+            </Route>
+            <Route element={<UnprotectedRoutes />}>
+              <Route path="/SignUp" element={<SignUp />} />
+              <Route path="/Login" element={<Login />} />
+              <Route path="/otp" element={<Otp />} />
+            </Route>
 
             {/* <Route path="/location" elemenmt ={<Location/> }/> */}
-
-            <Route path="/otp" element={<Otp />} />
 
             <Route path="/view" element={<View />} />
 
