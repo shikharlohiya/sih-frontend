@@ -5,6 +5,8 @@ import { CartProvider, useCart } from "react-use-cart";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, fetchPlaceList } from "../store/API";
 import { CircularProgress } from "@mui/material";
+
+
 const Monument = (props) => {
   const { data, setCurrentData } = props;
   const dispatch = useDispatch();
