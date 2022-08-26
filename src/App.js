@@ -21,7 +21,8 @@ import Use from "./component/howToUse";
 import Exp from "./component/explore";
 import Dash from "./component/Dahboard";
 import Otp from "./component/OTP";
-import location from "./component/Location";
+
+import Speech from "./component/Speech";
 export const notifications = {
   message: "teodosii@react-notifications-component",
   type: "success",
@@ -59,8 +60,13 @@ function App() {
             <Route path="/explore" element={<Exp />} />
             <Route path="/how-to-use" element={<Use />} />
             <Route path="/dashboard" element={<Dash />} />
+<<<<<<< HEAD
+            
+=======
             {/* <Route path="/location" elemenmt ={<Location/> }/> */}
+>>>>>>> 705a26234a6ea25ea53b7d8eb5210f5ee5a63964
             <Route path="/otp" element={<Otp />} />
+            <Route path="/speech" element={<Speech />} />
           </Route>
         </Routes>
       </BrowserRouter>
