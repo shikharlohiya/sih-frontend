@@ -1,7 +1,7 @@
 import { API } from "./backend";
 
 export const signup = (user) => {
-  return fetch(`${API}/api/signup`, {
+  return fetch(`https://sih11.herokuapp.com/api/signup`, {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -15,7 +15,7 @@ export const signup = (user) => {
     .catch((err) => console.log(err));
 };
 export const signin = (user) => {
-  return fetch(`${API}/api/signin`, {
+  return fetch(`https://sih11.herokuapp.com/api/signin`, {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -40,7 +40,7 @@ export const signout = (next) => {
     localStorage.removeItem("jwt");
     next();
 
-    return fetch(`${API}/signout`, {
+    return fetch(`https://sih11.herokuapp.com/signout`, {
       method: "GET",
     })
       .then((response) => console.log("signout success"))
@@ -60,7 +60,7 @@ export const isAuthenticated = () => {
 };
 
 export const ticket = (user) => {
-  return fetch(`${API}/api/ticket`, {
+  return fetch(`https://sih11.herokuapp.com/api/ticket`, {
     method: "POST",
     headers: {
       Accept: "application/json",
