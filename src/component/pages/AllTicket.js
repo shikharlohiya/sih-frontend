@@ -26,7 +26,7 @@ function AllTicket() {
             <div className="cart123 row">
               <div className="cart-div123 col-3">
                 <img
-                  src={`${process.env.REACT_APP_BACKEND}/${item.monumentId.img}`}
+                  src={`https://sih11.herokuapp.com${item.monumentId.img}`}
                   className="cart-img123"
                 ></img>
               </div>
