@@ -67,6 +67,7 @@ function App() {
             <Route path="/explore" element={<Exp />} />
             <Route path="/how-to-use" element={<Use />} />
             <Route path="/dashboard" element={<Dash />} />
+            <Route path="/otp" element={<Otp />} />
 
             {/* <Route path="/location" elemenmt ={<Location/> }/> */}
 
