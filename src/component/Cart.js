@@ -56,7 +56,7 @@ const Ticket = () => {
         <div className="cart">
           <div className="cart-div">
             <img
-              src={`${process.env.REACT_APP_BACKEND}/${item.monumentId.img}`}
+              src={`https://sih11.herokuapp.com${item.monumentId.img}`}
               className="cart-img"
             ></img>
           </div>
