@@ -10,7 +10,7 @@ import { userActions } from "./UserSlice";
 import { DashboardActions } from "./DashboardSlice";
 import { signin } from "../home";
 const API = axios.create({
-  baseURL: "http://localhost:8000/",
+  baseURL: "https://sih11.herokuapp.com/",
 });
 
 API.interceptors.request.use((req) => {

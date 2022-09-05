@@ -48,7 +48,7 @@ const Monument = (props) => {
       >
         <img
           className="monu-img2"
-          src={`http://localhost:8000${data.img}`}
+          src={`https://sih11.herokuapp.com${data.img}`}
           alt={data.name}
           onClick={handleClick}
         ></img>
