@@ -377,7 +377,7 @@ function TicketPdf() {
               })}
             </div>
             <div style={{ flex: "1" }}>
-              <img src={data?.qr} style={{ width: "200px" }} />
+              <img src={data?.qr} style={{ width: "200px" ,borderRadius:'inherit' }} />
             </div>
           </div>
           <div style={{ display: "flex", margin: "4rem 0" }}>
