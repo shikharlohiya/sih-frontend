@@ -240,14 +240,14 @@ function TicketPdf() {
           <div className=" ticket-head">
             <div className="">
               <img
-                src="/imagess/imagess/download.png"
+                src="https://sih11.herokuapp.com/download.png"
                 alt=".."
                 className="img-ticket"
               />
             </div>
             <div className="">
               <img
-                src="/imagess/imagess/download.jpg"
+                src="https://sih11.herokuapp.com/download.jpg"
                 alt=".."
                 className="img-ticket"
               />
@@ -406,7 +406,7 @@ function TicketPdf() {
             </div>
             <div>
               <img
-                src="/imagess/imagess/ind-day.jpg"
+                src="https://sih11.herokuapp.com/ind-day.jpg"
                 style={{ margin: "0 0 0 1rem", borderRadius: "0" }}
               ></img>
             </div>
