@@ -12,7 +12,7 @@
   box-shadow: 0px 1px 9px 1px #cac6c6;
   border: none;
 }
-.monumentCard:hover {
+.monu-img2:hover {
   animation: lift-up 1s linear forwards;
 }
 @keyframes lift-up {

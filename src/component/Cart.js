@@ -106,7 +106,7 @@ const Ticket = () => {
     return (
       <>
         <div className="details">
-          <div className="row">
+          <div className="row" style={{padding:'1rem'}}>
             <div className="col-4">
               <form>
                 <p className="national">Select Nationality:</p>
@@ -151,7 +151,7 @@ const Ticket = () => {
               </form>
             </div>
             <div className="col-7 input-sec">
-              <div>
+              <div className="input-form-field">
                 <FormControl sx={{ m: 0, minWidth: 220 }}>
                   <InputLabel id="demo-simple-select-label">
                     User Type
